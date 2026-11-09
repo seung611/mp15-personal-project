@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "New Actions",
+    "maps": [
+        {
+            "name": "Camera",
+            "id": "d33a29af-e7e2-4625-bf2b-215ed47622f4",
+            "actions": [
+                {
+                    "name": "CameraSwitch",
+                    "type": "Button",
+                    "id": "5bb59120-7f2c-43a0-b722-ea18d13e040b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "07a33ee3-d543-462c-8a54-c16a53587c7b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraSwitch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
