@@ -42,6 +42,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Compression",
+                    "type": "Button",
+                    "id": "fc0c2990-c20c-4727-9855-a4c2fa46260f",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -53,6 +62,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Spawn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c0c8836e-156d-4262-8a61-3e29c6f7d80f",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Compression",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

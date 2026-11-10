@@ -13,21 +13,6 @@ public class CanSpawner : MonoBehaviour
         StartCoroutine(CorCanSpawn());
     }
     
-    /*private void OnEnable() => BindInputEvents();
-    private void OnDisable() => UnbindInputEvents();
-
-    private void BindInputEvents()
-    {
-        _canSpawn.action.Enable();
-        _canSpawn.action.performed += OnSpawnCan;
-    }
-
-    private void UnbindInputEvents()
-    {
-        _canSpawn.action.Disable();
-        _canSpawn.action.performed -= OnSpawnCan;
-    }*/
-    
     // 일반 캔 75%, 고가 캔 25% 랜덤 캔 프리팹
     private GameObject GetRandomPrefab()
     {
