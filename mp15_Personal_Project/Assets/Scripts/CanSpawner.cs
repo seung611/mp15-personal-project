@@ -45,7 +45,10 @@ public class CanSpawner : MonoBehaviour
     private void OnSpawnCan()
     {
         GameObject prefab = GetRandomPrefab();
-        GameObject can = Instantiate(prefab, _canRoot.parent.position, Quaternion.identity, _canRoot);
+        GameObject can = Instantiate(prefab, 
+            _canRoot.position, 
+            Quaternion.Euler(90f, 0f, 0f), 
+            _canRoot);
     }
 
     private IEnumerator CorCanSpawn()
