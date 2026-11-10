@@ -6,10 +6,8 @@ public class CanSpawner : MonoBehaviour
 {
     [SerializeField] private InputActionReference _canSpawn;
     [SerializeField] private GameObject[] _nomalCanPrefab;
+    [SerializeField] private Transform _canRoot;
     
-    private float _spawnInterval = 0.5f;
-    private float _beltSpeed;
-    private float _elapsed;
     private int _nextIndex;
     
     private void Start() => CacheComponents();
@@ -30,7 +28,16 @@ public class CanSpawner : MonoBehaviour
 
     private void OnSpawnCan(InputAction.CallbackContext context)
     {
-        
+        GameObject prefab = _nomalCanPrefab[_nextIndex];
+        GameObject can = Instantiate(prefab, _canRoot.parent.position, Quaternion.identity, _canRoot);
+        if (_nextIndex != _nomalCanPrefab.Length - 1)
+        {
+            _nextIndex++;
+        }
+        else
+        {
+            _nextIndex = 0;
+        }
     }
 
     private IEnumerator CanSpawn()

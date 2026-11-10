@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1607360051941588216}
   - component: {fileID: 1981864798169863534}
   - component: {fileID: 4494004512345746778}
+  - component: {fileID: -1365327868792003662}
   m_Layer: 0
   m_Name: PRF_Soda
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601165996669255698}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.19940405, y: 0.6784085, z: -0.6784084, w: -0.1994041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.002, y: 0.002, z: 0.002627254}
   m_ConstrainProportionsScale: 1
@@ -116,5 +117,28 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!136 &-1365327868792003662
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601165996669255698}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 113.332146
+  m_Height: 284.38934
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}

@@ -12,14 +12,12 @@
   <component name="ChangeListManager">
     <list default="true" id="b4b5a5c1-5baa-441f-be08-300e551f33a2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Imports.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Imports.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/MAT_Floor.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/MAT_Floor.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/MAT_Wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/MAT_Wall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/MAT_Wall_Under.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Material/MAT_Wall_Under.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NormalCan/PRF_Beer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NormalCan/PRF_Beer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NormalCan/PRF_Cola.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NormalCan/PRF_Cola.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NormalCan/PRF_Soda.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NormalCan/PRF_Soda.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRF_Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRF_Map.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ConveyorManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ConveyorManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CanSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CanSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
