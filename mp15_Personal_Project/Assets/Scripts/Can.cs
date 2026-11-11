@@ -4,7 +4,6 @@ public class Can : MonoBehaviour
 {
     [SerializeField] private GameObject _normalCan;
     [SerializeField] private GameObject _trashCan;
-
     
     private void Awake() => Init();
     private void OnTriggerStay(Collider collider)
