@@ -10,6 +10,16 @@ public class ConveyorManager : MonoBehaviour
 
     private Rigidbody _target;
 
+    public Vector3 LocalDirection
+    {
+        get => _localDirection;
+        set
+        {
+            _localDirection = value;
+            Debug.Log($"변경 전: {_localDirection} -> 변경 후: {value}");
+        }
+    }
+
     private void FixedUpdate() => CanMover();
 
     public void AddCan(Rigidbody target)
@@ -24,6 +34,8 @@ public class ConveyorManager : MonoBehaviour
 
     private void CanMover()
     {
+        _target = null;
+        
         for (int i = 0; i <= _onConveyors.Count - 1; i++)
         {
             _target = _onConveyors[i];

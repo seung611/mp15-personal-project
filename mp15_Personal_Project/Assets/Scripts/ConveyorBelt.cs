@@ -8,6 +8,8 @@ public class ConveyorBelt : MonoBehaviour
     
     private Material _material;
     private MeshRenderer _meshRenderer;
+    
+    public Vector3 BeltDirection { get => _beltDirection; set => _beltDirection = value; }
 
     private void Awake()
     {

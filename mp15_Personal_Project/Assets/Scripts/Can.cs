@@ -8,6 +8,10 @@ public class Can : MonoBehaviour
     [SerializeField] private GameObject _trashCan;
     [SerializeField] private List<Collider> _triggerList = new();
 
+    private bool _isSucess;
+    
+    public bool IsSucess => _isSucess;
+
     private void Awake() => Init();
     private void OnTriggerEnter(Collider collider)
     {
@@ -21,11 +25,15 @@ public class Can : MonoBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        _triggerList.Remove(collider);
+        for (int i = 0; i < _triggerList.Count; ++i)
+        {
+            _triggerList.Remove(collider);
+        }
     }
 
     private void CrushCan()
     {
+        _isSucess = true;
         _normalCan.SetActive(false);
         _trashCan.SetActive(true);
     }

@@ -560,6 +560,17 @@ Transform:
   - {fileID: 1768239221}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &780191746 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5174694257668223703, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+  m_PrefabInstance: {fileID: 1814399023}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164f91dce20484f4e8cf4a9b09226c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConveyorManager
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,15 +718,52 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5174694257668223703, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+      propertyPath: _speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5559525898742307950, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
       propertyPath: m_Name
       value: PRB_Map
       objectReference: {fileID: 0}
+    - target: {fileID: 6403749401050118616, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+      propertyPath: _conveyorManager
+      value: 
+      objectReference: {fileID: 780191746}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4096055389272720533, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1979134016}
   m_SourcePrefab: {fileID: 100100000, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+--- !u!1 &1979134012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4096055389272720533, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+  m_PrefabInstance: {fileID: 1814399023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1979134016
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979134012}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07760084, y: 1.7164359, z: 2.0533624}
+  m_Center: {x: -0.00000005215408, y: 0.85821795, z: 0.00112623}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 8407635533217816888}
   - component: {fileID: 7983696190300546836}
   - component: {fileID: 6441299042832907749}
-  - component: {fileID: 266203602396801356}
-  - component: {fileID: 4234198118394443009}
   m_Layer: 0
   m_Name: Normal
   m_TagString: Untagged
@@ -92,51 +90,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &266203602396801356
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412173492480862437}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 7486082892243263767, guid: 990cb06adfa26334683d070e8947fbb6, type: 3}
---- !u!136 &4234198118394443009
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412173492480862437}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 109.94814
-  m_Height: 236.63663
-  m_Direction: 2
-  m_Center: {x: 0, y: 0, z: -5.472196}
 --- !u!1 &2981882417540563613
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +101,6 @@ GameObject:
   - component: {fileID: 1036917513641852085}
   - component: {fileID: 8525024136797838838}
   - component: {fileID: 3479427033667139483}
-  - component: {fileID: 2570332560315591251}
   m_Layer: 0
   m_Name: Trash
   m_TagString: Untagged
@@ -228,27 +180,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2570332560315591251
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2981882417540563613}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 236.73389, y: 240.16644, z: 114.80475}
-  m_Center: {x: 6.2548103, y: -3.4782753, z: 54.369354}
 --- !u!1 &7722268064461781545
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +191,7 @@ GameObject:
   - component: {fileID: 6373552006990206410}
   - component: {fileID: 416379023688940059}
   - component: {fileID: 4331730840842353051}
+  - component: {fileID: 8257811453933769088}
   m_Layer: 0
   m_Name: PRB_Beer
   m_TagString: Untagged
@@ -323,11 +255,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3200e96979fe7af4199d6937a0fb0347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Can
-  _layerMaskPressure:
-    serializedVersion: 2
-    m_Bits: 128
-  _layerMaskCrushSpace:
-    serializedVersion: 2
-    m_Bits: 256
   _normalCan: {fileID: 1412173492480862437}
   _trashCan: {fileID: 2981882417540563613}
+  _triggerList: []
+--- !u!65 &8257811453933769088
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7722268064461781545}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.47019213, y: 0.5102332, z: 0.31207895}
+  m_Center: {x: 0, y: 0, z: 0.133}
