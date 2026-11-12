@@ -10,15 +10,7 @@ public class ConveyorManager : MonoBehaviour
 
     private Rigidbody _target;
 
-    public Vector3 LocalDirection
-    {
-        get => _localDirection;
-        set
-        {
-            _localDirection = value;
-            Debug.Log($"변경 전: {_localDirection} -> 변경 후: {value}");
-        }
-    }
+    public Vector3 LocalDirection { get => _localDirection; set => _localDirection = value; }
 
     private void FixedUpdate() => CanMover();
 
@@ -39,6 +31,8 @@ public class ConveyorManager : MonoBehaviour
         for (int i = 0; i <= _onConveyors.Count - 1; i++)
         {
             _target = _onConveyors[i];
+            
+            if (_target == null) continue;
             
             _target.linearVelocity = new Vector3(
                 _localDirection.x * _speed,

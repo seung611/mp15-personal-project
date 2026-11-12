@@ -1,10 +1,8 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CanSpawner : MonoBehaviour
 {
-    [SerializeField] private InputActionReference _canSpawn;
     [SerializeField] private GameObject[] _nomalCanPrefab;
     [SerializeField] private Transform _canRoot;
 
@@ -20,11 +18,11 @@ public class CanSpawner : MonoBehaviour
 
         if (randomValue < 25)
         {
-            return _nomalCanPrefab[0];
+            return _nomalCanPrefab[0].gameObject;
         }
 
         int normalIndex = Random.Range(1, 3);
-        return _nomalCanPrefab[normalIndex];
+        return _nomalCanPrefab[normalIndex].gameObject;
     }
     
     private void OnSpawnCan()

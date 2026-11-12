@@ -30,9 +30,7 @@ public class SucessOrFail : MonoBehaviour
         {
             if (target.IsSucess)
             {
-                Debug.Log("매니저 처음 " + _conveyorManager.LocalDirection);
                 _conveyorManager.LocalDirection = new Vector3(0f ,0f ,-1f);
-                Debug.Log("매니저 바뀌고 " + _conveyorManager.LocalDirection);
                 _beltDirection = new Vector3(0f, 0f, 1f);
             }
             else

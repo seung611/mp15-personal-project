@@ -192,7 +192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5886923f90121de49a19cf27d3e993da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanSpawner
-  _canSpawn: {fileID: 5069139727426176866, guid: 752d382753583594797810dab867de7c, type: 3}
   _nomalCanPrefab:
   - {fileID: 7722268064461781545, guid: 6e141c7e044082d47814ef5d7a6ba6b9, type: 3}
   - {fileID: 5468738738656942365, guid: 80d35da5fcf138340b29fa06b4781148, type: 3}
@@ -613,6 +612,8 @@ GameObject:
   - component: {fileID: 3716538418476129839}
   - component: {fileID: 305144805171892618}
   - component: {fileID: 2583061624197965120}
+  - component: {fileID: 314692370966644630}
+  - component: {fileID: 1310801936590997246}
   m_Layer: 0
   m_Name: CanDespawn
   m_TagString: Untagged
@@ -693,6 +694,40 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &314692370966644630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096055389272720533}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07760084, y: 1.7164359, z: 2.0533624}
+  m_Center: {x: -0.00000005215408, y: 0.85821795, z: 0.00112623}
+--- !u!114 &1310801936590997246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096055389272720533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ee6f31db760944da16a3fd70e00242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanDespawner
+  _conveyorManager: {fileID: 4471434421062528660}
 --- !u!1 &4586215428056969793
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,6 +2032,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1842453485906250912, guid: d0ee4b72ed4c83945aefe28b4080c158, type: 3}
+      propertyPath: _conveyorManager
+      value: 
+      objectReference: {fileID: 6311897187398802292}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2312,11 +2351,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: PRB_ConveyorFail
       objectReference: {fileID: 0}
+    - target: {fileID: 8872601502651782630, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+      propertyPath: m_Size.z
+      value: 7.3464513
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872601502651782630, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+      propertyPath: m_Center.z
+      value: -0.35106257
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+--- !u!114 &4471434421062528660 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+  m_PrefabInstance: {fileID: 3309199400672282116}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164f91dce20484f4e8cf4a9b09226c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConveyorManager
 --- !u!4 &5297658078117997805 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7235504106917489385, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
@@ -2650,6 +2708,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7235504106917489385, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
   m_PrefabInstance: {fileID: 4934053709179155428}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6311897187398802292 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+  m_PrefabInstance: {fileID: 4934053709179155428}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164f91dce20484f4e8cf4a9b09226c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConveyorManager
 --- !u!23 &9047515488511656049 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 4176662947005166485, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
@@ -2789,6 +2858,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7235504106917489385, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
   m_PrefabInstance: {fileID: 6066682651210832455}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5174694257668223703 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+  m_PrefabInstance: {fileID: 6066682651210832455}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164f91dce20484f4e8cf4a9b09226c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConveyorManager
 --- !u!1 &7932162603754045599 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4189926990760352472, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
@@ -2809,7 +2889,7 @@ MonoBehaviour:
   _beltDirection: {x: 0, y: 0, z: 0}
   _conveyorSpeed: 2
   _cans: []
-  _meshRenderer: {fileID: 0}
+  _conveyorManager: {fileID: 5174694257668223703}
 --- !u!1001 &7093090364790372947
 PrefabInstance:
   m_ObjectHideFlags: 0

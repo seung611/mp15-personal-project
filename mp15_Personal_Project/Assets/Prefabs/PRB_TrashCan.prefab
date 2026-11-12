@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 618612668026077046}
   - component: {fileID: 2959878098295163850}
   - component: {fileID: 6313170282899056185}
+  - component: {fileID: 1842453485906250912}
   m_Layer: 0
   m_Name: PRB_TrashCan
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278678219399390668}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.968, y: 0.699, z: -4.582}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -82,6 +83,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.1448274, z: 1}
   m_Center: {x: 0, y: -0.07241374, z: 0}
+--- !u!114 &1842453485906250912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278678219399390668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11ee6f31db760944da16a3fd70e00242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanDespawner
 --- !u!1 &446332088416850003
 GameObject:
   m_ObjectHideFlags: 0
