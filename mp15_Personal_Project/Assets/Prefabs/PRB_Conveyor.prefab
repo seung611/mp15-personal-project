@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 7235504106917489385}
   - component: {fileID: 1432455535128684688}
   m_Layer: 0
-  m_Name: Conveyor
+  m_Name: PRB_Conveyor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

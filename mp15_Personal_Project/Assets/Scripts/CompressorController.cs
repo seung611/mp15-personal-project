@@ -10,17 +10,15 @@ public class CompressorController : MonoBehaviour
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private InputActionReference _pointAction;
     [SerializeField] private InputActionReference _clickAction;
-    [SerializeField] private Animator _pullLeverAnimator;
     [SerializeField] private Animator _pressedAnimator;
     [SerializeField] private Animator _pushButtonAnimator;
-    // [SerializeField] private Vector3 position;
-    [SerializeField] private float _leverCoolTime = 5f;
+    [SerializeField] private float _buttonCoolTime = 5f;
 
     private Camera _camera;
     private Coroutine _runningCoroutine;
     private Animator _anim;
     private float _pressSpeed;
-    private bool _isPullLever;
+    private bool _isPushButton;
 
     private void Awake() => CacheComponents();
     private void OnEnable() => BindInputEvents();
@@ -50,9 +48,8 @@ public class CompressorController : MonoBehaviour
         Vector2 position = _pointAction.action.ReadValue<Vector2>();
         
         Ray ray = _camera.ScreenPointToRay(position);
-        RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, _layerMask))
+        if (Physics.Raycast(ray, Mathf.Infinity, _layerMask))
         {
             Compressor();
         }
@@ -62,31 +59,25 @@ public class CompressorController : MonoBehaviour
     { 
         if (_runningCoroutine != null) return;
         
-        _runningCoroutine = StartCoroutine(PullLever());
+        _runningCoroutine = StartCoroutine(PushButtonCoolTime());
     }
 
     private void DeCompressor()
     {
-        _isPullLever = false;
-        
-        // _pullLeverAnimator.SetBool("IsPull", _isPullLever);
-        _pushButtonAnimator.SetBool("IsPressed", _isPullLever);
-        _pressedAnimator.SetBool("IsPressed", _isPullLever);
-
+        _isPushButton = false;
         _runningCoroutine = null;
     }
 
-    private IEnumerator PullLever()
+    private IEnumerator PushButtonCoolTime()
     {
-        _isPullLever = true;
+        _isPushButton = true;
         
-        while (_isPullLever)
+        while (_isPushButton)
         {
-            // _pullLeverAnimator.SetBool("IsPull", _isPullLever);
-            _pushButtonAnimator.SetBool("IsPressed", _isPullLever);
-            _pressedAnimator.SetBool("IsPressed", _isPullLever);
+            _pushButtonAnimator.SetTrigger("OnDown");
+            _pressedAnimator.SetTrigger("OnDown");
         
-            yield return new WaitForSeconds(_leverCoolTime);
+            yield return new WaitForSeconds(_buttonCoolTime);
 
             DeCompressor();
         }

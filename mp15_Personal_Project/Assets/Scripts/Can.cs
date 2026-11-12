@@ -1,12 +1,30 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Can : MonoBehaviour
 {
     [SerializeField] private GameObject _normalCan;
     [SerializeField] private GameObject _trashCan;
-    
+    [SerializeField] private List<Collider> _triggerList = new();
+
     private void Awake() => Init();
-    private void OnTriggerStay(Collider collider)
+    private void OnTriggerEnter(Collider collider)
+    {
+        _triggerList.Add(collider);
+        
+        if (_triggerList.Count == 2)
+        {
+            CrushCan();
+        }
+    }
+
+    private void OnTriggerExit(Collider collider)
+    {
+        _triggerList.Remove(collider);
+    }
+
+    private void CrushCan()
     {
         _normalCan.SetActive(false);
         _trashCan.SetActive(true);
