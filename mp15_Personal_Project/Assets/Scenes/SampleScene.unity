@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GarbageTruckController
   _gameStartAction: {fileID: -6416851942400315906, guid: 752d382753583594797810dab867de7c, type: 3}
-  _workDuration: 20
+  _workDuration: 7
   _timeText: {fileID: 2022528727}
 --- !u!4 &393651320
 Transform:
@@ -977,6 +977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraController
   _switchCamera: {fileID: -6529011108306701447, guid: 752d382753583594797810dab867de7c, type: 3}
+  _garbageTruckController: {fileID: 393651319}
   _camera: {fileID: 330585545}
   _conveyorView: {fileID: 529872794}
   _trashCanView: {fileID: 332824041}
