@@ -763,6 +763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CanDespawner
   _garbageTruckController: {fileID: 0}
   _conveyorManager: {fileID: 4471434421062528660}
+  _canDeleteSelf: 1
 --- !u!1 &4586215428056969793
 GameObject:
   m_ObjectHideFlags: 0

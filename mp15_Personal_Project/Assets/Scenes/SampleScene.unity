@@ -921,6 +921,14 @@ PrefabInstance:
       propertyPath: _garbageTruckController
       value: 
       objectReference: {fileID: 393651319}
+    - target: {fileID: 6254782299937297378, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+      propertyPath: m_Size.z
+      value: 7.9632883
+      objectReference: {fileID: 0}
+    - target: {fileID: 6254782299937297378, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0426428
+      objectReference: {fileID: 0}
     - target: {fileID: 6311897187398802292, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
       propertyPath: _garbageTruckController
       value: 

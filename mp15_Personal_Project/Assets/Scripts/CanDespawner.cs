@@ -5,6 +5,7 @@ public class CanDespawner : MonoBehaviour
 {
     [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private ConveyorManager _conveyorManager;
+    [SerializeField] private bool _canDeleteSelf;
 
     private int _failCanCount;
     private int _successCanCount;
@@ -27,19 +28,21 @@ public class CanDespawner : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.rigidbody == null) return;
-        if (collision.gameObject.TryGetComponent<Can>(out _))
+        if (!_canDeleteSelf) return;
+        
+        Can target = collision.transform.GetComponent<Can>();
+        
+        if (target == null) return;
+        if (target.gameObject.TryGetComponent<Can>(out _))
         {
-            ResultCanCount(collision);
-            DespawnCan(collision);
+            ResultCanCount(target);
+            DespawnCan(target);
         }
     }
 
-    private void ResultCanCount(Collision collision)
+    private void ResultCanCount(Can can)
     {
-        Can target = collision.transform.GetComponent<Can>();
-        
-        if (target.IsSuccess)
+        if (can.IsSuccess)
         {
             _successCanCount++;
         }
@@ -50,10 +53,10 @@ public class CanDespawner : MonoBehaviour
         }
     }
 
-    private void DespawnCan(Collision collision)
+    public void DespawnCan(Can can)
     {
-        _conveyorManager.RemoveCan(collision.rigidbody);
-        Destroy(collision.gameObject);
+        _conveyorManager.RemoveCan(can.GetComponent<Rigidbody>());
+        Destroy(can.gameObject);
     }
 
     private void StartGameCountInit()

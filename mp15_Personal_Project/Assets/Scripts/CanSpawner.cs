@@ -65,6 +65,19 @@ public class CanSpawner : MonoBehaviour
     {
         StopCoroutine(_runningCoroutine);
         
+        DespawnCan();
         _runningCoroutine = null;
+    }
+
+    private void DespawnCan()
+    {
+        for (int i = 0; i <= _canRoot.childCount - 1; i++)
+        {
+            Transform target = _canRoot.GetChild(i);
+            
+            if (target == null) continue;
+            
+            Destroy(target.gameObject);
+        }
     }
 }

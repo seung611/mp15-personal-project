@@ -41,14 +41,6 @@ public class ConveyorManager : MonoBehaviour
     {
         if (_garbageTruckController.IsWorking) return;
         
-        for (int i = 0; i <= _onConveyors.Count - 1; i++)
-        {
-            _target = _onConveyors[i];
-            
-            if (_target == null) continue;
-            
-            Destroy(_target.gameObject);
-        }
         _onConveyors.Clear();
     }
 
