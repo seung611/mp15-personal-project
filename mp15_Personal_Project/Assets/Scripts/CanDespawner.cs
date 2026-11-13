@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CanDespawner : MonoBehaviour
@@ -11,8 +12,13 @@ public class CanDespawner : MonoBehaviour
         
         if (collision.gameObject.TryGetComponent<Can>(out _))
         {
-            _conveyorManager.RemoveCan(collision.rigidbody);
-            Destroy(collision.gameObject);
+            DespawnCan(collision);
         }
+    }
+
+    private void DespawnCan(Collision collision)
+    {
+        _conveyorManager.RemoveCan(collision.rigidbody);
+        Destroy(collision.gameObject);
     }
 }

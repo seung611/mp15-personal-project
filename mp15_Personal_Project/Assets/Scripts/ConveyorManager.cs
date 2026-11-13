@@ -12,9 +12,21 @@ public class ConveyorManager : MonoBehaviour
     private Rigidbody _target;
 
     public Vector3 LocalDirection { get => _localDirection; set => _localDirection = value; }
-
+    
     private void FixedUpdate() => CanMover();
+    private void OnEnable() => BindInputEvents();
+    private void OnDisable() => UnbindInputEvents();
+    
+    private void BindInputEvents()
+    {
+        _garbageTruckController.OnWorkEnded += DespawnAllCans;
+    }
 
+    private void UnbindInputEvents()
+    {
+        _garbageTruckController.OnWorkEnded -= DespawnAllCans;
+    }
+    
     public void AddCan(Rigidbody target)
     {
         _onConveyors.Add(target);
@@ -23,6 +35,21 @@ public class ConveyorManager : MonoBehaviour
     public void RemoveCan(Rigidbody target)
     {
         _onConveyors.Remove(target);
+    }
+    
+    private void DespawnAllCans()
+    {
+        if (_garbageTruckController.IsWorking) return;
+        
+        for (int i = 0; i <= _onConveyors.Count - 1; i++)
+        {
+            _target = _onConveyors[i];
+            
+            if (_target == null) continue;
+            
+            Destroy(_target.gameObject);
+        }
+        _onConveyors.Clear();
     }
 
     private void CanMover()
