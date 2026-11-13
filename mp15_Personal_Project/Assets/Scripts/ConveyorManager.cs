@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ConveyorManager : MonoBehaviour
 {
+    [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private Vector3 _localDirection;
     [SerializeField] private List<Rigidbody> _onConveyors; // 벨트 위 오브젝트 목록
     [SerializeField] private float _speed = 1.0f; // 오브젝트 속도
@@ -27,6 +28,8 @@ public class ConveyorManager : MonoBehaviour
     private void CanMover()
     {
         _target = null;
+        
+        if (!_garbageTruckController.IsWorking) return;
         
         for (int i = 0; i <= _onConveyors.Count - 1; i++)
         {

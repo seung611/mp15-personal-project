@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SucessOrFail : MonoBehaviour
+public class SuccessOrFail : MonoBehaviour
 {
     [SerializeField] private Vector3 _beltDirection;
     [SerializeField] private float _conveyorSpeed = 1.0f;
@@ -28,7 +28,7 @@ public class SucessOrFail : MonoBehaviour
         
         for (int i = 0; i < _cans.Count; i++)
         {
-            if (target.IsSucess)
+            if (target.IsSuccess)
             {
                 _conveyorManager.LocalDirection = new Vector3(0f ,0f ,-1f);
                 _beltDirection = new Vector3(0f, 0f, 1f);

@@ -7,6 +7,7 @@ using Debug = UnityEngine.Debug;
 
 public class CompressorController : MonoBehaviour
 {
+    [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private InputActionReference _pointAction;
     [SerializeField] private InputActionReference _clickAction;
@@ -18,7 +19,7 @@ public class CompressorController : MonoBehaviour
     private Coroutine _runningCoroutine;
     private Animator _anim;
     private float _pressSpeed;
-    private bool _isPushButton;
+    private bool _isPushButton; 
 
     private void Awake() => CacheComponents();
     private void OnEnable() => BindInputEvents();
@@ -51,12 +52,13 @@ public class CompressorController : MonoBehaviour
 
         if (Physics.Raycast(ray, Mathf.Infinity, _layerMask))
         {
-            Compressor();
+            CompressorTry();
         }
     }
 
-    private void Compressor()
-    { 
+    private void CompressorTry()
+    {
+        if (!_garbageTruckController.IsWorking) return;
         if (_runningCoroutine != null) return;
         
         _runningCoroutine = StartCoroutine(PushButtonCoolTime());

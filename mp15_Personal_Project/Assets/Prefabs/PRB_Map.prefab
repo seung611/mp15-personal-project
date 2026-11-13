@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5886923f90121de49a19cf27d3e993da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanSpawner
+  _garbageTruckController: {fileID: 0}
   _nomalCanPrefab:
   - {fileID: 7722268064461781545, guid: 6e141c7e044082d47814ef5d7a6ba6b9, type: 3}
   - {fileID: 5468738738656942365, guid: 80d35da5fcf138340b29fa06b4781148, type: 3}
@@ -455,6 +456,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.98, y: 2.18, z: 0.1575}
   m_Center: {x: 0.46999997, y: 1.1, z: -0.0062500015}
+--- !u!1 &3147193396343657111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6187869719078320012}
+  m_Layer: 0
+  m_Name: CanDespawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6187869719078320012
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147193396343657111}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 693380179590336738}
+  - {fileID: 3716538418476129839}
+  m_Father: {fileID: 3337711006049116237}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3513362135601249456
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,7 +649,7 @@ GameObject:
   - component: {fileID: 314692370966644630}
   - component: {fileID: 1310801936590997246}
   m_Layer: 0
-  m_Name: CanDespawn
+  m_Name: CanDespawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -634,7 +668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3337711006049116237}
+  m_Father: {fileID: 6187869719078320012}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!33 &305144805171892618
 MeshFilter:
@@ -727,6 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ee6f31db760944da16a3fd70e00242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanDespawner
+  _garbageTruckController: {fileID: 0}
   _conveyorManager: {fileID: 4471434421062528660}
 --- !u!1 &4586215428056969793
 GameObject:
@@ -1225,9 +1260,8 @@ Transform:
   - {fileID: 5531000056554460816}
   - {fileID: 5815204605213728922}
   - {fileID: 3820493481031611207}
-  - {fileID: 693380179590336738}
   - {fileID: 4789254575270742441}
-  - {fileID: 3716538418476129839}
+  - {fileID: 6187869719078320012}
   - {fileID: 6897227202533868381}
   - {fileID: 1511754516129473480}
   - {fileID: 7691143751971552484}
@@ -1986,7 +2020,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3337711006049116237}
+    m_TransformParent: {fileID: 6187869719078320012}
     m_Modifications:
     - target: {fileID: 278678219399390668, guid: d0ee4b72ed4c83945aefe28b4080c158, type: 3}
       propertyPath: m_Name

@@ -36,11 +36,6 @@ public class CameraController : MonoBehaviour
 
     private void OnSwitchCamera(InputAction.CallbackContext context)
     {
-        /*bool isConveyor = _conveyorViewCamera.enabled;
-        
-        _conveyorViewCamera.enabled = !isConveyor;
-        _trashCanViewCamera.enabled = isConveyor;*/
-
         if (_isTransitioning) return;
         
         _isTrashCanView = !_isTrashCanView;
