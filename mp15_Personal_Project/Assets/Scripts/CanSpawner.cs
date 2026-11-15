@@ -6,8 +6,10 @@ using Random = UnityEngine.Random;
 public class CanSpawner : MonoBehaviour
 {
     [SerializeField] private GarbageTruckController _garbageTruckController;
+    [SerializeField] private GarbageBagController _garbageBagController;
     [SerializeField] private GameObject[] _nomalCanPrefab;
     [SerializeField] private Transform _canRoot;
+    [SerializeField] private float _canCreateInterval = 2f;
     
     private Coroutine _runningCoroutine;
 
@@ -49,15 +51,23 @@ public class CanSpawner : MonoBehaviour
 
     private IEnumerator CorCanSpawn()
     {
+        
         while (true)
         {
+            float canCreateInterval = _canCreateInterval;
+            
             GameObject prefab = GetRandomPrefab();
             GameObject can = Instantiate(prefab, 
                 _canRoot.position, 
                 Quaternion.Euler(90f, 0f, 0f), 
                 _canRoot);
             
-            yield return new WaitForSeconds(2f);
+            if (_garbageBagController.IsTrashBagChange)
+            {
+                canCreateInterval = _canCreateInterval * 2;
+            }
+            
+            yield return new WaitForSeconds(canCreateInterval);
         }
     }
 

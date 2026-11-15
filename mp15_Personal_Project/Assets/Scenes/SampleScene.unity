@@ -297,6 +297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 393651320}
   - component: {fileID: 393651319}
+  - component: {fileID: 393651321}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -317,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GarbageTruckController
   _gameStartAction: {fileID: 1797881073548302290, guid: 752d382753583594797810dab867de7c, type: 3}
-  _workDuration: 30
+  _workDuration: 60
   _timeText: {fileID: 2022528727}
 --- !u!4 &393651320
 Transform:
@@ -334,6 +335,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &393651321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393651318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db3e20b21dc770e49a2ee7e309555c3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinManager
+  _garbageTruckController: {fileID: 393651319}
+  _garbageBagController: {fileID: 612583919}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +622,17 @@ Transform:
   - {fileID: 1768239221}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &612583919 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5137304465488580784, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+  m_PrefabInstance: {fileID: 1228786004}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb4fe2023abf914183b43cfd312683b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GarbageBagController
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,10 +943,6 @@ PrefabInstance:
       propertyPath: _garbageTruckController
       value: 
       objectReference: {fileID: 393651319}
-    - target: {fileID: 5137304465488580784, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _stopCahngeTrashBagAction
-      value: 
-      objectReference: {fileID: 6047367241591659970, guid: 752d382753583594797810dab867de7c, type: 3}
     - target: {fileID: 5174694257668223703, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
       propertyPath: _garbageTruckController
       value: 

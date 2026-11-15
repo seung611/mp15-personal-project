@@ -8,7 +8,7 @@ public class ConveyorManager : MonoBehaviour
     [SerializeField] private GarbageBagController _garbageBagController;
     [SerializeField] private Vector3 _localDirection;
     [SerializeField] private List<Rigidbody> _onConveyors; // 벨트 위 오브젝트 목록
-    [SerializeField] private float _speed = 1.0f; // 오브젝트 속도
+    [SerializeField] private float _speed = 1.5f; // 오브젝트 속도
 
     private Rigidbody _target;
 

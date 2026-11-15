@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class GarbageBagController : MonoBehaviour
 {
     [SerializeField] private InputActionReference _changeTrashBagAction;
-    [SerializeField] private InputActionReference _stopCahngeTrashBagAction;
+    [SerializeField] private InputActionReference _stopChangeTrashBagAction;
     [SerializeField] private CameraController _cameraController;
     [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private CanDespawner _canDespawner;
@@ -18,7 +18,10 @@ public class GarbageBagController : MonoBehaviour
     private int _currentGarbageBagCapacity;
     private int _successCanCount;
     private int _bagCanCount;
-    
+    private int _canPrice;
+    private int _tiedTrashBag;
+
+    public int TiedTrashBag => _tiedTrashBag;
     public bool IsTrashBagChange => _isTrashBagChange;
     
     private void OnEnable() => BindInputAction();
@@ -35,9 +38,9 @@ public class GarbageBagController : MonoBehaviour
         _garbageTruckController.OnWorkStarted += StartGameInit;
         _garbageTruckController.OnWorkEnded += CancelChangeTrashBag;
         _changeTrashBagAction.action.Enable();
-        _stopCahngeTrashBagAction.action.Enable();
+        _stopChangeTrashBagAction.action.Enable();
         _changeTrashBagAction.action.performed += ChangeGarbageBag;
-        _stopCahngeTrashBagAction.action.performed += StopChangeTrashBag;
+        _stopChangeTrashBagAction.action.performed += StopChangeTrashBag;
     }
 
     private void UnbindInputAction()
@@ -45,9 +48,9 @@ public class GarbageBagController : MonoBehaviour
         _garbageTruckController.OnWorkStarted -= StartGameInit;
         _garbageTruckController.OnWorkEnded -= CancelChangeTrashBag;
         _changeTrashBagAction.action.Disable();
-        _stopCahngeTrashBagAction.action.Disable();
+        _stopChangeTrashBagAction.action.Disable();
         _changeTrashBagAction.action.performed -= ChangeGarbageBag;
-        _stopCahngeTrashBagAction.action.performed -= StopChangeTrashBag;
+        _stopChangeTrashBagAction.action.performed -= StopChangeTrashBag;
     }
 
     private void asdf(Collision collision) // TODO 이름 나중에 바꾸기...
@@ -69,16 +72,18 @@ public class GarbageBagController : MonoBehaviour
             _canDespawner.DespawnCan(can);
             return;
         }
-        
+
+        _canPrice += can.CanPrice;
         _currentGarbageBagCapacity++;
         _successCanCount++;
+        Debug.Log($"현재 : {_canPrice} 묶인 쓰레기 봉투 : {_tiedTrashBag }");
 
         if (_currentGarbageBagCapacity == _garbageBagCapacity)
         {
             Debug.Log("가득참");
         }
         
-        Debug.Log($"쓰레기통 : {_currentGarbageBagCapacity} / {_garbageBagCapacity}");
+        Debug.Log($"쓰레기통 : {_currentGarbageBagCapacity} / {_garbageBagCapacity} 쓰레기통 금액 {_canPrice}");
         
         _canDespawner.DespawnCan(can);
     }
@@ -97,7 +102,9 @@ public class GarbageBagController : MonoBehaviour
     private void ChangeComplete()
     {
         _bagCanCount += _currentGarbageBagCapacity;
+        _tiedTrashBag += _canPrice;
         _currentGarbageBagCapacity = 0;
+        _canPrice = 0;
     }
 
     private IEnumerator ChangeTrashBag()
@@ -137,5 +144,7 @@ public class GarbageBagController : MonoBehaviour
         _currentGarbageBagCapacity = 0;
         _successCanCount = 0;
         _bagCanCount = 0;
+        _canPrice = 0;
+        _tiedTrashBag = 0;
     }
 }

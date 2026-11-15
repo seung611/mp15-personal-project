@@ -13,7 +13,7 @@ public class CompressorController : MonoBehaviour
     [SerializeField] private InputActionReference _clickAction;
     [SerializeField] private Animator _pressedAnimator;
     [SerializeField] private Animator _pushButtonAnimator;
-    [SerializeField] private float _buttonCoolTime = 5f;
+    [SerializeField] private float _buttonCoolTime = 1f;
 
     private Camera _camera;
     private Coroutine _runningCoroutine;

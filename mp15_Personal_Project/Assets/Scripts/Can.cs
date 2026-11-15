@@ -7,10 +7,12 @@ public class Can : MonoBehaviour
     [SerializeField] private GameObject _normalCan;
     [SerializeField] private GameObject _trashCan;
     [SerializeField] private List<Collider> _triggerList = new();
+    [SerializeField] private int _canPrice;
 
     private bool _isSuccess;
     
     public bool IsSuccess => _isSuccess;
+    public int CanPrice => _canPrice;
 
     private void Awake() => Init();
     private void OnTriggerEnter(Collider collider)

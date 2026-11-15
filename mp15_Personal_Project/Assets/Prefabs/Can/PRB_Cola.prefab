@@ -168,6 +168,7 @@ MonoBehaviour:
   _normalCan: {fileID: 7285268091429950841}
   _trashCan: {fileID: 1467363637191128715}
   _triggerList: []
+  _canPrice: 10
 --- !u!65 &2160141289270790360
 BoxCollider:
   m_ObjectHideFlags: 0
