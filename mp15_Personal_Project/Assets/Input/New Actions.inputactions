@@ -3,137 +3,49 @@
     "name": "New Actions",
     "maps": [
         {
-            "name": "Camera",
-            "id": "d33a29af-e7e2-4625-bf2b-215ed47622f4",
+            "name": "Player",
+            "id": "83a0d678-95e1-4f06-b1de-001ae1135218",
             "actions": [
                 {
-                    "name": "CameraSwitch",
+                    "name": "Camera",
                     "type": "Button",
-                    "id": "5bb59120-7f2c-43a0-b722-ea18d13e040b",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "07a33ee3-d543-462c-8a54-c16a53587c7b",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "CameraSwitch",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Can",
-            "id": "23d9bc36-3774-41ba-8820-82228001b6bc",
-            "actions": [
-                {
-                    "name": "Spawn",
-                    "type": "Button",
-                    "id": "9c20ed8c-df06-447c-bdd6-86f55fd47785",
+                    "id": "c2b0befa-aaaf-4afa-b602-31be029cfdac",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Compression",
+                    "name": "Press",
                     "type": "Button",
-                    "id": "fc0c2990-c20c-4727-9855-a4c2fa46260f",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "96c42916-b6ca-4a27-8b82-14478d20dd8e",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Spawn",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c0c8836e-156d-4262-8a61-3e29c6f7d80f",
-                    "path": "<Keyboard>/2",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Compression",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Lever",
-            "id": "ed61df8d-0bc4-43ef-ae94-536c84d9f2f8",
-            "actions": [
-                {
-                    "name": "MouseClick",
-                    "type": "Button",
-                    "id": "4e76e5f0-ce80-4b0e-a02d-b7b015b8ddcf",
+                    "id": "f8791a16-7dd8-42cd-bee3-2ebab53b9543",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "MousePosition",
+                    "name": "Position",
                     "type": "Value",
-                    "id": "a2c4de6b-f420-442d-b7a4-ffa42232f7d5",
+                    "id": "47af3d07-e924-4425-9906-9553f5d27c00",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "f994f10e-b772-4e45-bcc3-9081ea9ce0d0",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MouseClick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "4e1a014d-573e-4b6b-a869-70e713487f48",
-                    "path": "<Pointer>/position",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MousePosition",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Start",
-            "id": "3f80a24a-331e-4985-ae46-dfa7d7530665",
-            "actions": [
-                {
-                    "name": "StartGame",
+                    "name": "Start",
                     "type": "Button",
-                    "id": "f7d80967-1d44-4c25-bb8c-ab2548e9f23b",
+                    "id": "9ed91ec3-4342-4271-9035-07b5d4a0b0f2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TrashBag",
+                    "type": "Button",
+                    "id": "33e2d824-6b5d-4f63-ad6a-3f1b2d4fc116",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -143,12 +55,56 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "5614819f-e733-4712-9be1-9e128b921512",
+                    "id": "2b36abdc-6d2b-41be-ab8d-72b36335d8e3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Camera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2e56177a-4d99-4c2a-adea-c56ff558c1d8",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9732c9f0-c910-41c7-b8c3-307f3c7e5b46",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0edb24ef-e488-475c-9d0b-af9f0f7ae876",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "StartGame",
+                    "action": "Start",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "98d19d61-d1b3-4c3d-8a2a-ee8f2fcacb22",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TrashBag",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

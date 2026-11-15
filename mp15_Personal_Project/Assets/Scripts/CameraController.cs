@@ -18,6 +18,9 @@ public class CameraController : MonoBehaviour
     private bool _isTrashCanView;
     private bool _isTransitioning;
     
+    public bool IsTrashCanView => _isTrashCanView;
+    public bool IsTransitioning => _isTransitioning;
+    
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();
     
@@ -91,6 +94,8 @@ public class CameraController : MonoBehaviour
 
     private void SetCameraPosition()
     {
+        _isTrashCanView = false;
+        
         _camera.transform.SetPositionAndRotation(
             _conveyorView.position,
             _conveyorView.rotation);
