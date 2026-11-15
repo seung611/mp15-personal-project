@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class CameraController : MonoBehaviour
+public class PlayerCameraController : MonoBehaviour
 {
     [SerializeField] private InputActionReference _switchCamera;
     [SerializeField] private Camera _camera;

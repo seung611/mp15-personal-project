@@ -7,7 +7,7 @@ public class GarbageBagController : MonoBehaviour
 {
     [SerializeField] private InputActionReference _changeTrashBagAction;
     [SerializeField] private InputActionReference _stopChangeTrashBagAction;
-    [SerializeField] private CameraController _cameraController;
+    [SerializeField] private PlayerCameraController _cameraController;
     [SerializeField] private CanDespawner _canDespawner;
     [SerializeField] private int _garbageBagCapacity = 3;
     
