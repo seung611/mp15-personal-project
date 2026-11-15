@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class CanDespawner : MonoBehaviour
 {
-    [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private ConveyorManager _conveyorManager;
     [SerializeField] private bool _canDeleteSelf;
 
@@ -18,12 +17,12 @@ public class CanDespawner : MonoBehaviour
 
     private void BindInputEvents()
     {
-        _garbageTruckController.OnWorkStarted += StartGameCountInit;
+        GameManager.Instance.OnWorkStarted += StartGameCountInit;
     }
 
     private void UnbindInputEvents()
     {
-        _garbageTruckController.OnWorkStarted -= StartGameCountInit;
+        GameManager.Instance.OnWorkStarted -= StartGameCountInit;
     }
     
     private void OnCollisionEnter(Collision collision)

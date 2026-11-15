@@ -8,7 +8,6 @@ public class GarbageBagController : MonoBehaviour
     [SerializeField] private InputActionReference _changeTrashBagAction;
     [SerializeField] private InputActionReference _stopChangeTrashBagAction;
     [SerializeField] private CameraController _cameraController;
-    [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private CanDespawner _canDespawner;
     [SerializeField] private int _garbageBagCapacity = 3;
     
@@ -35,8 +34,8 @@ public class GarbageBagController : MonoBehaviour
     
     private void BindInputAction()
     {
-        _garbageTruckController.OnWorkStarted += StartGameInit;
-        _garbageTruckController.OnWorkEnded += CancelChangeTrashBag;
+        GameManager.Instance.OnWorkStarted += StartGameInit;
+        GameManager.Instance.OnWorkEnded += CancelChangeTrashBag;
         _changeTrashBagAction.action.Enable();
         _stopChangeTrashBagAction.action.Enable();
         _changeTrashBagAction.action.performed += ChangeGarbageBag;
@@ -45,8 +44,8 @@ public class GarbageBagController : MonoBehaviour
 
     private void UnbindInputAction()
     {
-        _garbageTruckController.OnWorkStarted -= StartGameInit;
-        _garbageTruckController.OnWorkEnded -= CancelChangeTrashBag;
+        GameManager.Instance.OnWorkStarted -= StartGameInit;
+        GameManager.Instance.OnWorkEnded -= CancelChangeTrashBag;
         _changeTrashBagAction.action.Disable();
         _stopChangeTrashBagAction.action.Disable();
         _changeTrashBagAction.action.performed -= ChangeGarbageBag;
@@ -90,7 +89,7 @@ public class GarbageBagController : MonoBehaviour
 
     private void ChangeGarbageBag(InputAction.CallbackContext context)
     {
-        if (!_garbageTruckController.IsWorking || 
+        if (!GameManager.Instance.IsWorking || 
             !_cameraController.IsTrashCanView ||
             _cameraController.IsTransitioning ||
             _currentGarbageBagCapacity == 0 ||

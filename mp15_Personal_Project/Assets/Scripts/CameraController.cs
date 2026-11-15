@@ -6,7 +6,6 @@ using UnityEngine.InputSystem;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private InputActionReference _switchCamera;
-    [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private Camera _camera;
     
     [Header("Camera Position")]
@@ -28,20 +27,20 @@ public class CameraController : MonoBehaviour
     {
         _switchCamera.action.Enable();
         _switchCamera.action.performed += OnSwitchCamera;
-        _garbageTruckController.OnWorkStarted += SetCameraPosition;
+        GameManager.Instance.OnWorkStarted += SetCameraPosition;
     }
 
     private void UnbindInputEvents()
     {
         _switchCamera.action.Disable();
         _switchCamera.action.performed -= OnSwitchCamera;
-        _garbageTruckController.OnWorkStarted -= SetCameraPosition;
+        GameManager.Instance.OnWorkStarted -= SetCameraPosition;
     }
 
     private void OnSwitchCamera(InputAction.CallbackContext context)
     {
         if (_isTransitioning) return;
-        if (!_garbageTruckController.IsWorking) return;
+        if (!GameManager.Instance.IsWorking) return;
         
         _isTrashCanView = !_isTrashCanView;
         

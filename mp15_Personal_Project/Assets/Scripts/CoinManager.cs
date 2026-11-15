@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CoinManager : MonoBehaviour
 {
-    [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private GarbageBagController _garbageBagController;
 
     private int _haveCoin;
@@ -14,12 +13,12 @@ public class CoinManager : MonoBehaviour
     
     private void BindInputAction()
     {
-        _garbageTruckController.OnWorkEnded += ResultReward;
+        GameManager.Instance.OnWorkEnded += ResultReward;
     }
 
     private void UnbindInputAction()
     {
-        _garbageTruckController.OnWorkEnded -= ResultReward;
+        GameManager.Instance.OnWorkEnded -= ResultReward;
     }
 
     private void ResultReward()

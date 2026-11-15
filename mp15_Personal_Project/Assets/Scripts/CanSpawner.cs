@@ -5,7 +5,6 @@ using Random = UnityEngine.Random;
 
 public class CanSpawner : MonoBehaviour
 {
-    [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private GarbageBagController _garbageBagController;
     [SerializeField] private GameObject[] _nomalCanPrefab;
     [SerializeField] private Transform _canRoot;
@@ -18,14 +17,14 @@ public class CanSpawner : MonoBehaviour
 
     private void BindInputEvents()
     {
-        _garbageTruckController.OnWorkStarted += OnSpawnCan;
-        _garbageTruckController.OnWorkEnded += OnSpawnCanStop;
+        GameManager.Instance.OnWorkStarted += OnSpawnCan;
+        GameManager.Instance.OnWorkEnded += OnSpawnCanStop;
     }
 
     private void UnbindInputEvents()
     {
-        _garbageTruckController.OnWorkStarted -= OnSpawnCan;
-        _garbageTruckController.OnWorkEnded -= OnSpawnCanStop;
+        GameManager.Instance.OnWorkStarted -= OnSpawnCan;
+        GameManager.Instance.OnWorkEnded -= OnSpawnCanStop;
     }
 
     // 일반 캔 75%, 고가 캔 25% 랜덤 캔 프리팹

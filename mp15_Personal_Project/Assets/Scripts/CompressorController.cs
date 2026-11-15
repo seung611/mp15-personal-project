@@ -7,7 +7,6 @@ using Debug = UnityEngine.Debug;
 
 public class CompressorController : MonoBehaviour
 {
-    [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private LayerMask _layerMask;
     [SerializeField] private InputActionReference _pointAction;
     [SerializeField] private InputActionReference _clickAction;
@@ -58,7 +57,7 @@ public class CompressorController : MonoBehaviour
 
     private void CompressorTry()
     {
-        if (!_garbageTruckController.IsWorking) return;
+        if (!GameManager.Instance.IsWorking) return;
         if (_runningCoroutine != null) return;
         
         _runningCoroutine = StartCoroutine(PushButtonCoolTime());

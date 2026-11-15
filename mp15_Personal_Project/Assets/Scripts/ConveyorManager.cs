@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ConveyorManager : MonoBehaviour
 {
-    [SerializeField] private GarbageTruckController _garbageTruckController;
     [SerializeField] private GarbageBagController _garbageBagController;
     [SerializeField] private Vector3 _localDirection;
     [SerializeField] private List<Rigidbody> _onConveyors; // 벨트 위 오브젝트 목록
@@ -20,12 +19,13 @@ public class ConveyorManager : MonoBehaviour
     
     private void BindInputEvents()
     {
-        _garbageTruckController.OnWorkEnded += DespawnAllCans;
+        GameManager.Instance.OnWorkEnded += DespawnAllCans;
     }
 
     private void UnbindInputEvents()
     {
-        _garbageTruckController.OnWorkEnded -= DespawnAllCans;
+        if (GameManager.Instance == null) return; 
+        GameManager.Instance.OnWorkEnded -= DespawnAllCans;
     }
     
     public void AddCan(Rigidbody target)
@@ -40,7 +40,7 @@ public class ConveyorManager : MonoBehaviour
     
     private void DespawnAllCans()
     {
-        if (_garbageTruckController.IsWorking) return;
+        if (GameManager.Instance.IsWorking) return;
         
         _onConveyors.Clear();
     }
@@ -51,7 +51,7 @@ public class ConveyorManager : MonoBehaviour
         
         float speed = _speed;
         
-        if (!_garbageTruckController.IsWorking) return;
+        if (!GameManager.Instance.IsWorking) return;
         if (_garbageBagController.IsTrashBagChange)
         {
             speed *= 0.5f;

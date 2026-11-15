@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GarbageTruckController : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     // 게임이 시작되면 시간 감소
     // 만약 패널티가 있으면 추가 시간 감소
@@ -22,6 +22,7 @@ public class GarbageTruckController : MonoBehaviour
     public event Action OnWorkStarted;
     public event Action OnWorkEnded;
 
+    private void Awake() => SetSingleton();
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();
 
