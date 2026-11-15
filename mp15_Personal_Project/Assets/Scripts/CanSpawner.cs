@@ -11,6 +11,7 @@ public class CanSpawner : MonoBehaviour
     [SerializeField] private float _canCreateInterval = 2f;
     
     private Coroutine _runningCoroutine;
+    private float _elapsedTime;
 
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();
@@ -50,23 +51,28 @@ public class CanSpawner : MonoBehaviour
 
     private IEnumerator CorCanSpawn()
     {
-        
         while (true)
         {
-            float canCreateInterval = _canCreateInterval;
-            
-            GameObject prefab = GetRandomPrefab();
-            GameObject can = Instantiate(prefab, 
-                _canRoot.position, 
-                Quaternion.Euler(90f, 0f, 0f), 
-                _canRoot);
+            float spawnTime = Time.deltaTime;
             
             if (_garbageBagController.IsTrashBagChange)
             {
-                canCreateInterval = _canCreateInterval * 2;
+                spawnTime *= 0.5f;
             }
             
-            yield return new WaitForSeconds(canCreateInterval);
+            _elapsedTime += spawnTime;
+
+            if (_elapsedTime > _canCreateInterval)
+            {
+                GameObject prefab = GetRandomPrefab();
+                GameObject can = Instantiate(prefab, 
+                    _canRoot.position, 
+                    Quaternion.Euler(90f, 0f, 0f), 
+                    _canRoot);
+                _elapsedTime = 0f;
+            }
+            
+            yield return null;
         }
     }
 
