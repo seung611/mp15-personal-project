@@ -15,6 +15,7 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public void UseCoin(int value)
     {
+        if (value > _haveCoin) return;
         _haveCoin -= value;
     }
 }
