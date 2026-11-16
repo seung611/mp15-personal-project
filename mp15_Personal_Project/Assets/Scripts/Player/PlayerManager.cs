@@ -11,7 +11,6 @@ public class PlayerManager : Singleton<PlayerManager>
     public void SaveCoin(int roundCoin)
     {
         _haveCoin += roundCoin;
-        UIManager.Instance.InGameUI.SetCoinUI(_haveCoin, roundCoin);
     }
 
     public void UseCoin(int value)

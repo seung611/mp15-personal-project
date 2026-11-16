@@ -12,6 +12,8 @@ public class InGame : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _trashBagText;
     [SerializeField] private TextMeshProUGUI _trashBagState;
     [SerializeField] private Slider _trashBagSlider;
+
+    private int _haveCoin => PlayerManager.Instance.HaveCoin;
     
     public void SetTimeUI(float time)
     {
@@ -32,9 +34,9 @@ public class InGame : MonoBehaviour
         }
     }
 
-    public void SetCoinUI(int haveCoin, int roundCoin)
+    public void SetCoinUI(int roundCoin)
     {
-        _haveCoinText.text = $"{haveCoin}";
+        _haveCoinText.text = $"{_haveCoin}";
         _getCoinText.text = $"Get +{roundCoin}";
     }
 

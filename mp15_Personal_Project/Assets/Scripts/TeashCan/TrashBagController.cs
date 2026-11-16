@@ -64,7 +64,7 @@ public class TrashBagController : MonoBehaviour
         }
 
         AddCanToBag(can);
-        UpdateBagUI();
+        UpdateInGameUI();
         
         DiscardCan(can);
     }
@@ -79,11 +79,13 @@ public class TrashBagController : MonoBehaviour
         _currentBagCoin += can.CanPrice;
         _currentCanCount++;
         _processedCanCount++;
+        UpdateInGameUI();
     }
 
-    private void UpdateBagUI()
+    private void UpdateInGameUI()
     {
         UIManager.Instance.InGameUI.SetTrashBagUI(_currentCanCount, _trashBagCapacity);
+        UIManager.Instance.InGameUI.SetCoinUI(_currentBagCoin);
     }
 
     private void OnChangeBagInput(InputAction.CallbackContext context)
@@ -118,7 +120,7 @@ public class TrashBagController : MonoBehaviour
         _tiedCoin += _currentBagCoin;
         _currentCanCount = 0;
         _currentBagCoin = 0;
-        UpdateBagUI();
+        UpdateInGameUI();
     }
 
     private void OnCancelChangeInput(InputAction.CallbackContext context)
@@ -147,6 +149,6 @@ public class TrashBagController : MonoBehaviour
         _tiedCanCount = 0;
         _currentBagCoin = 0;
         _tiedCoin = 0;
-        UpdateBagUI();
+        UpdateInGameUI();
     }
 }
