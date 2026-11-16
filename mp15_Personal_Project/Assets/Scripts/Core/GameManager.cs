@@ -12,6 +12,7 @@ public class GameManager : Singleton<GameManager>
     
     private float _currentTime;
     private bool _isWorking;
+    private float _elapsedPenaltyTime;
 
     public bool IsWorking => _isWorking;
 
@@ -37,7 +38,7 @@ public class GameManager : Singleton<GameManager>
         {
             _currentTime = 0f;
             UIManager.Instance.InGameUI.SetTimeUI(_currentTime);
-            EndWork();
+            OnEndWork();
         }
     }
 
@@ -51,13 +52,21 @@ public class GameManager : Singleton<GameManager>
         OnWorkStarted?.Invoke();
     }
 
-    private void EndWork()
+    private void OnEndWork()
     {
         if (!_isWorking) return;
 
         _isWorking = false;
-
+        
         OnWorkEnded?.Invoke();
+        SetResultUI();
+        
+    }
+
+    private void SetResultUI()
+    {
+        UIManager.Instance.ResultUI.TotalTime(_workDuration - _elapsedPenaltyTime);
+        UIManager.Instance.ResultUI.gameObject.SetActive(true);
     }
 
     // 패널티를 받았을 때 호출
@@ -65,6 +74,7 @@ public class GameManager : Singleton<GameManager>
     {
         if (!_isWorking) return;
 
+        _elapsedPenaltyTime += penaltyTime;
         _currentTime -= penaltyTime;
     }
 }

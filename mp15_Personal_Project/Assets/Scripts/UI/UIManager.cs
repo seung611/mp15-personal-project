@@ -8,7 +8,7 @@ public class UIManager : Singleton<UIManager>
     [Header("화면")]
     [SerializeField] public Title TitleUI;     // [UI] Title
     [SerializeField] public InGame InGameUI;    // [UI] InGame
-    [SerializeField] public GameObject ResultUI;    // [UI] Result
+    [SerializeField] public Result ResultUI;    // [UI] Result
     [SerializeField] public Help HelpUI;      // [Ui] Help
     [SerializeField] public TitleSetting TitleSettingUI;   // [UI] TitleSetting
     [SerializeField] public GameObject InGameSettingUI;   // [UI] InGameSetting

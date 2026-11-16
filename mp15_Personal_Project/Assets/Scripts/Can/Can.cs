@@ -9,7 +9,7 @@ public class Can : MonoBehaviour
     [SerializeField] private List<Collider> _triggerList = new();
     [SerializeField] private int _canPrice;
 
-    private bool _isSuccess;
+    [SerializeField] private bool _isSuccess;
     
     public bool IsSuccess => _isSuccess;
     public int CanPrice => _canPrice;

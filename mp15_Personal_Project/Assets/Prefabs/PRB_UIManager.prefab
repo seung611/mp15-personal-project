@@ -2910,6 +2910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5214870451326064838}
+  - component: {fileID: 9009456393377341306}
   m_Layer: 5
   m_Name: '[UI] Result'
   m_TagString: Untagged
@@ -2946,6 +2947,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &9009456393377341306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2993028416743724589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bd63bf82ec4c94a8e56c230bf1b421, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Result
+  _nextWorkButton: {fileID: 3682921205215466231}
+  _skillTreeButton: {fileID: 1176465609193388360}
+  _successCanText: {fileID: 6461411705469765313}
+  _failCanText: {fileID: 8573904652841479462}
+  _timeText: {fileID: 1393608658147473595}
+  _tiedCoinText: {fileID: 4885090051161132382}
+  _coinText: {fileID: 3914049599453716566}
 --- !u!1 &3195999724848951317
 GameObject:
   m_ObjectHideFlags: 0
@@ -5645,7 +5665,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2513328370867055151}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9009456393377341306}
+        m_TargetAssemblyTypeName: Result, Assembly-CSharp
+        m_MethodName: OnClickNextWorkButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6073889772499124912
 GameObject:
   m_ObjectHideFlags: 0
@@ -6086,7 +6118,7 @@ RectTransform:
   m_Father: {fileID: 4283204993000615849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6251,7 +6283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   TitleUI: {fileID: 2734240833649264404}
   InGameUI: {fileID: 7091533657683435075}
-  ResultUI: {fileID: 2993028416743724589}
+  ResultUI: {fileID: 9009456393377341306}
   HelpUI: {fileID: 1292099611376061403}
   TitleSettingUI: {fileID: 7238424003776558180}
   InGameSettingUI: {fileID: 8981275316931773729}
@@ -6659,7 +6691,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1255048228127390668}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9009456393377341306}
+        m_TargetAssemblyTypeName: Result, Assembly-CSharp
+        m_MethodName: OnClickSkillTreeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6900307060553830042
 GameObject:
   m_ObjectHideFlags: 0

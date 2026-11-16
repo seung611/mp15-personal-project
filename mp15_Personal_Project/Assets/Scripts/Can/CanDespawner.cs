@@ -9,20 +9,21 @@ public class CanDespawner : MonoBehaviour
     private int _failCanCount;
     private int _successCanCount;
 
-    public int FailCount => _failCanCount;
-    public int SuccessCount => _successCanCount;
-    
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();
 
     private void BindInputEvents()
     {
         GameManager.Instance.OnWorkStarted += StartGameCountInit;
+        if (!_canDeleteSelf) return;
+        GameManager.Instance.OnWorkEnded += EndGame;
     }
 
     private void UnbindInputEvents()
     {
         GameManager.Instance.OnWorkStarted -= StartGameCountInit;
+        if (!_canDeleteSelf) return;
+        GameManager.Instance.OnWorkEnded -= EndGame;
     }
     
     private void OnCollisionEnter(Collision collision)
@@ -47,7 +48,7 @@ public class CanDespawner : MonoBehaviour
         }
         else
         {
-            // _garbageTruckController.AddPenalty(1f);
+            GameManager.Instance.AddPenalty(1f);
             _failCanCount++;
         }
     }
@@ -56,6 +57,11 @@ public class CanDespawner : MonoBehaviour
     {
         _conveyorManager.RemoveCan(can.GetComponent<Rigidbody>());
         Destroy(can.gameObject);
+    }
+
+    private void EndGame()
+    {
+        UIManager.Instance.ResultUI.SetFailCanCount(_failCanCount);
     }
 
     private void StartGameCountInit()

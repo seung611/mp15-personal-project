@@ -22,7 +22,6 @@ public class TrashBagController : MonoBehaviour
     private int _tiedCoin;
 
     public bool IsChangeBag => _isChangingBag;
-    public int TiedCoin => _tiedCoin;
     
     private void OnEnable() => BindEvents();
     private void OnDisable() => UnbindEvents();
@@ -34,7 +33,7 @@ public class TrashBagController : MonoBehaviour
     private void BindEvents()
     {
         GameManager.Instance.OnWorkStarted += ResetForNewWork;
-        GameManager.Instance.OnWorkEnded += CancelBagChange;
+        GameManager.Instance.OnWorkEnded += GameEnd;
         _changeTrashBagAction.action.Enable();
         _stopChangeTrashBagAction.action.Enable();
         _changeTrashBagAction.action.performed += OnChangeBagInput;
@@ -44,7 +43,7 @@ public class TrashBagController : MonoBehaviour
     private void UnbindEvents()
     {
         GameManager.Instance.OnWorkStarted -= ResetForNewWork;
-        GameManager.Instance.OnWorkEnded -= CancelBagChange;
+        GameManager.Instance.OnWorkEnded -= GameEnd;
         _changeTrashBagAction.action.Disable();
         _stopChangeTrashBagAction.action.Disable();
         _changeTrashBagAction.action.performed -= OnChangeBagInput;
@@ -84,7 +83,7 @@ public class TrashBagController : MonoBehaviour
 
     private void UpdateInGameUI()
     {
-        UIManager.Instance.InGameUI.SetTrashBagUI(_currentCanCount, _trashBagCapacity);
+        UIManager.Instance.InGameUI.SetTrashBagUI(_tiedCanCount, _trashBagCapacity);
         UIManager.Instance.InGameUI.SetCoinUI(_currentBagCoin);
     }
 
@@ -126,6 +125,12 @@ public class TrashBagController : MonoBehaviour
     private void OnCancelChangeInput(InputAction.CallbackContext context)
     {
         CancelBagChange();
+    }
+
+    private void GameEnd()
+    {
+        CancelBagChange();
+        UIManager.Instance.ResultUI.TrashBag(_processedCanCount, _tiedCoin);
     }
 
     private void CancelBagChange()
