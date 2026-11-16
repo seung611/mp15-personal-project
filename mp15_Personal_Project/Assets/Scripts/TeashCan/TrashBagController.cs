@@ -128,6 +128,7 @@ public class TrashBagController : MonoBehaviour
     private void GameEnd()
     {
         CancelBagChange();
+        PlayerManager.Instance.SaveCoin(_tiedCoin);
         UIManager.Instance.ResultUI.TrashBag(_tiedCanCount, _tiedCoin);
     }
 
