@@ -16,7 +16,6 @@ public class TrashBagController : MonoBehaviour
     private bool _isBagFull => _currentCanCount >= _trashBagCapacity;
     private float _changeDuration = 2f;
     private int _currentCanCount;
-    private int _processedCanCount;
     private int _tiedCanCount;
     private int _currentBagCoin;
     private int _tiedCoin;
@@ -77,14 +76,13 @@ public class TrashBagController : MonoBehaviour
     {
         _currentBagCoin += can.CanPrice;
         _currentCanCount++;
-        _processedCanCount++;
         UpdateInGameUI();
     }
 
     private void UpdateInGameUI()
     {
-        UIManager.Instance.InGameUI.SetTrashBagUI(_tiedCanCount, _trashBagCapacity);
-        UIManager.Instance.InGameUI.SetCoinUI(_currentBagCoin);
+        UIManager.Instance.InGameUI.SetTrashBagUI(_currentCanCount, _trashBagCapacity);
+        UIManager.Instance.InGameUI.SetCoinUI(_tiedCoin);
     }
 
     private void OnChangeBagInput(InputAction.CallbackContext context)
@@ -130,7 +128,7 @@ public class TrashBagController : MonoBehaviour
     private void GameEnd()
     {
         CancelBagChange();
-        UIManager.Instance.ResultUI.TrashBag(_processedCanCount, _tiedCoin);
+        UIManager.Instance.ResultUI.TrashBag(_tiedCanCount, _tiedCoin);
     }
 
     private void CancelBagChange()
@@ -150,9 +148,8 @@ public class TrashBagController : MonoBehaviour
     private void ResetForNewWork()
     {
         _currentCanCount = 0;
-        _processedCanCount = 0;
-        _tiedCanCount = 0;
         _currentBagCoin = 0;
+        _tiedCanCount = 0;
         _tiedCoin = 0;
         UpdateInGameUI();
     }
