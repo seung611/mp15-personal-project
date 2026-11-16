@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class CanSpawner : MonoBehaviour
 {
-    [SerializeField] private GarbageBagController _garbageBagController;
+    [SerializeField] private TrashBagController _trashBagController;
     [SerializeField] private GameObject[] _nomalCanPrefab;
     [SerializeField] private Transform _canRoot;
     [SerializeField] private float _canCreateInterval = 2f;
@@ -55,7 +55,7 @@ public class CanSpawner : MonoBehaviour
         {
             float spawnTime = Time.deltaTime;
             
-            if (_garbageBagController.IsTrashBagChange)
+            if (_trashBagController.IsChangeBag)
             {
                 spawnTime *= 0.5f;
             }

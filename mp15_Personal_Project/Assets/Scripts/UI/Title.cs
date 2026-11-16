@@ -1,5 +1,4 @@
 using System;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,16 +14,17 @@ public class Title : MonoBehaviour
     public void OnClickStart()
     {
         SceneManager.LoadScene(_nextScene.SceneName);
-        UIManager.Instance._titleUI.SetActive(false);
+        UIManager.Instance.TitleUI.gameObject.SetActive(false);
+        UIManager.Instance.InGameUI.gameObject.SetActive(true);
     }
 
     public void OnClickHelp()
     {
-        UIManager.Instance._helpUI.SetActive(true);
+        UIManager.Instance.HelpUI.gameObject.SetActive(true);
     }
     
     public void OnClickSetting()
     {
-        UIManager.Instance._titleSettingUI.SetActive(true);
+        UIManager.Instance.TitleSettingUI.gameObject.SetActive(true);
     }
 }

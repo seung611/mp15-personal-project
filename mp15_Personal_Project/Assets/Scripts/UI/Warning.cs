@@ -20,12 +20,12 @@ public class Warning : MonoBehaviour
 
     public void OnClickInGameYes()
     {
-        UIManager.Instance._warningUI.SetActive(false);
+        UIManager.Instance.WarningUI.gameObject.SetActive(false);
     }
 
     public void OnClickNo()
     {
-        UIManager.Instance._warningUI.SetActive(false);
+        UIManager.Instance.WarningUI.gameObject.SetActive(false);
     }
 
     public void SetMessage()

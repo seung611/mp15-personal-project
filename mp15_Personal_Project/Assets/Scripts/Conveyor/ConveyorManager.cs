@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConveyorManager : MonoBehaviour
 {
-    [SerializeField] private GarbageBagController _garbageBagController;
+    [SerializeField] private TrashBagController _trashBagController;
     [SerializeField] private Vector3 _localDirection;
     [SerializeField] private List<Rigidbody> _onConveyors; // 벨트 위 오브젝트 목록
     [SerializeField] private float _speed = 1.5f; // 오브젝트 속도
@@ -52,7 +52,7 @@ public class ConveyorManager : MonoBehaviour
         float speed = _speed;
         
         if (!GameManager.Instance.IsWorking) return;
-        if (_garbageBagController.IsTrashBagChange)
+        if (_trashBagController.IsChangeBag)
         {
             speed *= 0.5f;
         }

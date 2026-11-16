@@ -7,6 +7,6 @@ public class Help : MonoBehaviour
     
     public void OnClickEsc()
     {
-        UIManager.Instance._helpUI.SetActive(false);
+        UIManager.Instance.HelpUI.gameObject.SetActive(false);
     }
 }

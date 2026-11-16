@@ -8,58 +8,40 @@ public class GameManager : Singleton<GameManager>
     // 게임이 시작되면 시간 감소
     // 만약 패널티가 있으면 추가 시간 감소
     // 시간이 다 끝나면 작업 종료 및 캔 생성과 모든 걸 멈추기
-
-    [SerializeField] private InputActionReference _gameStartAction;
-    [SerializeField] private float _workDuration = 20f;
-    [SerializeField] private TextMeshProUGUI _timeText;   // 남은 시간을 보여줄 UI (없어도 동작함)
-
+    [SerializeField] private float _workDuration = 60f;
+    
     private float _currentTime;
     private bool _isWorking;
 
     public bool IsWorking => _isWorking;
 
-    // 작업이 끝났을 때 다른 스크립트에게 알려주는 이벤트
     public event Action OnWorkStarted;
     public event Action OnWorkEnded;
 
     private void Awake() => SetSingleton();
-    private void OnEnable() => BindInputEvents();
-    private void OnDisable() => UnbindInputEvents();
 
     private void Start()
     {
         _currentTime = _workDuration;
-        UpdateTimeText();
+        UIManager.Instance.InGameUI.SetTimeUI(_currentTime);
     }
-
+    
     private void Update()
     {
         if (!_isWorking) return;
 
         _currentTime -= Time.deltaTime;   // 매 프레임 흐른 시간만큼 감소
-        UpdateTimeText();
-
+        UIManager.Instance.InGameUI.SetTimeUI(_currentTime);
+        
         if (_currentTime <= 0f)
         {
             _currentTime = 0f;
-            UpdateTimeText();
+            UIManager.Instance.InGameUI.SetTimeUI(_currentTime);
             EndWork();
         }
     }
 
-    private void BindInputEvents()
-    {
-        _gameStartAction.action.Enable();
-        _gameStartAction.action.started += OnStartWork;
-    }
-
-    private void UnbindInputEvents()
-    {
-        _gameStartAction.action.Disable();
-        _gameStartAction.action.started -= OnStartWork;
-    }
-
-    private void OnStartWork(InputAction.CallbackContext context)
+    public void OnStartWork()
     {
         if (_isWorking) return;
 
@@ -84,19 +66,5 @@ public class GameManager : Singleton<GameManager>
         if (!_isWorking) return;
 
         _currentTime -= penaltyTime;
-    }
-
-    private void UpdateTimeText()
-    {
-        if (_timeText == null) return;
-
-        if (_currentTime < 5f)
-        {
-            _timeText.text = (Mathf.Floor(_currentTime * 100f) / 100f).ToString();
-        }
-        else
-        {
-            _timeText.text = Mathf.Floor(_currentTime).ToString();
-        }
     }
 }

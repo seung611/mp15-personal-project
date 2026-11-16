@@ -192,8 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5886923f90121de49a19cf27d3e993da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanSpawner
-  _garbageTruckController: {fileID: 0}
-  _garbageBagController: {fileID: 5137304465488580784}
+  _trashBagController: {fileID: 5137304465488580784}
   _nomalCanPrefab:
   - {fileID: 7722268064461781545, guid: 6e141c7e044082d47814ef5d7a6ba6b9, type: 3}
   - {fileID: 5468738738656942365, guid: 80d35da5fcf138340b29fa06b4781148, type: 3}
@@ -730,7 +729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ee6f31db760944da16a3fd70e00242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanDespawner
-  _garbageTruckController: {fileID: 0}
   _conveyorManager: {fileID: 4471434421062528660}
   _canDeleteSelf: 1
 --- !u!1 &4586215428056969793
@@ -2091,6 +2089,10 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+      propertyPath: _trashBagController
+      value: 
+      objectReference: {fileID: 5137304465488580784}
+    - target: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
       propertyPath: _garbageBagController
       value: 
       objectReference: {fileID: 5137304465488580784}
@@ -2292,6 +2294,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+      propertyPath: _trashBagController
+      value: 
+      objectReference: {fileID: 5137304465488580784}
+    - target: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
       propertyPath: _garbageBagController
       value: 
       objectReference: {fileID: 5137304465488580784}
@@ -2440,6 +2446,10 @@ PrefabInstance:
       propertyPath: _localDirection.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+      propertyPath: _trashBagController
+      value: 
+      objectReference: {fileID: 5137304465488580784}
     - target: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
       propertyPath: _garbageBagController
       value: 
@@ -2655,6 +2665,10 @@ PrefabInstance:
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+      propertyPath: _trashBagController
+      value: 
+      objectReference: {fileID: 5137304465488580784}
+    - target: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
       propertyPath: _garbageBagController
       value: 
       objectReference: {fileID: 5137304465488580784}
@@ -2804,6 +2818,10 @@ PrefabInstance:
       propertyPath: _localDirection.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
+      propertyPath: _trashBagController
+      value: 
+      objectReference: {fileID: 5137304465488580784}
     - target: {fileID: 1432455535128684688, guid: 0cbf8189007ea2042bac268ea5abc22c, type: 3}
       propertyPath: _garbageBagController
       value: 
