@@ -13,7 +13,7 @@ public class SkillToolTip : MonoBehaviour
 
     private RectTransform _toolTipPosition;
 
-    public void Show(Node node, RectTransform target)
+    public void Show(NodeData node, RectTransform target)
     {
         _skillName.text = node.SkillName;
         _description.text = node.Description;

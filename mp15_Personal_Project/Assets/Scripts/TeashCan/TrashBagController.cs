@@ -11,7 +11,7 @@ public class TrashBagController : MonoBehaviour
     [SerializeField] private CanDespawner _canDespawner;
     [SerializeField] private float _changeDuration = 2f;
     [SerializeField] private int _trashBagCapacity = 3;
-    
+
     private Coroutine _changeBagCoroutine;
     private bool _isBagFull => _currentCanCount >= _trashBagCapacity;
     private bool _isChangingBag;
@@ -21,6 +21,7 @@ public class TrashBagController : MonoBehaviour
     private int _tiedCoin;
 
     public bool IsChangeBag => _isChangingBag;
+    public int TrashBagCapacity { get => _trashBagCapacity; set => _trashBagCapacity = value; }
     
     private void OnEnable() => BindEvents();
     private void OnDisable() => UnbindEvents();

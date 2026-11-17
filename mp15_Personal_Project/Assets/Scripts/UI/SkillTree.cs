@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +7,9 @@ public class SkillTree : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _coinsText;
     [SerializeField] private Button _continueButton;
-    [SerializeField] private SkillNodeButton[] _nodeButtons;
+    [SerializeField] private Node[] _node;
+
+    private Dictionary<EffectType, Node> _nodeDictionary = new();
     
     private int _haveCoin => PlayerManager.Instance.HaveCoin;
     
@@ -23,9 +26,9 @@ public class SkillTree : MonoBehaviour
 
     public void RefreshAllNodes()
     {
-        foreach (SkillNodeButton node in _nodeButtons)
+        foreach (Node node in _node)
         {
-            node.RefreshVisual();
+            node.Button.RefreshVisual();
         }
     }
 }

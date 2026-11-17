@@ -1,19 +1,12 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Node", menuName = "Skill/Node")]
-public class Node : ScriptableObject
+public class Node : MonoBehaviour
 {
-    [SerializeField] private string _skillId;
-    [SerializeField] private string _skillName;
-    [TextArea] [SerializeField] private string _description;
-    [SerializeField] private int _skillPrice;
-    [SerializeField] private int _effectValue;
-    [SerializeField] private Node _prevNode;
+    [SerializeField] private NodeData _nodeData;
+    [SerializeField] private SkillNodeButton _button;
+    [SerializeField] private NodeEffect _nodeEffect;
     
-    public string SkillId => _skillId;
-    public string SkillName => _skillName;
-    public string Description => _description;
-    public int SkillPrice => _skillPrice;
-    public int EffectValue => _effectValue;
-    public Node PrevNode => _prevNode;
+    public NodeData NodeData => _nodeData;
+    public NodeEffect NodeEffect => _nodeEffect;
+    public SkillNodeButton Button => _button;
 }

@@ -16,5 +16,6 @@ MonoBehaviour:
   _skillName: "\uBD09\uD22C \uC6A9\uB7C9 \uC99D\uAC00"
   _description: Increase in envelope capacity
   _skillPrice: 50
+  _effectType: 1
   _effectValue: 1
   _prevNode: {fileID: 11400000, guid: 8d3f0a72257b0e44991286a6f52a7eb6, type: 2}

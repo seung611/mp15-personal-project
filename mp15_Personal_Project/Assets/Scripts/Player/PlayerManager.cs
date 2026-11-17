@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
     private int _haveCoin = 500;
-    private HashSet<string> _haveNodes = new HashSet<string>();
+    private HashSet<string> _haveNodes = new();
+    private ApplyEffect _applyEffect;
 
     public int HaveCoin => _haveCoin;
 
@@ -25,15 +27,22 @@ public class PlayerManager : Singleton<PlayerManager>
 
     public bool IsPurchased(Node node)
     {
-        return _haveNodes.Contains(node.SkillId);
+        return _haveNodes.Contains(node.NodeData.SkillId);
     }
     
     public bool TryPurchase(Node node)
     {
         if (!CanPurchase(node)) return false;
         
-        _haveNodes.Add(node.SkillId);
-        UseCoin(node.SkillPrice);
+        _haveNodes.Add(node.NodeData.SkillId);
+
+        Debug.Log("구매");
+        if (node.NodeEffect != null)
+        {
+            Debug.Log("플레이어 매니저");
+            node.NodeEffect.SetNodeEffect(_applyEffect);
+        }
+        UseCoin(node.NodeData.SkillPrice);
         
         return true;
     }
@@ -42,15 +51,19 @@ public class PlayerManager : Singleton<PlayerManager>
     {
         return IsPrevNodeCleared(node)
                && !IsPurchased(node)
-               && _haveCoin >= node.SkillPrice;
+               && _haveCoin >= node.NodeData.SkillPrice;
     }
 
     public bool IsPrevNodeCleared(Node node)
     {
-        return (node.PrevNode == null
-                || _haveNodes.Contains(node.PrevNode.SkillId));
+        return (node.NodeData.PrevNode == null
+                || _haveNodes.Contains(node.NodeData.PrevNode.SkillId));
     }
 
+    public void SetApplyEffect(ApplyEffect applyEffect)
+    {
+        _applyEffect = applyEffect;
+    }
 
     private void UpdateUI()
     {
