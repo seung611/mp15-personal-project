@@ -48,6 +48,8 @@ public class SkillNodeButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     public void RefreshVisual()
     {
+        UpdateVisibility();
+        
         switch (GetState())
         {
             case NodeState.Available:
@@ -60,8 +62,12 @@ public class SkillNodeButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
                 _stateImage.color = _purchasedColor;
                 break;
             case NodeState.Hidden:
-                _stateImage.color = Color.gray;
                 break;
         }
+    }
+
+    private void UpdateVisibility()
+    {
+        gameObject.SetActive(GetState() != NodeState.Hidden);
     }
 }
