@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: eed033295eafd8b4cad5a360701dbe3c, type: 2}
+  _lineToPrev: {fileID: 6694740423929392723}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 2788136213656780458}
   _stateImage: {fileID: 6228301843439781124}
@@ -4919,6 +4920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: b0be8ad343a5ddd4193574fef638d364, type: 2}
+  _lineToPrev: {fileID: 7444554407936035195}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 2956049662111449382}
   _stateImage: {fileID: 806854890907134057}
@@ -5343,6 +5345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: c73debd33ce6dee4db5b411be41b5c19, type: 2}
+  _lineToPrev: {fileID: 9043819021720439610}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 372090587542483279}
   _stateImage: {fileID: 296149656982019941}
@@ -5711,6 +5714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: 1deb208baa1b2c84892b10873a9b5076, type: 2}
+  _lineToPrev: {fileID: 3470322631113318412}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 8404073049229091307}
   _stateImage: {fileID: 4960183601316598607}
@@ -5807,6 +5811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: a1a5cd35321dc8d418bded7522efda07, type: 2}
+  _lineToPrev: {fileID: 8454142205460048514}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 8441555389840722202}
   _stateImage: {fileID: 524798621826003694}
@@ -7409,6 +7414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: 2c4657db3d55b0e4084f965ebb9ee402, type: 2}
+  _lineToPrev: {fileID: 941422472613793911}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 7820593762138131235}
   _stateImage: {fileID: 7818195146017619459}
@@ -7691,6 +7697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: cf04fdceb9d0dfb4295a04a4570c0aed, type: 2}
+  _lineToPrev: {fileID: 9204067383301435478}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 2061777465946068381}
   _stateImage: {fileID: 7136172877946253629}
@@ -7862,6 +7869,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: 8d3f0a72257b0e44991286a6f52a7eb6, type: 2}
+  _lineToPrev: {fileID: 6635419283750579464}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 7016528452683455562}
   _stateImage: {fileID: 1175328595159767786}
@@ -9734,6 +9742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: 16815931605f59a44999de2488b7555b, type: 2}
+  _lineToPrev: {fileID: 8971599846691779106}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 7673339302707703128}
   _stateImage: {fileID: 2554583861567417103}
@@ -11034,6 +11043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: b1448216f782bf5499d6a1d214ea52db, type: 2}
+  _lineToPrev: {fileID: 4946193106751051107}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 5073628815044545410}
   _stateImage: {fileID: 1289349818344782362}
@@ -13127,6 +13137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: d4b7393f1d0c0594eb0cb3eed1bda24a, type: 2}
+  _lineToPrev: {fileID: 0}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 5745420970805813159}
   _stateImage: {fileID: 65609508318326057}
@@ -14091,6 +14102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: 6685d2f59fa22984380e52592d115fc9, type: 2}
+  _lineToPrev: {fileID: 5740219181277831615}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 1720353177384991157}
   _stateImage: {fileID: 2317124964554855599}
@@ -15637,6 +15649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: f4b9090c5cf36604294522652e944710, type: 2}
+  _lineToPrev: {fileID: 4236369294459728755}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 4832443360531208897}
   _stateImage: {fileID: 1055360333817376288}
@@ -15909,6 +15922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
   _node: {fileID: 11400000, guid: d37725cef442186469edd15e1a3d8546, type: 2}
+  _lineToPrev: {fileID: 1296583123243660777}
   _toolTip: {fileID: 6515954067800004608}
   _skillButton: {fileID: 5487681998451449899}
   _stateImage: {fileID: 3824003283558849690}

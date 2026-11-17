@@ -1,3 +1,4 @@
+using System.Net;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -5,6 +6,7 @@ using UnityEngine.UI;
 public class SkillNodeButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private Node _node;
+    [SerializeField] private Image _lineToPrev;
     [SerializeField] private SkillToolTip _toolTip;
     [SerializeField] private Button _skillButton;
     [SerializeField] private Image _stateImage;
@@ -69,5 +71,8 @@ public class SkillNodeButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
     private void UpdateVisibility()
     {
         gameObject.SetActive(GetState() != NodeState.Hidden);
+        
+        if (_lineToPrev == null) return;
+        _lineToPrev.gameObject.SetActive(GetState() != NodeState.Hidden);	
     }
 }
