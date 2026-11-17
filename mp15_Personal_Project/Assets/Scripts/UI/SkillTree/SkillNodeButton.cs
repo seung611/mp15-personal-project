@@ -16,6 +16,16 @@ public class SkillNodeButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         PlayerManager.Instance.TryPurchase(_node);
     }
+    
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        _toolTip.Show(_node, transform as RectTransform);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        _toolTip.Hide();
+    }
 
     private NodeState GetState()
     {
