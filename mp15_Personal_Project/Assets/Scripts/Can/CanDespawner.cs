@@ -61,7 +61,7 @@ public class CanDespawner : MonoBehaviour
 
     private void EndGame()
     {
-        UIManager.Instance.ResultUI.SetFailCanCount(_failCanCount);
+        UIManager.Instance.ResultUI.SetFailCanText(_failCanCount);
     }
 
     private void StartGameCountInit()

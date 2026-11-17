@@ -10,18 +10,18 @@ public class InGameSetting : MonoBehaviour
     
     public void OnClickEsc()
     {
-        UIManager.Instance.TitleSettingUI.gameObject.SetActive(false);
+        UIManager.Instance.InGameSettingUI.gameObject.SetActive(false);
     }
     
     public void OnClickContinueButton()
     {
-        UIManager.Instance.TitleSettingUI.gameObject.SetActive(false);
+        UIManager.Instance.InGameSettingUI.gameObject.SetActive(false);
     }
     
     public void OnClickTitleButton()
     {
         UIManager.Instance.WarningUI.gameObject.SetActive(true);
-        UIManager.Instance.TitleSettingUI.gameObject.SetActive(false);
+        UIManager.Instance.InGameSettingUI.gameObject.SetActive(false);
     }
 
     public void OnMusicValueChange()

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002086272d52a6c40afa1220f7ba37cc, type: 3}
+  m_Name: Node_Work
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _skillId: Work
+  _skillName: "\uC791\uC5C5 \uD6A8\uC728 \uAC08\uB798"
+  _description: Work Efficiency Branch
+  _skillPrice: 50
+  _effectValue: 0
+  _prevNode: {fileID: 11400000, guid: d4b7393f1d0c0594eb0cb3eed1bda24a, type: 2}

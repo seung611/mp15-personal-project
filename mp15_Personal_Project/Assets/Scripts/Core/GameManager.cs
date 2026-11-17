@@ -59,15 +59,16 @@ public class GameManager : Singleton<GameManager>
         _isWorking = false;
         
         OnWorkEnded?.Invoke();
-        SetResultUI();
+        UpdateUI();
         
+        _elapsedPenaltyTime = 0;
     }
 
-    private void SetResultUI() 
+    private void UpdateUI() 
     {
-        UIManager.Instance.ResultUI.TotalTime(_workDuration - _elapsedPenaltyTime);
+        UIManager.Instance.ResultUI.SetTotalTimeText(_workDuration - _elapsedPenaltyTime);
+        UIManager.Instance.InGameUI.gameObject.SetActive(false);
         UIManager.Instance.ResultUI.gameObject.SetActive(true);
-        _elapsedPenaltyTime = 0;
     }
 
     // 패널티를 받았을 때 호출

@@ -9,12 +9,12 @@ public class TrashBagController : MonoBehaviour
     [SerializeField] private InputActionReference _stopChangeTrashBagAction;
     [SerializeField] private PlayerCameraController _cameraController;
     [SerializeField] private CanDespawner _canDespawner;
+    [SerializeField] private float _changeDuration = 2f;
     [SerializeField] private int _trashBagCapacity = 3;
     
     private Coroutine _changeBagCoroutine;
-    private bool _isChangingBag;
     private bool _isBagFull => _currentCanCount >= _trashBagCapacity;
-    private float _changeDuration = 2f;
+    private bool _isChangingBag;
     private int _currentCanCount;
     private int _tiedCanCount;
     private int _currentBagCoin;
@@ -129,7 +129,7 @@ public class TrashBagController : MonoBehaviour
     {
         CancelBagChange();
         PlayerManager.Instance.SaveCoin(_tiedCoin);
-        UIManager.Instance.ResultUI.TrashBag(_tiedCanCount, _tiedCoin);
+        UIManager.Instance.ResultUI.SetTrashBagUI(_tiedCanCount, _tiedCoin);
     }
 
     private void CancelBagChange()
