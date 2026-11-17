@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 8630006488980151952}
   - component: {fileID: 8317448881961802730}
   - component: {fileID: 6228301843439781124}
+  - component: {fileID: 3284959487075821328}
   m_Layer: 5
   m_Name: Skill3
   m_TagString: Untagged
@@ -329,6 +330,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3284959487075821328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228587388668152796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38db8411170fa54b8f892bb374af5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
+  _node: {fileID: 11400000, guid: eed033295eafd8b4cad5a360701dbe3c, type: 2}
+  _toolTip: {fileID: 6515954067800004608}
+  _skillButton: {fileID: 2788136213656780458}
+  _stateImage: {fileID: 6228301843439781124}
+  _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
+  _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
+  _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
 --- !u!1 &289932063247334745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,7 +1624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1585452720753011047
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4820,6 +4840,7 @@ GameObject:
   - component: {fileID: 1096646963061552429}
   - component: {fileID: 7990487796505768189}
   - component: {fileID: 806854890907134057}
+  - component: {fileID: 2664876179643748077}
   m_Layer: 5
   m_Name: Skill3
   m_TagString: Untagged
@@ -4885,6 +4906,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2664876179643748077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855726642157023086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38db8411170fa54b8f892bb374af5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
+  _node: {fileID: 11400000, guid: b0be8ad343a5ddd4193574fef638d364, type: 2}
+  _toolTip: {fileID: 6515954067800004608}
+  _skillButton: {fileID: 2956049662111449382}
+  _stateImage: {fileID: 806854890907134057}
+  _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
+  _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
+  _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
 --- !u!1 &2861801289137577583
 GameObject:
   m_ObjectHideFlags: 0
@@ -5224,6 +5264,7 @@ GameObject:
   - component: {fileID: 3025179127298953500}
   - component: {fileID: 5901466376502084674}
   - component: {fileID: 296149656982019941}
+  - component: {fileID: 1681924869496266218}
   m_Layer: 5
   m_Name: Skill2
   m_TagString: Untagged
@@ -5289,6 +5330,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1681924869496266218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2986755230808308009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38db8411170fa54b8f892bb374af5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
+  _node: {fileID: 11400000, guid: c73debd33ce6dee4db5b411be41b5c19, type: 2}
+  _toolTip: {fileID: 6515954067800004608}
+  _skillButton: {fileID: 372090587542483279}
+  _stateImage: {fileID: 296149656982019941}
+  _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
+  _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
+  _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
 --- !u!1 &2993028416743724589
 GameObject:
   m_ObjectHideFlags: 0
@@ -5668,6 +5728,7 @@ GameObject:
   - component: {fileID: 8594513380512181738}
   - component: {fileID: 166255222079303928}
   - component: {fileID: 524798621826003694}
+  - component: {fileID: 2992484978575197912}
   m_Layer: 5
   m_Name: Skill4
   m_TagString: Untagged
@@ -5733,6 +5794,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2992484978575197912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3268824216009248018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38db8411170fa54b8f892bb374af5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
+  _node: {fileID: 11400000, guid: a1a5cd35321dc8d418bded7522efda07, type: 2}
+  _toolTip: {fileID: 6515954067800004608}
+  _skillButton: {fileID: 8441555389840722202}
+  _stateImage: {fileID: 524798621826003694}
+  _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
+  _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
+  _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
 --- !u!1 &3445170165998294298
 GameObject:
   m_ObjectHideFlags: 0
@@ -7523,6 +7603,7 @@ GameObject:
   - component: {fileID: 7829165710880755527}
   - component: {fileID: 8921985062290924513}
   - component: {fileID: 7136172877946253629}
+  - component: {fileID: 7131849665648954955}
   m_Layer: 5
   m_Name: Skill1
   m_TagString: Untagged
@@ -7588,6 +7669,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7131849665648954955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431343907774776419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38db8411170fa54b8f892bb374af5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
+  _node: {fileID: 11400000, guid: cf04fdceb9d0dfb4295a04a4570c0aed, type: 2}
+  _toolTip: {fileID: 6515954067800004608}
+  _skillButton: {fileID: 2061777465946068381}
+  _stateImage: {fileID: 7136172877946253629}
+  _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
+  _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
+  _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
 --- !u!1 &4441952456783557225
 GameObject:
   m_ObjectHideFlags: 0
@@ -9546,6 +9646,7 @@ GameObject:
   - component: {fileID: 6412924274049384828}
   - component: {fileID: 6473337357371926159}
   - component: {fileID: 2554583861567417103}
+  - component: {fileID: 601514300169079242}
   m_Layer: 5
   m_Name: Skill2
   m_TagString: Untagged
@@ -9611,6 +9712,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &601514300169079242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548282493383764419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38db8411170fa54b8f892bb374af5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
+  _node: {fileID: 11400000, guid: 16815931605f59a44999de2488b7555b, type: 2}
+  _toolTip: {fileID: 6515954067800004608}
+  _skillButton: {fileID: 7673339302707703128}
+  _stateImage: {fileID: 2554583861567417103}
+  _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
+  _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
+  _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
 --- !u!1 &5567309828171378815
 GameObject:
   m_ObjectHideFlags: 0
@@ -10826,6 +10946,7 @@ GameObject:
   - component: {fileID: 606963273926364081}
   - component: {fileID: 4593992672943634705}
   - component: {fileID: 1289349818344782362}
+  - component: {fileID: 1614663433054928147}
   m_Layer: 5
   m_Name: Skill1
   m_TagString: Untagged
@@ -10891,6 +11012,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1614663433054928147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456765092131427666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38db8411170fa54b8f892bb374af5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
+  _node: {fileID: 11400000, guid: b1448216f782bf5499d6a1d214ea52db, type: 2}
+  _toolTip: {fileID: 6515954067800004608}
+  _skillButton: {fileID: 5073628815044545410}
+  _stateImage: {fileID: 1289349818344782362}
+  _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
+  _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
+  _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
 --- !u!1 &6552508317184250692
 GameObject:
   m_ObjectHideFlags: 0
@@ -13863,6 +14003,7 @@ GameObject:
   - component: {fileID: 3433488568839258881}
   - component: {fileID: 1488718034725852131}
   - component: {fileID: 2317124964554855599}
+  - component: {fileID: 427408352907014017}
   m_Layer: 5
   m_Name: Skill3
   m_TagString: Untagged
@@ -13928,6 +14069,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &427408352907014017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827763674307648511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38db8411170fa54b8f892bb374af5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
+  _node: {fileID: 11400000, guid: 6685d2f59fa22984380e52592d115fc9, type: 2}
+  _toolTip: {fileID: 6515954067800004608}
+  _skillButton: {fileID: 1720353177384991157}
+  _stateImage: {fileID: 2317124964554855599}
+  _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
+  _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
+  _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
 --- !u!1 &7889687915795913316
 GameObject:
   m_ObjectHideFlags: 0
@@ -15389,6 +15549,7 @@ GameObject:
   - component: {fileID: 33118650783287170}
   - component: {fileID: 6100145562235176370}
   - component: {fileID: 1055360333817376288}
+  - component: {fileID: 8111828415737163265}
   m_Layer: 5
   m_Name: Skill2
   m_TagString: Untagged
@@ -15454,6 +15615,25 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8111828415737163265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8479397291761432128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a38db8411170fa54b8f892bb374af5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillNodeButton
+  _node: {fileID: 11400000, guid: f4b9090c5cf36604294522652e944710, type: 2}
+  _toolTip: {fileID: 6515954067800004608}
+  _skillButton: {fileID: 4832443360531208897}
+  _stateImage: {fileID: 1055360333817376288}
+  _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
+  _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
+  _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
 --- !u!1 &8507395160063895879
 GameObject:
   m_ObjectHideFlags: 0
