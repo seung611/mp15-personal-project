@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5824623538465932849}
   - component: {fileID: 5315325043152457565}
   m_Layer: 5
-  m_Name: Button
+  m_Name: '[I] Button'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,8 +264,9 @@ GameObject:
   - component: {fileID: 8630006488980151952}
   - component: {fileID: 8317448881961802730}
   - component: {fileID: 6228301843439781124}
-  - component: {fileID: 3284959487075821328}
   - component: {fileID: 1817686791563360314}
+  - component: {fileID: 3284959487075821328}
+  - component: {fileID: 8481998262540264312}
   m_Layer: 5
   m_Name: Skill3
   m_TagString: Untagged
@@ -331,6 +332,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1817686791563360314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228587388668152796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: eed033295eafd8b4cad5a360701dbe3c, type: 2}
+  _button: {fileID: 3284959487075821328}
+  _nodeEffect: {fileID: 8481998262540264312}
 --- !u!114 &3284959487075821328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,7 +367,7 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &1817686791563360314
+--- !u!114 &8481998262540264312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,12 +376,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 228587388668152796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Script: {fileID: 11500000, guid: 72af4d79b9fca69419c2c07b097a96af, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: eed033295eafd8b4cad5a360701dbe3c, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::TieBagOnWorkEnd
 --- !u!1 &289932063247334745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1050,7 @@ GameObject:
   - component: {fileID: 3204345245877126898}
   - component: {fileID: 1891510600228409827}
   m_Layer: 5
-  m_Name: Coin
+  m_Name: '[I] Coin'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1624,7 +1637,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4801924038831174170}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3284959487075821328}
+        m_TargetAssemblyTypeName: SkillNodeButton, Assembly-CSharp
+        m_MethodName: OnClickSkillButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &863308319372174504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,7 +1720,7 @@ GameObject:
   - component: {fileID: 3064191657576472116}
   - component: {fileID: 4434050713246161446}
   m_Layer: 5
-  m_Name: TrashBagSlider
+  m_Name: '[S] Amount'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4857,8 +4882,8 @@ GameObject:
   - component: {fileID: 1096646963061552429}
   - component: {fileID: 7990487796505768189}
   - component: {fileID: 806854890907134057}
-  - component: {fileID: 2664876179643748077}
   - component: {fileID: 1266341477627733151}
+  - component: {fileID: 2664876179643748077}
   m_Layer: 5
   m_Name: Skill3
   m_TagString: Untagged
@@ -4924,6 +4949,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1266341477627733151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855726642157023086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: b0be8ad343a5ddd4193574fef638d364, type: 2}
+  _button: {fileID: 2664876179643748077}
+  _nodeEffect: {fileID: 0}
 --- !u!114 &2664876179643748077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4944,21 +4984,6 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &1266341477627733151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2855726642157023086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: b0be8ad343a5ddd4193574fef638d364, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
 --- !u!1 &2861801289137577583
 GameObject:
   m_ObjectHideFlags: 0
@@ -5185,7 +5210,7 @@ GameObject:
   - component: {fileID: 3179220345214838103}
   - component: {fileID: 984957143211614771}
   m_Layer: 5
-  m_Name: Time
+  m_Name: '[I] Time'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5298,8 +5323,8 @@ GameObject:
   - component: {fileID: 3025179127298953500}
   - component: {fileID: 5901466376502084674}
   - component: {fileID: 296149656982019941}
-  - component: {fileID: 1681924869496266218}
   - component: {fileID: 1828145151057868871}
+  - component: {fileID: 1681924869496266218}
   m_Layer: 5
   m_Name: Skill2
   m_TagString: Untagged
@@ -5365,6 +5390,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1828145151057868871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2986755230808308009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: c73debd33ce6dee4db5b411be41b5c19, type: 2}
+  _button: {fileID: 1681924869496266218}
+  _nodeEffect: {fileID: 0}
 --- !u!114 &1681924869496266218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5385,21 +5425,6 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &1828145151057868871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2986755230808308009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: c73debd33ce6dee4db5b411be41b5c19, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
 --- !u!1 &2993028416743724589
 GameObject:
   m_ObjectHideFlags: 0
@@ -5416,7 +5441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5214870451326064838
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5683,8 +5708,8 @@ GameObject:
   - component: {fileID: 7627762626294238668}
   - component: {fileID: 6394956637155827002}
   - component: {fileID: 4960183601316598607}
-  - component: {fileID: 4322915073917510680}
   - component: {fileID: 2459912482702212865}
+  - component: {fileID: 4322915073917510680}
   m_Layer: 5
   m_Name: Skill
   m_TagString: Untagged
@@ -5750,6 +5775,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2459912482702212865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3212187357572101830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: 1deb208baa1b2c84892b10873a9b5076, type: 2}
+  _button: {fileID: 4322915073917510680}
+  _nodeEffect: {fileID: 0}
 --- !u!114 &4322915073917510680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5770,21 +5810,6 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &2459912482702212865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3212187357572101830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: 1deb208baa1b2c84892b10873a9b5076, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
 --- !u!1 &3268824216009248018
 GameObject:
   m_ObjectHideFlags: 0
@@ -5796,8 +5821,8 @@ GameObject:
   - component: {fileID: 8594513380512181738}
   - component: {fileID: 166255222079303928}
   - component: {fileID: 524798621826003694}
-  - component: {fileID: 2992484978575197912}
   - component: {fileID: 2808179966858540077}
+  - component: {fileID: 2992484978575197912}
   m_Layer: 5
   m_Name: Skill4
   m_TagString: Untagged
@@ -5818,11 +5843,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4369218528364812962}
-  m_Father: {fileID: 2552149882305951983}
+  m_Father: {fileID: 6087621598667850166}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 169}
+  m_AnchoredPosition: {x: 106, y: 202}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &166255222079303928
@@ -5863,6 +5888,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2808179966858540077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3268824216009248018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: a1a5cd35321dc8d418bded7522efda07, type: 2}
+  _button: {fileID: 2992484978575197912}
+  _nodeEffect: {fileID: 0}
 --- !u!114 &2992484978575197912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5883,21 +5923,6 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &2808179966858540077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3268824216009248018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: a1a5cd35321dc8d418bded7522efda07, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
 --- !u!1 &3445170165998294298
 GameObject:
   m_ObjectHideFlags: 0
@@ -6935,7 +6960,7 @@ GameObject:
   - component: {fileID: 2543011244910296476}
   - component: {fileID: 7810991608341616905}
   m_Layer: 5
-  m_Name: Text
+  m_Name: '[T] Text'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7209,7 +7234,7 @@ GameObject:
   - component: {fileID: 8220528277690698412}
   - component: {fileID: 1478962679113659263}
   m_Layer: 5
-  m_Name: GetCoin
+  m_Name: '[T] GetCoin'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7395,11 +7420,11 @@ MonoBehaviour:
   - {fileID: 3444551843535727238}
   - {fileID: 1144258713859314369}
   - {fileID: 1817686791563360314}
+  - {fileID: 2808179966858540077}
   - {fileID: 2459912482702212865}
   - {fileID: 8839132237513317623}
   - {fileID: 855189635248579516}
   - {fileID: 1562351296003909791}
-  - {fileID: 2808179966858540077}
   - {fileID: 5478330933566820922}
   - {fileID: 762692865924277693}
   - {fileID: 1828145151057868871}
@@ -7415,8 +7440,8 @@ GameObject:
   - component: {fileID: 1551726827935862892}
   - component: {fileID: 2168006282699509200}
   - component: {fileID: 7818195146017619459}
-  - component: {fileID: 2429958340116504312}
   - component: {fileID: 5478330933566820922}
+  - component: {fileID: 2429958340116504312}
   m_Layer: 5
   m_Name: Skill
   m_TagString: Untagged
@@ -7482,6 +7507,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5478330933566820922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4266973601613734337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: 2c4657db3d55b0e4084f965ebb9ee402, type: 2}
+  _button: {fileID: 2429958340116504312}
+  _nodeEffect: {fileID: 0}
 --- !u!114 &2429958340116504312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7502,21 +7542,6 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &5478330933566820922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4266973601613734337}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: 2c4657db3d55b0e4084f965ebb9ee402, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
 --- !u!1 &4323896397653456759
 GameObject:
   m_ObjectHideFlags: 0
@@ -7640,7 +7665,7 @@ GameObject:
   - component: {fileID: 2028959410647663134}
   - component: {fileID: 1543886864369972684}
   m_Layer: 5
-  m_Name: BackGround
+  m_Name: '[I] BackGround'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7714,8 +7739,8 @@ GameObject:
   - component: {fileID: 7829165710880755527}
   - component: {fileID: 8921985062290924513}
   - component: {fileID: 7136172877946253629}
-  - component: {fileID: 7131849665648954955}
   - component: {fileID: 8839132237513317623}
+  - component: {fileID: 7131849665648954955}
   m_Layer: 5
   m_Name: Skill1
   m_TagString: Untagged
@@ -7781,6 +7806,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8839132237513317623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431343907774776419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: cf04fdceb9d0dfb4295a04a4570c0aed, type: 2}
+  _button: {fileID: 7131849665648954955}
+  _nodeEffect: {fileID: 0}
 --- !u!114 &7131849665648954955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7801,21 +7841,6 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &8839132237513317623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4431343907774776419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: cf04fdceb9d0dfb4295a04a4570c0aed, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
 --- !u!1 &4441952456783557225
 GameObject:
   m_ObjectHideFlags: 0
@@ -7902,8 +7927,8 @@ GameObject:
   - component: {fileID: 6390879646924058437}
   - component: {fileID: 3462413274557514848}
   - component: {fileID: 1175328595159767786}
-  - component: {fileID: 3904600726046971966}
   - component: {fileID: 8634973198538853477}
+  - component: {fileID: 3904600726046971966}
   m_Layer: 5
   m_Name: Skill
   m_TagString: Untagged
@@ -7969,6 +7994,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8634973198538853477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4442537214858612328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: 8d3f0a72257b0e44991286a6f52a7eb6, type: 2}
+  _button: {fileID: 3904600726046971966}
+  _nodeEffect: {fileID: 0}
 --- !u!114 &3904600726046971966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7989,21 +8029,6 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &8634973198538853477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4442537214858612328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: 8d3f0a72257b0e44991286a6f52a7eb6, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
 --- !u!1 &4447227261774800772
 GameObject:
   m_ObjectHideFlags: 0
@@ -8501,7 +8526,7 @@ GameObject:
   - component: {fileID: 6471809302596710136}
   - component: {fileID: 4584855485930314661}
   m_Layer: 5
-  m_Name: GameName
+  m_Name: '[T] Name'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9388,7 +9413,7 @@ GameObject:
   - component: {fileID: 4446195671070521972}
   - component: {fileID: 7012177412869458245}
   m_Layer: 5
-  m_Name: Image
+  m_Name: '[I] KeyIcon'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9791,8 +9816,8 @@ GameObject:
   - component: {fileID: 6412924274049384828}
   - component: {fileID: 6473337357371926159}
   - component: {fileID: 2554583861567417103}
-  - component: {fileID: 601514300169079242}
   - component: {fileID: 855189635248579516}
+  - component: {fileID: 601514300169079242}
   m_Layer: 5
   m_Name: Skill2
   m_TagString: Untagged
@@ -9858,6 +9883,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &855189635248579516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548282493383764419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: 16815931605f59a44999de2488b7555b, type: 2}
+  _button: {fileID: 601514300169079242}
+  _nodeEffect: {fileID: 0}
 --- !u!114 &601514300169079242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9878,21 +9918,6 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &855189635248579516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5548282493383764419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: 16815931605f59a44999de2488b7555b, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
 --- !u!1 &5567309828171378815
 GameObject:
   m_ObjectHideFlags: 0
@@ -10299,7 +10324,7 @@ GameObject:
   - component: {fileID: 5630521024906651147}
   - component: {fileID: 7893409745858791753}
   m_Layer: 5
-  m_Name: UIName
+  m_Name: '[T] Name'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11108,8 +11133,8 @@ GameObject:
   - component: {fileID: 606963273926364081}
   - component: {fileID: 4593992672943634705}
   - component: {fileID: 1289349818344782362}
-  - component: {fileID: 1614663433054928147}
   - component: {fileID: 762692865924277693}
+  - component: {fileID: 1614663433054928147}
   m_Layer: 5
   m_Name: Skill1
   m_TagString: Untagged
@@ -11175,6 +11200,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &762692865924277693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6456765092131427666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: b1448216f782bf5499d6a1d214ea52db, type: 2}
+  _button: {fileID: 1614663433054928147}
+  _nodeEffect: {fileID: 0}
 --- !u!114 &1614663433054928147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11195,21 +11235,6 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &762692865924277693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6456765092131427666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: b1448216f782bf5499d6a1d214ea52db, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
 --- !u!1 &6552508317184250692
 GameObject:
   m_ObjectHideFlags: 0
@@ -11377,7 +11402,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 449376961343155187}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8111828415737163265}
+        m_TargetAssemblyTypeName: SkillNodeButton, Assembly-CSharp
+        m_MethodName: OnClickSkillButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6578876645125970786
 GameObject:
   m_ObjectHideFlags: 0
@@ -11411,7 +11448,7 @@ RectTransform:
   m_Father: {fileID: 4283204993000615849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11615,7 +11652,6 @@ RectTransform:
   - {fileID: 7829165710880755527}
   - {fileID: 6412924274049384828}
   - {fileID: 3433488568839258881}
-  - {fileID: 8594513380512181738}
   m_Father: {fileID: 5444067577437386950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -11636,7 +11672,7 @@ GameObject:
   - component: {fileID: 1000192809700741935}
   - component: {fileID: 7219274802524093359}
   m_Layer: 5
-  m_Name: Setting
+  m_Name: '[B] Setting'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11843,7 +11879,7 @@ GameObject:
   - component: {fileID: 949117197873802618}
   - component: {fileID: 442697028777933259}
   m_Layer: 5
-  m_Name: CoinImage
+  m_Name: '[I] CoinIcon'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12326,7 +12362,7 @@ GameObject:
   - component: {fileID: 1093102091204804786}
   - component: {fileID: 6470933982704815947}
   m_Layer: 5
-  m_Name: TrashImage
+  m_Name: '[I] TrashIcon'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12750,7 +12786,7 @@ GameObject:
   - component: {fileID: 9024310578112563944}
   - component: {fileID: 7504269017818733751}
   m_Layer: 5
-  m_Name: TrashBagState
+  m_Name: '[T] State'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13318,7 +13354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Node
   _nodeData: {fileID: 11400000, guid: d4b7393f1d0c0594eb0cb3eed1bda24a, type: 2}
-  _button: {fileID: 0}
+  _button: {fileID: 2658589520935129421}
   _nodeEffect: {fileID: 0}
 --- !u!1 &7509666433978206689
 GameObject:
@@ -13407,7 +13443,7 @@ GameObject:
   - component: {fileID: 6216984698518529607}
   - component: {fileID: 1365496096476708717}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: '[T] Amount'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13719,7 +13755,7 @@ GameObject:
   - component: {fileID: 4796724113860146675}
   - component: {fileID: 3473699377188643859}
   m_Layer: 5
-  m_Name: Start
+  m_Name: '[B] Start'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13926,7 +13962,7 @@ GameObject:
   - component: {fileID: 3419181014163704932}
   - component: {fileID: 3215866669434037138}
   m_Layer: 5
-  m_Name: Coin
+  m_Name: '[T] Coin'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14199,8 +14235,8 @@ GameObject:
   - component: {fileID: 3433488568839258881}
   - component: {fileID: 1488718034725852131}
   - component: {fileID: 2317124964554855599}
-  - component: {fileID: 427408352907014017}
   - component: {fileID: 1562351296003909791}
+  - component: {fileID: 427408352907014017}
   m_Layer: 5
   m_Name: Skill3
   m_TagString: Untagged
@@ -14266,6 +14302,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1562351296003909791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827763674307648511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: 6685d2f59fa22984380e52592d115fc9, type: 2}
+  _button: {fileID: 427408352907014017}
+  _nodeEffect: {fileID: 0}
 --- !u!114 &427408352907014017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14286,21 +14337,6 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &1562351296003909791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7827763674307648511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: 6685d2f59fa22984380e52592d115fc9, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
 --- !u!1 &7889687915795913316
 GameObject:
   m_ObjectHideFlags: 0
@@ -14314,7 +14350,7 @@ GameObject:
   - component: {fileID: 8396301974755443459}
   - component: {fileID: 6339873321539317963}
   m_Layer: 5
-  m_Name: Help
+  m_Name: '[B] Help'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14534,17 +14570,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8055653272049703959}
-  m_LocalRotation: {x: -0, y: -0, z: 0.20912181, w: 0.97788966}
+  m_LocalRotation: {x: -0, y: -0, z: 0.83843577, w: 0.5450005}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4891759811838552559}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 24.142}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 113.951}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -87.8, y: 125}
-  m_SizeDelta: {x: 120.874, y: 3}
+  m_AnchoredPosition: {x: 133.6, y: 108.03978}
+  m_SizeDelta: {x: 127.4954, y: 3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6189417068215470152
 CanvasRenderer:
@@ -15409,7 +15445,7 @@ GameObject:
   - component: {fileID: 5146462018930690234}
   - component: {fileID: 7490748713746570237}
   m_Layer: 5
-  m_Name: TrashBag
+  m_Name: '[I] TrashBag'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15762,8 +15798,9 @@ GameObject:
   - component: {fileID: 33118650783287170}
   - component: {fileID: 6100145562235176370}
   - component: {fileID: 1055360333817376288}
-  - component: {fileID: 8111828415737163265}
   - component: {fileID: 1144258713859314369}
+  - component: {fileID: 8111828415737163265}
+  - component: {fileID: 2100831856021062603}
   m_Layer: 5
   m_Name: Skill2
   m_TagString: Untagged
@@ -15829,6 +15866,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1144258713859314369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8479397291761432128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: f4b9090c5cf36604294522652e944710, type: 2}
+  _button: {fileID: 8111828415737163265}
+  _nodeEffect: {fileID: 2100831856021062603}
 --- !u!114 &8111828415737163265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15849,7 +15901,7 @@ MonoBehaviour:
   _purchasedColor: {r: 0.9490196, g: 0.7882353, b: 0.29803923, a: 1}
   _availableColor: {r: 0.43529412, g: 0.8117647, b: 0.5921569, a: 1}
   _notEnoughCoinColor: {r: 0.92156863, g: 0.34117648, b: 0.34117648, a: 1}
---- !u!114 &1144258713859314369
+--- !u!114 &2100831856021062603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15858,12 +15910,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8479397291761432128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Script: {fileID: 11500000, guid: 085cdba609edbdb48abec1a4c00cdad5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: f4b9090c5cf36604294522652e944710, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::SkilledHands
 --- !u!1 &8507395160063895879
 GameObject:
   m_ObjectHideFlags: 0
@@ -16033,6 +16082,7 @@ RectTransform:
   - {fileID: 3854328763618804690}
   - {fileID: 33118650783287170}
   - {fileID: 8630006488980151952}
+  - {fileID: 8594513380512181738}
   m_Father: {fileID: 5444067577437386950}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -16051,9 +16101,9 @@ GameObject:
   - component: {fileID: 3854328763618804690}
   - component: {fileID: 7838546508636981657}
   - component: {fileID: 3824003283558849690}
+  - component: {fileID: 3444551843535727238}
   - component: {fileID: 5477433291192516666}
   - component: {fileID: 2739535356917879835}
-  - component: {fileID: 3444551843535727238}
   m_Layer: 5
   m_Name: Skill1
   m_TagString: Untagged
@@ -16119,6 +16169,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3444551843535727238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8592618643000033645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Node
+  _nodeData: {fileID: 11400000, guid: d37725cef442186469edd15e1a3d8546, type: 2}
+  _button: {fileID: 5477433291192516666}
+  _nodeEffect: {fileID: 2739535356917879835}
 --- !u!114 &5477433291192516666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16151,21 +16216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ac0b54744715546849b02f605eb3e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrashBagCapacity
---- !u!114 &3444551843535727238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8592618643000033645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b680fa156455bcb46afe5922a220757d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Node
-  _nodeData: {fileID: 11400000, guid: d37725cef442186469edd15e1a3d8546, type: 2}
-  _button: {fileID: 0}
-  _nodeEffect: {fileID: 2739535356917879835}
 --- !u!1 &8644901910914062211
 GameObject:
   m_ObjectHideFlags: 0
@@ -16491,7 +16541,7 @@ GameObject:
   - component: {fileID: 6003871613773189069}
   - component: {fileID: 3601131376484534278}
   m_Layer: 5
-  m_Name: Time
+  m_Name: '[T] Time'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17617,7 +17667,7 @@ GameObject:
   - component: {fileID: 2296629405608869442}
   - component: {fileID: 1241160429177319045}
   m_Layer: 5
-  m_Name: Button
+  m_Name: '[T] Button'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17856,7 +17906,7 @@ GameObject:
   - component: {fileID: 8760209983871213684}
   - component: {fileID: 810575130370230571}
   m_Layer: 5
-  m_Name: ChangeTrashCan
+  m_Name: '[I] ChangeTrashCan'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

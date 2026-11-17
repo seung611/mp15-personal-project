@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Node_TrashBag_1
   m_EditorClassIdentifier: Assembly-CSharp::Node
   _skillId: TrashBag_1
-  _skillName: "\uBD09\uD22C \uC6A9\uB7C9 \uC99D\uAC00"
-  _description: Increase in envelope capacity
+  _skillName: "\uD070 \uBD09\uD22C"
+  _description: "\uBD09\uD22C \uC6A9\uB7C9 \uC99D"
   _skillPrice: 50
   _effectType: 1
   _effectValue: 1

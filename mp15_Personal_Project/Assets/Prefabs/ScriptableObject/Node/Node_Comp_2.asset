@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Node_Comp_2
   m_EditorClassIdentifier: Assembly-CSharp::Node
   _skillId: Comp_2
-  _skillName: "\uC555\uCD95\uAE30 \uAC08\uB798"
-  _description: Compressor Branch
+  _skillName: "\uAC10\uC555 \uBCA8\uBE0C"
+  _description: "\uC555\uCD95 \uC2E4\uD328 \uD328\uB110\uD2F0 \uC2DC\uAC04 \uAC10\uC18C"
   _skillPrice: 50
-  _effectValue: 0
+  _effectType: 6
+  _effectValue: 1
   _prevNode: {fileID: 11400000, guid: 1deb208baa1b2c84892b10873a9b5076, type: 2}

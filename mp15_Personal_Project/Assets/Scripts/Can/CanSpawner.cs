@@ -12,6 +12,9 @@ public class CanSpawner : MonoBehaviour
     
     private Coroutine _runningCoroutine;
     private float _elapsedTime;
+    private int _percent = 25;
+    
+    public int Percent { get => _percent; set => _percent = value; }
 
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();
@@ -33,7 +36,7 @@ public class CanSpawner : MonoBehaviour
     {
         int randomValue = Random.Range(0, 100);
 
-        if (randomValue < 25)
+        if (randomValue < _percent)
         {
             return _nomalCanPrefab[0].gameObject;
         }

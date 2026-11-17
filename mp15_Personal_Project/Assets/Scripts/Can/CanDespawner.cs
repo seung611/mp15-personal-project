@@ -8,6 +8,9 @@ public class CanDespawner : MonoBehaviour
 
     private int _failCanCount;
     private int _successCanCount;
+    private float _penaltyTime;
+    
+    public float PenaltyTime { get => _penaltyTime; set => _penaltyTime = value; }
 
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();

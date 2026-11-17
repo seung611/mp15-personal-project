@@ -22,6 +22,9 @@ public class TrashBagController : MonoBehaviour
 
     public bool IsChangeBag => _isChangingBag;
     public int TrashBagCapacity { get => _trashBagCapacity; set => _trashBagCapacity = value; }
+    public float ChangeDuration { get => _changeDuration; set => _changeDuration = value; }
+    public int CurrentCanCount { get => _currentCanCount; set => _currentCanCount = value; }
+    public int TiedCanCount { get => _tiedCanCount; set => _tiedCanCount = value; }
     
     private void OnEnable() => BindEvents();
     private void OnDisable() => UnbindEvents();

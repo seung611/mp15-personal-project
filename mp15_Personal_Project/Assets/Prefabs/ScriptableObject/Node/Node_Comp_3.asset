@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: Node_Comp_3
   m_EditorClassIdentifier: Assembly-CSharp::Node
   _skillId: Comp_3
-  _skillName: "\uC555\uCD95\uAE30 \uAC08\uB798"
-  _description: Compressor Branch
+  _skillName: "\uC774\uC911 \uC555\uCD95\uD310"
+  _description: "\uC555\uCD95 \uACF5\uAC04 2\uCE78, \uBC84\uD2BC \uD55C \uBC88\uC5D0
+    \uACF5\uAC04 \uC548\uC758 \uCE94 \uC804\uBD80 \uC555\uCD95"
   _skillPrice: 50
+  _effectType: 7
   _effectValue: 0
   _prevNode: {fileID: 11400000, guid: 1deb208baa1b2c84892b10873a9b5076, type: 2}

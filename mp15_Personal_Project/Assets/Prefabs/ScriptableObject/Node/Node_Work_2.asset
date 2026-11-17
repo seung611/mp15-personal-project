@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Node_Work_2
   m_EditorClassIdentifier: Assembly-CSharp::Node
   _skillId: Work_2
-  _skillName: "\uC791\uC5C5 \uD6A8\uC728 \uAC08\uB798"
-  _description: Work Efficiency Branch
+  _skillName: "\uB208\uC370"
+  _description: "\uCE94 \uC0DD\uC131 \uC2DC \uACE0\uAC00 \uCE94 \uD655\uB960 \uC99D\uAC00."
   _skillPrice: 50
-  _effectValue: 0
+  _effectType: 9
+  _effectValue: 10
   _prevNode: {fileID: 11400000, guid: 2c4657db3d55b0e4084f965ebb9ee402, type: 2}

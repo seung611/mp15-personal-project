@@ -14,17 +14,20 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Can/CanDespawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Can/CanDespawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Can/CanSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Can/CanSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/Node.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/Node.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/Node.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/Node.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/ApplyEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/ApplyEffect.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/NodeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/NodeState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SkillNodeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SkillNodeButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SkillToolTip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SkillToolTip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagCapacity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagCapacity.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +41,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameExit.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/GameStart.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,16 +48,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/InGameSetting.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Node.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/NodeSkill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/NodeTree.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillNode.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillNodeButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/ApplyEffect.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/DualCompress.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/FullBagCoinBonus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/KeenEye.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/Node.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/NodeData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/NodeState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagCapacity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/PressureReduceValve.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SkilledHands.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/SkillTreeTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Title.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Warning.cs" root0="FORCE_HIGHLIGHTING" />
@@ -71,61 +74,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="5.104250156033998E-32" />
-      <entry key="MS500" value="5.534275074113349E-7" />
-      <entry key="S2" value="0.03383278532883127" />
-      <entry key="S5" value="0.37074298491142144" />
-      <entry key="S10" value="0.8526443505053074" />
-      <entry key="S30" value="1.5018954298536935" />
-      <entry key="S60" value="1.7326591472211015" />
-      <entry key="M2" value="1.8614060590010992" />
-      <entry key="M5" value="1.9433343638307399" />
-      <entry key="M10" value="1.9761177726702652" />
-      <entry key="M15" value="2.060766060236231" />
-      <entry key="M30" value="4.139487554494616" />
-      <entry key="H1" value="21.549577971172333" />
-      <entry key="H2" value="81.00943371897279" />
-      <entry key="H4" value="177.28262318812776" />
-      <entry key="D1" value="599.3598514808954" />
-      <entry key="W1" value="994.105426397183" />
-    </decayedCancelled>
-    <decayedSelected>
       <entry key="MS100" value="1.0" />
       <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0" />
-      <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0000000015970287" />
-      <entry key="M10" value="1.0000436902002041" />
-      <entry key="M15" value="1.0016221880758664" />
-      <entry key="M30" value="1.1020108287689079" />
-      <entry key="H1" value="2.356280085118436" />
-      <entry key="H2" value="7.42685678626999" />
-      <entry key="H4" value="16.289120080150916" />
-      <entry key="D1" value="54.410347327596185" />
-      <entry key="W1" value="87.53265035338364" />
+      <entry key="S2" value="1.0000000001665317" />
+      <entry key="S5" value="1.0001239225071" />
+      <entry key="S10" value="1.012275314707866" />
+      <entry key="S30" value="1.6191349468648002" />
+      <entry key="S60" value="4.780141965414078" />
+      <entry key="M2" value="13.595950680246327" />
+      <entry key="M5" value="33.99516760343165" />
+      <entry key="M10" value="62.593375834695195" />
+      <entry key="M15" value="87.81964450008982" />
+      <entry key="M30" value="142.32892231744273" />
+      <entry key="H1" value="204.44081947647996" />
+      <entry key="H2" value="283.85006727309747" />
+      <entry key="H4" value="397.70218997603394" />
+      <entry key="D1" value="871.3690760389356" />
+      <entry key="W1" value="1301.587412115466" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="2.303022638996408E-90" />
+      <entry key="S2" value="3.96023272860489E-23" />
+      <entry key="S5" value="1.4222757331942683E-9" />
+      <entry key="S10" value="6.327037747163416E-5" />
+      <entry key="S30" value="0.09667104650364373" />
+      <entry key="S60" value="0.6534147049948105" />
+      <entry key="M2" value="2.000800829532555" />
+      <entry key="M5" value="5.0930521866742815" />
+      <entry key="M10" value="7.975862710105084" />
+      <entry key="M15" value="9.723695785944576" />
+      <entry key="M30" value="12.615213378315534" />
+      <entry key="H1" value="15.415746433412195" />
+      <entry key="H2" value="19.96838787509279" />
+      <entry key="H4" value="28.607666009793267" />
+      <entry key="D1" value="69.64479240855223" />
+      <entry key="W1" value="105.66318674297158" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="3.333397413689108E-14" />
-      <entry key="MS500" value="0.0020164319138159877" />
-      <entry key="S2" value="0.22999563210250873" />
-      <entry key="S5" value="0.8349380248457192" />
-      <entry key="S10" value="1.5011804630157903" />
-      <entry key="S30" value="2.3540600748447096" />
-      <entry key="S60" value="2.6537032394051043" />
-      <entry key="M2" value="2.820553644801353" />
-      <entry key="M5" value="2.926647553973998" />
-      <entry key="M10" value="2.9677566813355165" />
-      <entry key="M15" value="3.056741078517227" />
-      <entry key="M30" value="5.238065951064448" />
-      <entry key="H1" value="23.901191634213806" />
-      <entry key="H2" value="88.42887182440617" />
-      <entry key="H4" value="193.56394320844623" />
-      <entry key="D1" value="653.7658368520998" />
-      <entry key="W1" value="1081.63704742098" />
+      <entry key="MS100" value="0.8408964152537145" />
+      <entry key="MS500" value="0.9659363289248456" />
+      <entry key="S2" value="0.9913730875390446" />
+      <entry key="S5" value="0.9966313199827068" />
+      <entry key="S10" value="1.0089887924029013" />
+      <entry key="S30" value="1.6944751475265278" />
+      <entry key="S60" value="5.379317385599372" />
+      <entry key="M2" value="15.512034089589756" />
+      <entry key="M5" value="39.00192625865747" />
+      <entry key="M10" value="70.50032282264068" />
+      <entry key="M15" value="97.48515290700574" />
+      <entry key="M30" value="154.90234715705787" />
+      <entry key="H1" value="219.82825156345874" />
+      <entry key="H2" value="303.79882290040274" />
+      <entry key="H4" value="426.2956251032054" />
+      <entry key="D1" value="941.0081444505475" />
+      <entry key="W1" value="1407.24934045165" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
