@@ -15,7 +15,7 @@ MonoBehaviour:
   _skillId: TrashBag_4
   _skillName: "\uC790\uB3D9 \uAD50\uCCB4\uAE30"
   _description: "\uC4F0\uB808\uAE30 \uBD09\uD22C\uAC00 \uAC00\uB4DD \uCC28\uBA74
-    \uC790\uB3D9 \uAD50\uCCB4"
+    \uC790\uB3D9\uC73C\uB85C \uBD09\uD22C\uB97C \uAD50\uCCB4\uD569\uB2C8\uB2E4."
   _skillPrice: 50
   _effectType: 4
   _effectValue: 0

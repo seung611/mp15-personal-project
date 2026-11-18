@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Node
   _skillId: TrashBag_2
   _skillName: "\uB2A5\uC219\uD55C \uC190"
-  _description: "\uC4F0\uB808\uAE30 \uBD09\uD22C \uC9C1\uC811 \uAD50\uCCB4 \uC2DC\uAC04
-    \uAC10\uC18C"
+  _description: "\uC4F0\uB808\uAE30 \uBD09\uD22C \uC9C1\uC811 \uAD50\uCCB4\uD558\uB294
+    \uC2DC\uAC04\uC744 \uAC10\uC18C\uC2DC\uD0B5\uB2C8\uB2E4."
   _skillPrice: 50
   _effectType: 2
   _effectValue: 1
