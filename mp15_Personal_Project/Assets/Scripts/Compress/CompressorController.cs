@@ -18,7 +18,9 @@ public class CompressorController : MonoBehaviour
     private Coroutine _runningCoroutine;
     private Animator _anim;
     private float _pressSpeed;
-    private bool _isPushButton; 
+    private bool _isPushButton;
+    
+    public float ButtonCoolTime { get => _buttonCoolTime; set => _buttonCoolTime = value; }
 
     private void Awake() => CacheComponents();
     private void OnEnable() => BindInputEvents();

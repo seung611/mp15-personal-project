@@ -11,8 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b5a5c1-5baa-441f-be08-300e551f33a2" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/AutoBagChange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/AutoBagChange.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Compress/CompressorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Compress/CompressorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/CompressotEffect/HighSpeedPiston.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/CompressotEffect/HighSpeedPiston.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
