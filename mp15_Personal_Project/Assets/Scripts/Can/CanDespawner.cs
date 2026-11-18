@@ -8,7 +8,7 @@ public class CanDespawner : MonoBehaviour
 
     private int _failCanCount;
     private int _successCanCount;
-    private float _penaltyTime;
+    private float _penaltyTime = 2f;
     
     public float PenaltyTime { get => _penaltyTime; set => _penaltyTime = value; }
 
@@ -51,7 +51,7 @@ public class CanDespawner : MonoBehaviour
         }
         else
         {
-            GameManager.Instance.AddPenalty(1f);
+            GameManager.Instance.AddPenalty(_penaltyTime);
             _failCanCount++;
         }
     }

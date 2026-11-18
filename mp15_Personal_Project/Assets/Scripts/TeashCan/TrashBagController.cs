@@ -9,8 +9,8 @@ public class TrashBagController : MonoBehaviour
     [SerializeField] private InputActionReference _stopChangeTrashBagAction;
     [SerializeField] private PlayerCameraController _cameraController;
     [SerializeField] private CanDespawner _canDespawner;
-    [SerializeField] private float _changeDuration = 2f;
-    [SerializeField] private int _trashBagCapacity = 3;
+    [SerializeField] private float _changeDuration = 5f;
+    [SerializeField] private int _trashBagCapacity = 20;
 
     private Coroutine _changeBagCoroutine;
     private bool _isBagFull => _currentCanCount >= _trashBagCapacity;

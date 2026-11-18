@@ -5,7 +5,7 @@ using UnityEngine;
 public class SuccessOrFail : MonoBehaviour
 {
     [SerializeField] private Vector3 _beltDirection;
-    [SerializeField] private float _conveyorSpeed = 1.0f;
+    [SerializeField] private float _conveyorSpeed = 0.5f;
     [SerializeField] private List<Can> _cans;
     [SerializeField] private ConveyorManager _conveyorManager;
 

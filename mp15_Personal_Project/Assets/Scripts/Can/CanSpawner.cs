@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,9 +9,10 @@ public class CanSpawner : MonoBehaviour
     [SerializeField] private TrashBagController _trashBagController;
     [SerializeField] private GameObject[] _nomalCanPrefab;
     [SerializeField] private Transform _canRoot;
-    [SerializeField] private float _canCreateInterval = 2f;
+    [SerializeField] private float _canCreateInterval = 5f;
     
     private Coroutine _runningCoroutine;
+    private bool _firstSpawn = true;
     private float _elapsedTime;
     private int _percent = 25;
     
@@ -48,6 +50,11 @@ public class CanSpawner : MonoBehaviour
     private void OnSpawnCan()
     {
         if (_runningCoroutine != null) return;
+        if (_firstSpawn)
+        {
+            _firstSpawn = false;
+            CanInstantiate();
+        }
         
         _runningCoroutine = StartCoroutine(CorCanSpawn());
     }
@@ -67,16 +74,21 @@ public class CanSpawner : MonoBehaviour
 
             if (_elapsedTime > _canCreateInterval)
             {
-                GameObject prefab = GetRandomPrefab();
-                GameObject can = Instantiate(prefab, 
-                    _canRoot.position, 
-                    Quaternion.Euler(90f, 0f, 0f), 
-                    _canRoot);
-                _elapsedTime = 0f;
+                CanInstantiate();
             }
             
             yield return null;
         }
+    }
+
+    private void CanInstantiate()
+    {
+        GameObject prefab = GetRandomPrefab();
+        GameObject can = Instantiate(prefab, 
+            _canRoot.position, 
+            Quaternion.Euler(90f, 0f, 0f), 
+            _canRoot);
+        _elapsedTime = 0f;
     }
 
     private void OnSpawnCanStop()

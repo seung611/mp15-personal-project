@@ -218,15 +218,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efaf45e997b762d4b9d558adbbdb3fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CompressorController
-  _garbageTruckController: {fileID: 0}
   _layerMask:
     serializedVersion: 2
     m_Bits: 64
-  _pointAction: {fileID: -4116906244157035570, guid: 752d382753583594797810dab867de7c, type: 3}
-  _clickAction: {fileID: -2222134536740770456, guid: 752d382753583594797810dab867de7c, type: 3}
+  _pointAction: {fileID: -4101544008466274895, guid: 752d382753583594797810dab867de7c, type: 3}
+  _clickAction: {fileID: 6047367241591659970, guid: 752d382753583594797810dab867de7c, type: 3}
   _pressedAnimator: {fileID: 8991842972012437172}
   _pushButtonAnimator: {fileID: 0}
-  _buttonCoolTime: 1
+  _buttonCoolTime: 2
 --- !u!95 &8991842972012437172
 Animator:
   serializedVersion: 7
