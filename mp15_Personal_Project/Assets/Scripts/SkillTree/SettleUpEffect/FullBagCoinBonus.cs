@@ -9,7 +9,8 @@ public class FullBagCoinBonus : NodeEffect
     {
         // 봉투를 꽉 채워서 묶으면 보너스 코인
         Debug.Log("꽉 찬 봉투 보너스 적용");
-        
+        int bonus = _trashBagController.FullTrashBagCount * (int)_node.Node.EffectValue;
+        _trashBagController.TiedCoin += bonus;
     }
 }
 

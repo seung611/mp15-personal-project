@@ -19,12 +19,15 @@ public class TrashBagController : MonoBehaviour
     private int _tiedCanCount;
     private int _currentBagCoin;
     private int _tiedCoin;
+    private int _fullTrashBagCount;
 
     public bool IsChangeBag { get => _isChangingBag; set => _isChangingBag = value; }
     public int TrashBagCapacity { get => _trashBagCapacity; set => _trashBagCapacity = value; }
     public float ChangeDuration { get => _changeDuration; set => _changeDuration = value; }
     public int CurrentCanCount { get => _currentCanCount; set => _currentCanCount = value; }
     public int TiedCanCount { get => _tiedCanCount; set => _tiedCanCount = value; }
+    public int FullTrashBagCount { get => _fullTrashBagCount; set => _fullTrashBagCount = value; }
+    public int TiedCoin { get => _tiedCoin; set => _tiedCoin = value; }
     
     private void OnEnable() => BindEvents();
     private void OnDisable() => UnbindEvents();
@@ -104,13 +107,20 @@ public class TrashBagController : MonoBehaviour
                && _currentCanCount != 0 
                && _changeBagCoroutine == null;
     }
+
+    private void FullTrashBag()
+    {
+        if (_currentCanCount != _trashBagCapacity) return;
+        _fullTrashBagCount++;
+    }
     
     public IEnumerator CorChangeBag()
     {
         _isChangingBag = true;
         
         yield return new WaitForSeconds(_changeDuration);
-        
+
+        FullTrashBag();
         CompleteBagChange();
         ResetChangeState();
     }
