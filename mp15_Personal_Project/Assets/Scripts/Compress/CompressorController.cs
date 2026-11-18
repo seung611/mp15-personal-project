@@ -66,7 +66,7 @@ public class CompressorController : MonoBehaviour
 
     private void CompressorTry()
     {
-        if (!GameManager.Instance.IsWorking) return;
+        if (!GameManager.Instance.IsWorking || _isPushButton) return;
         
         _compressButtonTimer.SetTime(_buttonCoolTime);
         UIManager.Instance.InGameUI.SetButtonCoolTimerOpen();

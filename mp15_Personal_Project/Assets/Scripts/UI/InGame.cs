@@ -106,6 +106,6 @@ public class InGame : MonoBehaviour
 
     public void SetPressedButtonCoolTime(float currentTime, float coolTime)
     {
-        _changeCoolTime.fillAmount = currentTime / coolTime;
+        _pressButtonCoolTime.fillAmount = currentTime / coolTime;
     }
 }

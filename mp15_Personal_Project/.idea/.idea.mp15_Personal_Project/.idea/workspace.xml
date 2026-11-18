@@ -11,15 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b5a5c1-5baa-441f-be08-300e551f33a2" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_Compressor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_Compressor.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_Map.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_TrashCan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_TrashCan.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Compress/CompressorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Compress/CompressorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGame.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
