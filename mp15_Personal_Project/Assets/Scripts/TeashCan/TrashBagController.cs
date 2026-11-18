@@ -20,7 +20,7 @@ public class TrashBagController : MonoBehaviour
     private int _currentBagCoin;
     private int _tiedCoin;
 
-    public bool IsChangeBag => _isChangingBag;
+    public bool IsChangeBag { get => _isChangingBag; set => _isChangingBag = value; }
     public int TrashBagCapacity { get => _trashBagCapacity; set => _trashBagCapacity = value; }
     public float ChangeDuration { get => _changeDuration; set => _changeDuration = value; }
     public int CurrentCanCount { get => _currentCanCount; set => _currentCanCount = value; }
@@ -89,7 +89,7 @@ public class TrashBagController : MonoBehaviour
         UIManager.Instance.InGameUI.SetCoinUI(_tiedCoin);
     }
 
-    private void OnChangeBagInput(InputAction.CallbackContext context)
+    public void OnChangeBagInput(InputAction.CallbackContext context)
     {
         if (!IsChangeAvailable()) return;
         
@@ -105,7 +105,7 @@ public class TrashBagController : MonoBehaviour
                && _changeBagCoroutine == null;
     }
     
-    private IEnumerator CorChangeBag()
+    public IEnumerator CorChangeBag()
     {
         _isChangingBag = true;
         
