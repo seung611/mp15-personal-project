@@ -18,6 +18,24 @@ public class UIManager : Singleton<UIManager>
 
     private void Start() => Init();
 
+    public void OnClickEsc()
+    {
+        if (TitleSettingUI.gameObject.activeSelf)
+        {
+            TitleSettingUI.gameObject.SetActive(false);
+        }
+
+        if (InGameSettingUI.gameObject.activeSelf)
+        {
+            InGameSettingUI.gameObject.SetActive(false);
+        }
+    }
+    
+    public void OnMusicValueChange()
+    {
+        
+    }
+
     private void Init()
     {
         TitleUI.gameObject.SetActive(true);

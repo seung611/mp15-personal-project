@@ -750,8 +750,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7238424003776558180}
-        m_TargetAssemblyTypeName: TitleSetting, Assembly-CSharp
+      - m_Target: {fileID: 2576116504003681178}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnClickEsc
         m_Mode: 1
         m_Arguments:
@@ -961,8 +961,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 718270433447081609}
-        m_TargetAssemblyTypeName: InGameSetting, Assembly-CSharp
+      - m_Target: {fileID: 2576116504003681178}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnClickEsc
         m_Mode: 1
         m_Arguments:
