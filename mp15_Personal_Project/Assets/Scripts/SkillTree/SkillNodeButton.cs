@@ -14,7 +14,7 @@ public class SkillNodeButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
     [SerializeField] private Color _availableColor;
     [SerializeField] private Color _notEnoughCoinColor;
 
-    public NodeData Node => _node.NodeData;
+    public NodeData NodeData => _node.NodeData;
 
     public void OnClickSkillButton()
     {

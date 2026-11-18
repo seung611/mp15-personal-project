@@ -9,7 +9,7 @@ public class PressureReduceValve : NodeEffect
     {
         // 압축 실패 패널티 시간 감소
         Debug.Log("감압 밸브 적용");
-        _canDespawner.PenaltyTime -= _node.Node.EffectValue;
+        _canDespawner.PenaltyTime -= _node.NodeData.EffectValue;
     }
 }
 

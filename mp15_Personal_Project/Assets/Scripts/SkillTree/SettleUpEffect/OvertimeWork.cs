@@ -8,7 +8,7 @@ public class OvertimeWork : NodeEffect
     {
         // 작업 시간 증가
         Debug.Log("연장 근무 적용");
-        GameManager.Instance.WorkDuration += _node.Node.EffectValue;
+        GameManager.Instance.WorkDuration += _node.NodeData.EffectValue;
     }
 }
 

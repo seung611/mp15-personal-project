@@ -9,6 +9,6 @@ public class HighSpeedPiston : NodeEffect
     {
         // 압축기 버튼 쿨타임 감소
         Debug.Log("고속 피스톤 적용");
-        _compressorController.ButtonCoolTime -= _node.Node.EffectValue;
+        _compressorController.ButtonCoolTime -= _node.NodeData.EffectValue;
     }
 }

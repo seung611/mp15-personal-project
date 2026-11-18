@@ -10,10 +10,13 @@ public class SkillTree : MonoBehaviour
     [SerializeField] private Button _continueButton;
     [SerializeField] private Node[] _node;
     [SerializeField] private GameObject _skillTree;
-
+    
+    private Dictionary<string, Node> _nodeDictionary = new();
     private int _haveCoin => PlayerManager.Instance.HaveCoin;
-    
-    
+
+    public Dictionary<string, Node> NodeDictionary => _nodeDictionary;
+
+    private void Awake() => SetNodeDictionary();
     private void OnEnable() => BindEvents();
     private void OnDisable() => UnbindEvents();
     
@@ -29,6 +32,15 @@ public class SkillTree : MonoBehaviour
         GameManager.Instance.OnWorkStarted -= SetStartGame;
         UIManager.Instance.ResultUI.OnOpenSkillTree -= OpenSkillTree;
         PlayerManager.Instance.OnUpdateSkillTreeUI -= UpdateUI;
+    }
+    
+    
+    private void SetNodeDictionary()
+    {
+        foreach (Node node in _node)
+        {
+            _nodeDictionary.Add(node.NodeData.SkillId, node);
+        }
     }
 
     private void OpenSkillTree()

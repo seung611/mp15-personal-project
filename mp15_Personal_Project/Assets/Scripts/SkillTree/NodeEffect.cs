@@ -1,8 +1,18 @@
 using UnityEngine;
 
-public abstract class NodeEffect : MonoBehaviour
+public class NodeEffect : MonoBehaviour
 {
-    protected SkillNodeButton _node;
-    public abstract EffectType EffectType { get;}
-    public abstract void SetNodeEffect();
+    protected Node _node;
+    public virtual EffectType EffectType { get;}
+
+    private void Awake() => CacheComponents();
+
+    public virtual void SetNodeEffect()
+    {
+    }
+
+    private void CacheComponents()
+    {
+        _node = GetComponent<Node>();
+    }
 }

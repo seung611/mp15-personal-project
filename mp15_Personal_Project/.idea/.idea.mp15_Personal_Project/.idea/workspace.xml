@@ -12,16 +12,22 @@
   <component name="ChangeListManager">
     <list default="true" id="b4b5a5c1-5baa-441f-be08-300e551f33a2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_Map.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_TrashCan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_TrashCan.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerCameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/CompressotEffect/HighSpeedPiston.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/CompressotEffect/HighSpeedPiston.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/CompressotEffect/PressureReduceValve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/CompressotEffect/PressureReduceValve.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/NodeEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/NodeEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/FullBagCoinBonus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/FullBagCoinBonus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/KeenEye.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/KeenEye.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/OvertimeWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/OvertimeWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SkillNodeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SkillNodeButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/AutoBagChange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/AutoBagChange.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/BigTrashBag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/BigTrashBag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/SkilledHands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/SkilledHands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/TieBagOnWorkEnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/TieBagOnWorkEnd.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -9,6 +9,6 @@ public class SkilledHands : NodeEffect
     {
         // 쓰레기 봉투 직접 교체 시간 -1초
         Debug.Log("능숙한 손 적용");
-        _trashBagController.ChangeDuration -= _node.Node.EffectValue;
+        _trashBagController.ChangeDuration -= _node.NodeData.EffectValue;
     }
 }

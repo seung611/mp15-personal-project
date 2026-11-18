@@ -9,6 +9,5 @@ public class AutoBagChange : NodeEffect
     {
         // 봉투가 가득 차면 자동으로 비워줌
         Debug.Log("자동 교체기 적용");
-        
     }
 }

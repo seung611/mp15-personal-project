@@ -9,6 +9,6 @@ public class BigTrashBag : NodeEffect
     {
         // 쓰레기 봉투 용량 증가
         Debug.Log("큰 봉투 적용");
-        _trashBagController.TrashBagCapacity += (int)_node.Node.EffectValue;
+        _trashBagController.TrashBagCapacity += (int)_node.NodeData.EffectValue;
     }
 }

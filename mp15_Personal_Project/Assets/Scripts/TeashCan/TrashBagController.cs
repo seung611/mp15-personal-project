@@ -9,10 +9,13 @@ public class TrashBagController : MonoBehaviour
     [SerializeField] private InputActionReference _stopChangeTrashBagAction;
     [SerializeField] private PlayerCameraController _cameraController;
     [SerializeField] private CanDespawner _canDespawner;
+    [SerializeField] private SkillTree _skillTree;
     [SerializeField] private Timer _trashBagTimer;
     [SerializeField] private float _changeDuration = 5f;
     [SerializeField] private int _trashBagCapacity = 20;
 
+    private const string BINDING_OFF_ID = "TrashBag_3";
+    private const string AUTO_BAG_CHANGE_ID = "TrashBag_4";
     private bool _isBagFull => _currentCanCount >= _trashBagCapacity;
     private bool _isChangingBag => _trashBagTimer.IsCounting;
     private int _currentCanCount;
@@ -67,7 +70,6 @@ public class TrashBagController : MonoBehaviour
         Can can = collision.transform.GetComponent<Can>();
         
         if (can == null || !can.IsSuccess) return;
-
         if (_isChangingBag || _isBagFull)
         {
             DiscardCan(can);
@@ -89,6 +91,11 @@ public class TrashBagController : MonoBehaviour
     {
         _currentBagCoin += can.CanPrice;
         _currentCanCount++;
+        if (_currentCanCount == _trashBagCapacity 
+            && PlayerManager.Instance.HaveNodes.Contains(AUTO_BAG_CHANGE_ID))
+        {
+            StartChangeBag();
+        }
         UpdateInGameUI();
     }
 
@@ -96,6 +103,11 @@ public class TrashBagController : MonoBehaviour
     {
         if (!IsChangeAvailable()) return;
         
+        StartChangeBag();
+    }
+
+    private void StartChangeBag()
+    {
         _trashBagTimer.SetTime(_changeDuration);
     }
 
@@ -136,6 +148,10 @@ public class TrashBagController : MonoBehaviour
 
     private void GameEnd()
     {
+        if (PlayerManager.Instance.HaveNodes.Contains(BINDING_OFF_ID))
+        {
+            CompleteBagChange();
+        }
         CancelBagChange();
         PlayerManager.Instance.SaveCoin(_tiedCoin);
         UIManager.Instance.ResultUI.SetTrashBagUI(_tiedCanCount, _tiedCoin);

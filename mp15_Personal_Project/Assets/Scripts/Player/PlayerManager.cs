@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerManager : Singleton<PlayerManager>
 {
     private int _guide;
-    private int _haveCoin;
+    private int _haveCoin = 5000;
     private HashSet<string> _haveNodes = new();
 
     public int HaveCoin => _haveCoin;
-
     public int Guide { get => _guide; set => _guide = value; }
+
+    public HashSet<string> HaveNodes => _haveNodes;
+    // public Dictionary<string, Node> NodeDictionary => _nodeDictionary;
 
     public event Action OnUpdateSkillTreeUI;
 
