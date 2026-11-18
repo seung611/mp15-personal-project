@@ -13,21 +13,27 @@
     <list default="true" id="b4b5a5c1-5baa-441f-be08-300e551f33a2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_4.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_2.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_3.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Can/CanDespawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Can/CanDespawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Can/CanSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Can/CanSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/ApplyEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/ApplyEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/NodeState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/NodeState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagCapacity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagCapacity.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Result.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/ApplyEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/ApplyEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/CompressotEffect/DualCompress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/CompressotEffect/DualCompress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/CompressotEffect/HighSpeedPiston.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/CompressotEffect/HighSpeedPiston.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/CompressotEffect/PressureReduceValve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/CompressotEffect/PressureReduceValve.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/NodeEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/NodeEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SettleUpEffect/FullBagCoinBonus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SettleUpEffect/FullBagCoinBonus.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SettleUpEffect/KeenEye.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SettleUpEffect/KeenEye.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SettleUpEffect/OvertimeWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/SettleUpEffect/OvertimeWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagEffect/AutoBagChange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagEffect/AutoBagChange.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagEffect/BigTrashBag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagEffect/BigTrashBag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagEffect/SkilledHands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagEffect/SkilledHands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagEffect/TieBagOnWorkEnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree/TrashBagEffect/TieBagOnWorkEnd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

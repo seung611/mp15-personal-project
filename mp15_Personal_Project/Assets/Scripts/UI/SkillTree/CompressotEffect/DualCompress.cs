@@ -4,8 +4,9 @@ public class DualCompress : NodeEffect
 {
     public override EffectType EffectType => EffectType.DualCompress;
     
-    public override void SetNodeEffect(ApplyEffect applyEffect)
+    public override void SetNodeEffect()
     {
-        applyEffect.ApplyDualCompress(_node.Node.EffectValue);
+        // 이중 압축칸... 이건...
+        Debug.Log("이중 압축판 적용");
     }
 }

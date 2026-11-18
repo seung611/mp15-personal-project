@@ -11,15 +11,21 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] public Result ResultUI;               // [UI] Result
     [SerializeField] public Help HelpUI;                   // [Ui] Help
     [SerializeField] public TitleSetting TitleSettingUI;   // [UI] TitleSetting
-    [SerializeField] public InGameSetting InGameSettingUI;    // [UI] InGameSetting
+    [SerializeField] public InGameSetting InGameSettingUI; // [UI] InGameSetting
     [SerializeField] public Warning WarningUI;             // [UI] Warning
-    [SerializeField] public SkillTree SkillTreeUI;         // [UI] SkillTree
 
     private void Awake() => SetSingleton();
 
-    private void Start()
+    private void Start() => Init();
+
+    private void Init()
     {
-        // 게임을 켜면 처음 보는 화면은 타이틀
         TitleUI.gameObject.SetActive(true);
+        InGameUI.gameObject.SetActive(false);
+        ResultUI.gameObject.SetActive(false);
+        HelpUI.gameObject.SetActive(false);
+        TitleSettingUI.gameObject.SetActive(false);
+        InGameSettingUI.gameObject.SetActive(false);
+        WarningUI.gameObject.SetActive(false);
     }
 }

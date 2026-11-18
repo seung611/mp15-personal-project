@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Node_Work_2
   m_EditorClassIdentifier: Assembly-CSharp::Node
   _skillId: Work_2
-  _skillName: "\uB208\uC370"
+  _skillName: "\uB208\uC370\uBBF8"
   _description: "\uCE94 \uC0DD\uC131 \uC2DC \uACE0\uAC00 \uCE94 \uD655\uB960 \uC99D\uAC00."
   _skillPrice: 50
   _effectType: 9

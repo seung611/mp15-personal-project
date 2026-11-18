@@ -1,14 +1,15 @@
+using System;
 using System.Collections.Generic;
-using System.Net;
 using UnityEngine;
 
 public class PlayerManager : Singleton<PlayerManager>
 {
     private int _haveCoin = 500;
     private HashSet<string> _haveNodes = new();
-    private ApplyEffect _applyEffect;
 
     public int HaveCoin => _haveCoin;
+
+    public event Action OnUpdateSkillTreeUI;
 
     private void Awake() => SetSingleton();
 
@@ -37,10 +38,11 @@ public class PlayerManager : Singleton<PlayerManager>
         _haveNodes.Add(node.NodeData.SkillId);
 
         Debug.Log("구매");
+        UpdateUI();
         if (node.NodeEffect != null)
         {
             Debug.Log("플레이어 매니저");
-            node.NodeEffect.SetNodeEffect(_applyEffect);
+            node.NodeEffect.SetNodeEffect();
         }
         UseCoin(node.NodeData.SkillPrice);
         
@@ -60,15 +62,9 @@ public class PlayerManager : Singleton<PlayerManager>
                 || _haveNodes.Contains(node.NodeData.PrevNode.SkillId));
     }
 
-    public void SetApplyEffect(ApplyEffect applyEffect)
-    {
-        _applyEffect = applyEffect;
-    }
-
     private void UpdateUI()
     {
-        UIManager.Instance.SkillTreeUI.SetCoinsText();
         UIManager.Instance.ResultUI.SetCoinText();
-        UIManager.Instance.SkillTreeUI.RefreshAllNodes();
+        OnUpdateSkillTreeUI?.Invoke();
     }
 }

@@ -21,13 +21,11 @@ public class GameManager : Singleton<GameManager>
     public event Action OnWorkEnded;
 
     private void Awake() => SetSingleton();
-
     private void Start()
     {
         _currentTime = _workDuration;
         UIManager.Instance.InGameUI.SetTimeUI(_currentTime);
     }
-    
     private void Update()
     {
         if (!_isWorking) return;

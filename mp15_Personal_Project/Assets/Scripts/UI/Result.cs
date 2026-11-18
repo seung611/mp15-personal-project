@@ -14,6 +14,8 @@ public class Result : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _coinText;
 
     private int _haveCoin => PlayerManager.Instance.HaveCoin;
+    
+    public event Action OnOpenSkillTree;
 
     public void OnClickNextWorkButton()
     {
@@ -25,9 +27,15 @@ public class Result : MonoBehaviour
     public void OnClickSkillTreeButton()
     {
         UIManager.Instance.ResultUI.gameObject.SetActive(false);
-        UIManager.Instance.SkillTreeUI.gameObject.SetActive(true);
-        UIManager.Instance.SkillTreeUI.SetCoinsText();
-        UIManager.Instance.SkillTreeUI.RefreshAllNodes();
+        OnOpenSkillTree?.Invoke();
+        // UIManager.Instance.SkillTreeUI.gameObject.SetActive(true);
+        // UIManager.Instance.SkillTreeUI.SetCoinsText();
+        // UIManager.Instance.SkillTreeUI.RefreshAllNodes();
+    }
+
+    public void SkillTreeContinue()
+    {
+        UIManager.Instance.ResultUI.gameObject.SetActive(true);
     }
     
     public void SetTrashBagUI(int success, int tiedCoin)

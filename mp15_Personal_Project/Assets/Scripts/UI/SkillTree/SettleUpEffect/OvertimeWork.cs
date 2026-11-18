@@ -4,9 +4,11 @@ public class OvertimeWork : NodeEffect
 {
     public override EffectType EffectType => EffectType.OvertimeWork;
 
-    public override void SetNodeEffect(ApplyEffect applyEffect)
+    public override void SetNodeEffect()
     {
-        applyEffect.ApplyOvertimeWork(_node.Node.EffectValue);
+        // 작업 시간 증가
+        Debug.Log("연장 근무 적용");
+        GameManager.Instance.WorkDuration += _node.Node.EffectValue;
     }
 }
 
