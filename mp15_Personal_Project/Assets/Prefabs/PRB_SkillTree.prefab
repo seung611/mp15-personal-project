@@ -1546,7 +1546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8453884887960920564
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1619,7 +1619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Node
   _nodeData: {fileID: 11400000, guid: 6685d2f59fa22984380e52592d115fc9, type: 2}
   _button: {fileID: 3442591693050675215}
-  _nodeEffect: {fileID: 0}
+  _nodeEffect: {fileID: 8730166962324385715}
 --- !u!114 &3442591693050675215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2197,7 +2197,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8571961862398451184
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2495,6 +2495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51fc2ced93b26544f902c280ee1134f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HighSpeedPiston
+  _compressorController: {fileID: 0}
 --- !u!1 &2613978926433790883
 GameObject:
   m_ObjectHideFlags: 0
