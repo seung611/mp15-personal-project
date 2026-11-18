@@ -12,6 +12,7 @@ public class InGame : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _trashBagText;
     [SerializeField] private TextMeshProUGUI _trashBagState;
     [SerializeField] private Slider _trashBagSlider;
+    [SerializeField] private GameObject[] _guideUI;
 
     private int _haveCoin => PlayerManager.Instance.HaveCoin;
     
@@ -57,5 +58,28 @@ public class InGame : MonoBehaviour
             case 0.8
         }*/
         return null;
+    }
+
+    public void SetGuide(bool isTrashCanView, bool isTransitioning)
+    {
+        SetPressButtonGuide(isTrashCanView, isTransitioning);
+        SetTrashBagChangeGuide(isTrashCanView, isTransitioning);
+    }
+
+    private void SetPressButtonGuide(bool isTrashCanView, bool isTransitioning)
+    {
+        if (PlayerManager.Instance.Guide == 0)
+        {
+            _guideUI[0].SetActive(!isTrashCanView && !isTransitioning);
+        }
+        else
+        {
+            _guideUI[0].gameObject.SetActive(false);
+        }
+    }
+
+    private void SetTrashBagChangeGuide(bool isTrashCanView, bool isTransitioning)
+    {
+        _guideUI[1].SetActive(isTrashCanView && !isTransitioning);
     }
 }

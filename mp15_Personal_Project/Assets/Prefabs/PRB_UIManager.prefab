@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6103401935319821852
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3503,6 +3503,9 @@ MonoBehaviour:
   _trashBagText: {fileID: 1365496096476708717}
   _trashBagState: {fileID: 7504269017818733751}
   _trashBagSlider: {fileID: 4434050713246161446}
+  _guideUI:
+  - {fileID: 128544216800140673}
+  - {fileID: 9221741439686131496}
 --- !u!1 &3609009533023352548
 GameObject:
   m_ObjectHideFlags: 0
@@ -11417,7 +11420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6375043695063936890
 RectTransform:
   m_ObjectHideFlags: 0

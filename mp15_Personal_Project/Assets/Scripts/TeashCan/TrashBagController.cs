@@ -86,12 +86,6 @@ public class TrashBagController : MonoBehaviour
         UpdateInGameUI();
     }
 
-    private void UpdateInGameUI()
-    {
-        UIManager.Instance.InGameUI.SetTrashBagUI(_currentCanCount, _trashBagCapacity);
-        UIManager.Instance.InGameUI.SetCoinUI(_tiedCoin);
-    }
-
     public void OnChangeBagInput(InputAction.CallbackContext context)
     {
         if (!IsChangeAvailable()) return;
@@ -167,5 +161,12 @@ public class TrashBagController : MonoBehaviour
         _tiedCanCount = 0;
         _tiedCoin = 0;
         UpdateInGameUI();
+    }
+    
+    private void UpdateInGameUI()
+    {
+        UIManager.Instance.InGameUI.SetTrashBagUI(_currentCanCount, _trashBagCapacity);
+        UIManager.Instance.InGameUI.SetCoinUI(_tiedCoin);
+        // UIManager.Instance.InGameUI.SetGuide(_cameraController.IsTrashCanView);
     }
 }

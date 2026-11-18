@@ -127,10 +127,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3584803493750553552, guid: cac721a74a120964b971fb1b0e7d497b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6615408113100947306, guid: cac721a74a120964b971fb1b0e7d497b, type: 3}
       propertyPath: m_Name
       value: PRB_UIManager
@@ -214,10 +210,6 @@ PrefabInstance:
     - target: {fileID: 7402808356964485022, guid: cac721a74a120964b971fb1b0e7d497b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9122966964165129219, guid: cac721a74a120964b971fb1b0e7d497b, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

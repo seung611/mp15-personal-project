@@ -19,6 +19,7 @@ public class PlayerCameraController : MonoBehaviour
     
     public bool IsTrashCanView => _isTrashCanView;
     public bool IsTransitioning => _isTransitioning;
+    public Transform TrashCanView  => _trashCanView;
     
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();
@@ -47,6 +48,7 @@ public class PlayerCameraController : MonoBehaviour
         Transform target = _isTrashCanView ? _trashCanView : _conveyorView;
         
         StartCoroutine(MoveCamera(target));
+        UIManager.Instance.InGameUI.SetGuide(_isTrashCanView, _isTransitioning);
     }
 
     private IEnumerator MoveCamera(Transform target)
@@ -89,11 +91,14 @@ public class PlayerCameraController : MonoBehaviour
         );
 
         _isTransitioning = false;
+        UIManager.Instance.InGameUI.SetGuide(_isTrashCanView, _isTransitioning);
     }
 
     private void SetCameraPosition()
     {
         _isTrashCanView = false;
+        
+        UIManager.Instance.InGameUI.SetGuide(_isTrashCanView, _isTransitioning);
         
         _camera.transform.SetPositionAndRotation(
             _conveyorView.position,

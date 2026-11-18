@@ -60,6 +60,7 @@ public class GameManager : Singleton<GameManager>
         OnWorkEnded?.Invoke();
         UpdateUI();
         
+        PlayerManager.Instance.Guide = 1;
         _elapsedPenaltyTime = 0;
     }
 
