@@ -617,18 +617,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1310801936590997246, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _garbageTruckController
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1773033724021580596, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _garbageTruckController
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2189652432709770243, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _garbageTruckController
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3337711006049116237, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -669,53 +657,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3475146705926618586, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _garbageTruckController
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3815827680912310572, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _garbageTruckController
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4471434421062528660, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _garbageTruckController
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5137304465488580784, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
       propertyPath: _skillTree
       value: 
       objectReference: {fileID: 4673711829579356025}
     - target: {fileID: 5137304465488580784, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _changeDuration
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5137304465488580784, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
       propertyPath: _cameraController
       value: 
       objectReference: {fileID: 1768239222}
-    - target: {fileID: 5137304465488580784, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _trashBagCapacity
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5137304465488580784, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _garbageTruckController
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5174694257668223703, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _garbageTruckController
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5559525898742307950, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
       propertyPath: m_Name
       value: PRB_Map
-      objectReference: {fileID: 0}
-    - target: {fileID: 5872443147057464818, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _garbageTruckController
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6311897187398802292, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _garbageTruckController
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

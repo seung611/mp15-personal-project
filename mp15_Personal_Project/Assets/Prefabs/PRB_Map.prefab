@@ -3835,10 +3835,6 @@ PrefabInstance:
       propertyPath: _conveyorManager
       value: 
       objectReference: {fileID: 6311897187398802292}
-    - target: {fileID: 5062607116259229476, guid: d0ee4b72ed4c83945aefe28b4080c158, type: 3}
-      propertyPath: _trashBagTimer
-      value: 
-      objectReference: {fileID: 5141386551750740365}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3860,17 +3856,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb4fe2023abf914183b43cfd312683b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GarbageBagController
---- !u!114 &5141386551750740365 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5067533352573445657, guid: d0ee4b72ed4c83945aefe28b4080c158, type: 3}
-  m_PrefabInstance: {fileID: 75049812550446996}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f3b979e4bab764bb973ef15e250f36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Timer
 --- !u!1001 &3283977039567043001
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,7 +15,7 @@ public class GameManager : Singleton<GameManager>
     private float _elapsedPenaltyTime;
 
     public bool IsWorking => _isWorking;
-    public float WorkDuration { get => _workDuration; set => _workDuration = value; }
+    public float WorkDuration {get => _workDuration; set => _workDuration = value; }
 
     public event Action OnWorkStarted;
     public event Action OnWorkEnded;

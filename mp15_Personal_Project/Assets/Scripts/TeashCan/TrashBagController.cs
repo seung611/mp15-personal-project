@@ -14,8 +14,11 @@ public class TrashBagController : MonoBehaviour
     [SerializeField] private float _changeDuration = 5f;
     [SerializeField] private int _trashBagCapacity = 20;
 
+    private const string BIG_TRASH_BAG_ID = "TrashBag_1";
+    private const string SKILLED_HANDS_ID = "TrashBag_2";
     private const string BINDING_OFF_ID = "TrashBag_3";
     private const string AUTO_BAG_CHANGE_ID = "TrashBag_4";
+    private const string FULL_BAG_BONUS_ID = "Work_3";
     private bool _isBagFull => _currentCanCount >= _trashBagCapacity;
     private bool _isChangingBag => _trashBagTimer.IsCounting;
     private int _currentCanCount;
@@ -102,6 +105,12 @@ public class TrashBagController : MonoBehaviour
     public void OnChangeBagInput(InputAction.CallbackContext context)
     {
         if (!IsChangeAvailable()) return;
+        if (PlayerManager.Instance.HaveNodes.Contains(SKILLED_HANDS_ID))
+        {
+            // bool 값 받아서 한 번만 실행되게.
+            Node node = _skillTree.NodeDictionary[SKILLED_HANDS_ID];
+            _changeDuration -= node.NodeData.EffectValue;
+        }
         
         StartChangeBag();
     }
@@ -119,17 +128,17 @@ public class TrashBagController : MonoBehaviour
                && _currentCanCount != 0 
                && !_trashBagTimer.IsCounting;
     }
-
-    private void FullTrashBag()
-    {
-        if (_currentCanCount != _trashBagCapacity) return;
-        _fullTrashBagCount++;
-    }
     
     private void ChangeBag()
     {
         FullTrashBag();
         CompleteBagChange();
+    }
+    
+    private void FullTrashBag()
+    {
+        if (_currentCanCount != _trashBagCapacity) return;
+        _fullTrashBagCount++;
     }
     
     private void CompleteBagChange()
@@ -152,6 +161,12 @@ public class TrashBagController : MonoBehaviour
         {
             CompleteBagChange();
         }
+        if (PlayerManager.Instance.HaveNodes.Contains(FULL_BAG_BONUS_ID))
+        {
+            Node node = _skillTree.NodeDictionary[FULL_BAG_BONUS_ID];
+            int bonus = _fullTrashBagCount * (int)node.NodeData.EffectValue;
+            _tiedCoin += bonus;
+        }
         CancelBagChange();
         PlayerManager.Instance.SaveCoin(_tiedCoin);
         UIManager.Instance.ResultUI.SetTrashBagUI(_tiedCanCount, _tiedCoin);
@@ -164,12 +179,23 @@ public class TrashBagController : MonoBehaviour
         _trashBagTimer.StopTime();
     }
 
+    private void AddBagCapacity()
+    {
+        if (PlayerManager.Instance.HaveNodes.Contains(BIG_TRASH_BAG_ID))
+        {
+            // 딱 한 번만 실행 되면 됨.
+            Node node = _skillTree.NodeDictionary[BIG_TRASH_BAG_ID];
+            _trashBagCapacity += (int)node.NodeData.EffectValue;
+        }
+    }
+
     private void ResetForNewWork()
     {
         _currentCanCount = 0;
         _currentBagCoin = 0;
         _tiedCanCount = 0;
         _tiedCoin = 0;
+        _fullTrashBagCount = 0;
         UpdateInGameUI();
     }
     

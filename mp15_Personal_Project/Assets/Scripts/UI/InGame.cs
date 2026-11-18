@@ -13,8 +13,14 @@ public class InGame : MonoBehaviour
     [SerializeField] private Slider _trashBagSlider;
     [SerializeField] private GameObject[] _guideUI;
     [SerializeField] private Image _changeCoolTime;
+    [SerializeField] private Image _pressButtonCoolTime;
 
     private int _haveCoin => PlayerManager.Instance.HaveCoin;
+
+    private void Awake()
+    {
+        _pressButtonCoolTime.gameObject.SetActive(false);
+    }
     
     public void SetTimeUI(float time)
     {
@@ -84,6 +90,21 @@ public class InGame : MonoBehaviour
     }
 
     public void SetChangeCoolTime(float currentTime, float coolTime)
+    {
+        _changeCoolTime.fillAmount = currentTime / coolTime;
+    }
+
+    public void SetButtonCoolTimerOpen()
+    {
+        _pressButtonCoolTime.gameObject.SetActive(true);
+    }
+
+    public void SetButtonCoolTimerClose()
+    {
+        _pressButtonCoolTime.gameObject.SetActive(true); 
+    }
+
+    public void SetPressedButtonCoolTime(float currentTime, float coolTime)
     {
         _changeCoolTime.fillAmount = currentTime / coolTime;
     }

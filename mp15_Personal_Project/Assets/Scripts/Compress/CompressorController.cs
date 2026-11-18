@@ -12,18 +12,23 @@ public class CompressorController : MonoBehaviour
     [SerializeField] private InputActionReference _clickAction;
     [SerializeField] private Animator _pressedAnimator;
     [SerializeField] private Animator _pushButtonAnimator;
+    [SerializeField] private Timer _compressButtonTimer;
     [SerializeField] private float _buttonCoolTime = 2f;
 
     private Camera _camera;
-    private Coroutine _runningCoroutine;
     private Animator _anim;
     private float _pressSpeed;
-    private bool _isPushButton;
+    private bool _isPushButton => _compressButtonTimer.IsCounting;
     
     public float ButtonCoolTime { get => _buttonCoolTime; set => _buttonCoolTime = value; }
 
     private void Awake() => CacheComponents();
     private void OnEnable() => BindInputEvents();
+    private void Update()
+    {
+        UIManager.Instance.InGameUI.SetPressedButtonCoolTime(
+            _compressButtonTimer.CurrentCoolTime, _buttonCoolTime);
+    }
     private void OnDisable() => UnbindInputEvents();
 
     private void BindInputEvents()
@@ -31,6 +36,7 @@ public class CompressorController : MonoBehaviour
         _pointAction.action.Enable();
         _clickAction.action.Enable();
         _clickAction.action.performed += OnMouseDown;
+        _compressButtonTimer.OnTimeOver += PushButtonCoolTime;
     }
 
     private void UnbindInputEvents()
@@ -38,6 +44,7 @@ public class CompressorController : MonoBehaviour
         _pointAction.action.Disable();
         _clickAction.action.Disable();
         _clickAction.action.performed -= OnMouseDown;
+        _compressButtonTimer.OnTimeOver -= PushButtonCoolTime;
     }
     
     private void OnMouseDown(InputAction.CallbackContext context)
@@ -60,30 +67,16 @@ public class CompressorController : MonoBehaviour
     private void CompressorTry()
     {
         if (!GameManager.Instance.IsWorking) return;
-        if (_runningCoroutine != null) return;
         
-        _runningCoroutine = StartCoroutine(PushButtonCoolTime());
+        _compressButtonTimer.SetTime(_buttonCoolTime);
+        UIManager.Instance.InGameUI.SetButtonCoolTimerOpen();
+        _pushButtonAnimator.SetTrigger("OnDown");
+        _pressedAnimator.SetTrigger("OnDown");
     }
 
-    private void DeCompressor()
+    private void PushButtonCoolTime()
     {
-        _isPushButton = false;
-        _runningCoroutine = null;
-    }
-
-    private IEnumerator PushButtonCoolTime()
-    {
-        _isPushButton = true;
-        
-        while (_isPushButton)
-        {
-            _pushButtonAnimator.SetTrigger("OnDown");
-            _pressedAnimator.SetTrigger("OnDown");
-        
-            yield return new WaitForSeconds(_buttonCoolTime);
-
-            DeCompressor();
-        }
+        UIManager.Instance.InGameUI.SetButtonCoolTimerClose();
     }
 
     private void CacheComponents()

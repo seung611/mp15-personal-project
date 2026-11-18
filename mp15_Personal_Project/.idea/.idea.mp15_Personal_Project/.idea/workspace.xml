@@ -12,22 +12,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b4b5a5c1-5baa-441f-be08-300e551f33a2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_Compressor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_Compressor.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_Map.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_TrashCan.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_TrashCan.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/CompressotEffect/HighSpeedPiston.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/CompressotEffect/HighSpeedPiston.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/CompressotEffect/PressureReduceValve.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/CompressotEffect/PressureReduceValve.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/NodeEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/NodeEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/FullBagCoinBonus.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/FullBagCoinBonus.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/KeenEye.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/KeenEye.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/OvertimeWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SettleUpEffect/OvertimeWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SkillNodeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SkillNodeButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/AutoBagChange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/AutoBagChange.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/BigTrashBag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/BigTrashBag.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/SkilledHands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/SkilledHands.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/TieBagOnWorkEnd.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/TrashBagEffect/TieBagOnWorkEnd.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Compress/CompressorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Compress/CompressorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeashCan/TrashBagController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SkillTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGame.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,61 +64,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000001665317" />
-      <entry key="S5" value="1.0001239225071" />
-      <entry key="S10" value="1.012275314707866" />
-      <entry key="S30" value="1.6191349468648002" />
-      <entry key="S60" value="4.780141965414078" />
-      <entry key="M2" value="13.595950680246327" />
-      <entry key="M5" value="33.99516760343165" />
-      <entry key="M10" value="62.593375834695195" />
-      <entry key="M15" value="87.81964450008982" />
-      <entry key="M30" value="142.32892231744273" />
-      <entry key="H1" value="204.44081947647996" />
-      <entry key="H2" value="283.85006727309747" />
-      <entry key="H4" value="397.70218997603394" />
-      <entry key="D1" value="871.3690760389356" />
-      <entry key="W1" value="1301.587412115466" />
+      <entry key="MS100" value="4.070102799814648E-13" />
+      <entry key="MS500" value="0.003325991045894315" />
+      <entry key="S2" value="0.24014871598836912" />
+      <entry key="S5" value="0.5651869270938663" />
+      <entry key="S10" value="0.7518373013907305" />
+      <entry key="S30" value="1.0147093180512696" />
+      <entry key="S60" value="1.6821677147217438" />
+      <entry key="M2" value="3.2945236753050104" />
+      <entry key="M5" value="14.702651752476065" />
+      <entry key="M10" value="41.981411028523304" />
+      <entry key="M15" value="66.78012682772273" />
+      <entry key="M30" value="129.83672161452077" />
+      <entry key="H1" value="232.88611142822268" />
+      <entry key="H2" value="374.45212519998137" />
+      <entry key="H4" value="547.4992788823513" />
+      <entry key="D1" value="1122.3256437514715" />
+      <entry key="W1" value="1596.8896238540951" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="2.303022638996408E-90" />
-      <entry key="S2" value="3.96023272860489E-23" />
-      <entry key="S5" value="1.4222757331942683E-9" />
-      <entry key="S10" value="6.327037747163416E-5" />
-      <entry key="S30" value="0.09667104650364373" />
-      <entry key="S60" value="0.6534147049948105" />
-      <entry key="M2" value="2.000800829532555" />
-      <entry key="M5" value="5.0930521866742815" />
-      <entry key="M10" value="7.975862710105084" />
-      <entry key="M15" value="9.723695785944576" />
-      <entry key="M30" value="12.615213378315534" />
-      <entry key="H1" value="15.415746433412195" />
-      <entry key="H2" value="19.96838787509279" />
-      <entry key="H4" value="28.607666009793267" />
-      <entry key="D1" value="69.64479240855223" />
-      <entry key="W1" value="105.66318674297158" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0" />
+      <entry key="S10" value="1.0" />
+      <entry key="S30" value="1.0000000255828991" />
+      <entry key="S60" value="1.0002513462900249" />
+      <entry key="M2" value="1.0379385619999417" />
+      <entry key="M5" value="2.2264303940480055" />
+      <entry key="M10" value="6.185665322770219" />
+      <entry key="M15" value="10.371891721530561" />
+      <entry key="M30" value="21.16770884777482" />
+      <entry key="H1" value="35.65017783173591" />
+      <entry key="H2" value="51.21577881371007" />
+      <entry key="H4" value="67.69048042065985" />
+      <entry key="D1" value="119.39346637274986" />
+      <entry key="W1" value="159.60308664924577" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.8408964152537145" />
-      <entry key="MS500" value="0.9659363289248456" />
-      <entry key="S2" value="0.9913730875390446" />
-      <entry key="S5" value="0.9966313199827068" />
-      <entry key="S10" value="1.0089887924029013" />
-      <entry key="S30" value="1.6944751475265278" />
-      <entry key="S60" value="5.379317385599372" />
-      <entry key="M2" value="15.512034089589756" />
-      <entry key="M5" value="39.00192625865747" />
-      <entry key="M10" value="70.50032282264068" />
-      <entry key="M15" value="97.48515290700574" />
-      <entry key="M30" value="154.90234715705787" />
-      <entry key="H1" value="219.82825156345874" />
-      <entry key="H2" value="303.79882290040274" />
-      <entry key="H4" value="426.2956251032054" />
-      <entry key="D1" value="941.0081444505475" />
-      <entry key="W1" value="1407.24934045165" />
+      <entry key="MS100" value="6.432701566841765E-8" />
+      <entry key="MS500" value="0.036452733428077574" />
+      <entry key="S2" value="0.48251643952621864" />
+      <entry key="S5" value="1.0088114971958992" />
+      <entry key="S10" value="1.3866369134318435" />
+      <entry key="S30" value="1.862153038865408" />
+      <entry key="S60" value="2.592046517760887" />
+      <entry key="M2" value="4.275295151195905" />
+      <entry key="M5" value="16.880170857075356" />
+      <entry key="M10" value="48.10790920063165" />
+      <entry key="M15" value="77.09014035693589" />
+      <entry key="M30" value="150.9452371733003" />
+      <entry key="H1" value="268.48619721035044" />
+      <entry key="H2" value="425.6303664226294" />
+      <entry key="H4" value="615.1637536084644" />
+      <entry key="D1" value="1241.710702090133" />
+      <entry key="W1" value="1756.4910238886184" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -137,29 +130,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Unity 에디터에 연결.Unity 에디터에 연결.executor": "Debug",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeLensConfigurable",
-    "to.speed.mode.migration.done": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Unity 에디터에 연결.Unity 에디터에 연결.executor&quot;: &quot;Debug&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Unity 에디터에 연결.Unity 에디터에 연결">
     <configuration name="유닛 테스트(배치 모드)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\6000.3.9f1\Editor\Unity.exe" />

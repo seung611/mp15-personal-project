@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 5976605230754289760}
   - component: {fileID: 4846810150686158600}
   - component: {fileID: 6240637870280997759}
+  - component: {fileID: 218635333054167593}
   - component: {fileID: 8991842972012437172}
   m_Layer: 0
   m_Name: PRB_Compressor
@@ -225,7 +226,20 @@ MonoBehaviour:
   _clickAction: {fileID: 6047367241591659970, guid: 752d382753583594797810dab867de7c, type: 3}
   _pressedAnimator: {fileID: 8991842972012437172}
   _pushButtonAnimator: {fileID: 0}
+  _compressButtonTimer: {fileID: 218635333054167593}
   _buttonCoolTime: 2
+--- !u!114 &218635333054167593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5109728461207730011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f3b979e4bab764bb973ef15e250f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
 --- !u!95 &8991842972012437172
 Animator:
   serializedVersion: 7
