@@ -9,6 +9,6 @@ public class TieBagOnWorkEnd : NodeEffect
     {
         // 작업 종료시 쓰레기통에 있고 봉투로 묶지 않은 캔들도 정산
         Debug.Log("마감 묶기 적용");
-        _trashBagController.TiedCanCount += _trashBagController.CurrentCanCount;
+        _trashBagController.TiedCoin += _trashBagController.CurrentBagCoin;
     }
 }
