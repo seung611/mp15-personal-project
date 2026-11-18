@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6313170282899056185}
   - component: {fileID: 1842453485906250912}
   - component: {fileID: 5062607116259229476}
+  - component: {fileID: 5067533352573445657}
   m_Layer: 0
   m_Name: PRB_TrashCan
   m_TagString: Untagged
@@ -86,8 +87,21 @@ MonoBehaviour:
   _stopChangeTrashBagAction: {fileID: 6968240184954989114, guid: 752d382753583594797810dab867de7c, type: 3}
   _cameraController: {fileID: 0}
   _canDespawner: {fileID: 1842453485906250912}
+  _trashBagTimer: {fileID: 0}
   _changeDuration: 5
   _trashBagCapacity: 20
+--- !u!114 &5067533352573445657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278678219399390668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f3b979e4bab764bb973ef15e250f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
 --- !u!1 &446332088416850003
 GameObject:
   m_ObjectHideFlags: 0

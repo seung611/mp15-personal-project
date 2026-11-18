@@ -1,5 +1,4 @@
 using System;
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +12,7 @@ public class InGame : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _trashBagState;
     [SerializeField] private Slider _trashBagSlider;
     [SerializeField] private GameObject[] _guideUI;
+    [SerializeField] private Image _changeCoolTime;
 
     private int _haveCoin => PlayerManager.Instance.HaveCoin;
     
@@ -81,5 +81,10 @@ public class InGame : MonoBehaviour
     private void SetTrashBagChangeGuide(bool isTrashCanView, bool isTransitioning)
     {
         _guideUI[1].SetActive(isTrashCanView && !isTransitioning);
+    }
+
+    public void SetChangeCoolTime(float currentTime, float coolTime)
+    {
+        _changeCoolTime.fillAmount = currentTime / coolTime;
     }
 }

@@ -9,19 +9,19 @@ public class TrashBagController : MonoBehaviour
     [SerializeField] private InputActionReference _stopChangeTrashBagAction;
     [SerializeField] private PlayerCameraController _cameraController;
     [SerializeField] private CanDespawner _canDespawner;
+    [SerializeField] private Timer _trashBagTimer;
     [SerializeField] private float _changeDuration = 5f;
     [SerializeField] private int _trashBagCapacity = 20;
 
-    private Coroutine _changeBagCoroutine;
     private bool _isBagFull => _currentCanCount >= _trashBagCapacity;
-    private bool _isChangingBag;
+    private bool _isChangingBag => _trashBagTimer.IsCounting;
     private int _currentCanCount;
     private int _tiedCanCount;
     private int _currentBagCoin;
     private int _tiedCoin;
     private int _fullTrashBagCount;
 
-    public bool IsChangeBag { get => _isChangingBag; set => _isChangingBag = value; }
+    public bool IsChangeBag { get => _isChangingBag; }
     public int TrashBagCapacity { get => _trashBagCapacity; set => _trashBagCapacity = value; }
     public float ChangeDuration { get => _changeDuration; set => _changeDuration = value; }
     public int CurrentCanCount { get => _currentCanCount; set => _currentCanCount = value; }
@@ -30,11 +30,15 @@ public class TrashBagController : MonoBehaviour
     public int CurrentBagCoin { get => _currentBagCoin; set => _currentBagCoin = value; }
     
     private void OnEnable() => BindEvents();
-    private void OnDisable() => UnbindEvents();
     private void OnCollisionEnter(Collision collision)
     {
         HandleCanArrival(collision);
     }
+    private void Update()
+    {
+        UIManager.Instance.InGameUI.SetChangeCoolTime(_trashBagTimer.CurrentCoolTime, _changeDuration);
+    }
+    private void OnDisable() => UnbindEvents();
     
     private void BindEvents()
     {
@@ -44,6 +48,7 @@ public class TrashBagController : MonoBehaviour
         _stopChangeTrashBagAction.action.Enable();
         _changeTrashBagAction.action.performed += OnChangeBagInput;
         _stopChangeTrashBagAction.action.performed += OnCancelChangeInput;
+        _trashBagTimer.OnTimeOver += ChangeBag;
     }
 
     private void UnbindEvents()
@@ -54,6 +59,7 @@ public class TrashBagController : MonoBehaviour
         _stopChangeTrashBagAction.action.Disable();
         _changeTrashBagAction.action.performed -= OnChangeBagInput;
         _stopChangeTrashBagAction.action.performed -= OnCancelChangeInput;
+        _trashBagTimer.OnTimeOver -= ChangeBag;
     }
 
     private void HandleCanArrival(Collision collision)
@@ -90,7 +96,7 @@ public class TrashBagController : MonoBehaviour
     {
         if (!IsChangeAvailable()) return;
         
-        _changeBagCoroutine = StartCoroutine(CorChangeBag());
+        _trashBagTimer.SetTime(_changeDuration);
     }
 
     private bool IsChangeAvailable()
@@ -99,7 +105,7 @@ public class TrashBagController : MonoBehaviour
                && _cameraController.IsTrashCanView 
                && !_cameraController.IsTransitioning 
                && _currentCanCount != 0 
-               && _changeBagCoroutine == null;
+               && !_trashBagTimer.IsCounting;
     }
 
     private void FullTrashBag()
@@ -108,15 +114,10 @@ public class TrashBagController : MonoBehaviour
         _fullTrashBagCount++;
     }
     
-    public IEnumerator CorChangeBag()
+    private void ChangeBag()
     {
-        _isChangingBag = true;
-        
-        yield return new WaitForSeconds(_changeDuration);
-
         FullTrashBag();
         CompleteBagChange();
-        ResetChangeState();
     }
     
     private void CompleteBagChange()
@@ -144,14 +145,7 @@ public class TrashBagController : MonoBehaviour
     {
         if (!_isChangingBag) return;
         
-        StopCoroutine(_changeBagCoroutine);
-        ResetChangeState();
-    }
-
-    private void ResetChangeState()
-    {
-        _changeBagCoroutine = null;
-        _isChangingBag = false;
+        _trashBagTimer.StopTime();
     }
 
     private void ResetForNewWork()
@@ -167,6 +161,5 @@ public class TrashBagController : MonoBehaviour
     {
         UIManager.Instance.InGameUI.SetTrashBagUI(_currentCanCount, _trashBagCapacity);
         UIManager.Instance.InGameUI.SetCoinUI(_tiedCoin);
-        // UIManager.Instance.InGameUI.SetGuide(_cameraController.IsTrashCanView);
     }
 }

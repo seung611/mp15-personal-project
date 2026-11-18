@@ -19,7 +19,6 @@ public class PlayerCameraController : MonoBehaviour
     
     public bool IsTrashCanView => _isTrashCanView;
     public bool IsTransitioning => _isTransitioning;
-    public Transform TrashCanView  => _trashCanView;
     
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();
