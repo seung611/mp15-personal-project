@@ -1,20 +1,20 @@
 using System;
 using System.Collections;
-using UnityEditor;
+using System.Threading;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using Cysharp.Threading.Tasks;
 
 public class CanSpawner : MonoBehaviour
 {
     [SerializeField] private TrashBagController _trashBagController;
     [SerializeField] private GameObject[] _nomalCanPrefab;
+    [SerializeField] private Timer _canSpawnTimer;
+    [SerializeField] private SkillTree _skillTree;
     [SerializeField] private Transform _canRoot;
     [SerializeField] private float _canCreateInterval = 5f;
-    
-    private Coroutine _runningCoroutine;
-    private bool _firstSpawn = true;
-    private float _elapsedTime;
-    private int _percent = 25;
+    [SerializeField, Range(0, 100)] private int _percent = 25;
+    CancellationTokenSource _token = new();
     
     public int Percent { get => _percent; set => _percent = value; }
 
@@ -43,41 +43,38 @@ public class CanSpawner : MonoBehaviour
             return _nomalCanPrefab[0].gameObject;
         }
 
-        int normalIndex = Random.Range(1, 3);
+        int normalIndex = Random.Range(1, _nomalCanPrefab.Length);
         return _nomalCanPrefab[normalIndex].gameObject;
     }
     
     private void OnSpawnCan()
     {
-        if (_runningCoroutine != null) return;
-        if (_firstSpawn)
+        if (_token != null)
         {
-            _firstSpawn = false;
-            CanInstantiate();
+            try
+            {
+                if (!_token.IsCancellationRequested)
+                {
+                    _token.Cancel();
+                }
+            }
+            catch (ObjectDisposedException) { /* 이미 폐기 중인 경우 무시 */ }
+            
+            _token.Dispose();
+            _token = null; 
         }
         
-        _runningCoroutine = StartCoroutine(CorCanSpawn());
+        _token = new CancellationTokenSource();
+        CanSpawnTimer(_token.Token).Forget();
     }
 
-    private IEnumerator CorCanSpawn()
+    private async UniTaskVoid CanSpawnTimer(CancellationToken token)
     {
-        while (true)
+        while (!token.IsCancellationRequested)
         {
-            float spawnTime = Time.deltaTime;
-            
-            if (_trashBagController.IsChangeBag)
-            {
-                spawnTime *= 0.5f;
-            }
-            
-            _elapsedTime += spawnTime;
-
-            if (_elapsedTime > _canCreateInterval)
-            {
-                CanInstantiate();
-            }
-            
-            yield return null;
+            CanInstantiate();
+            await UniTask.Delay(TimeSpan.FromSeconds(_canCreateInterval), 
+                cancellationToken: token);
         }
     }
 
@@ -88,15 +85,15 @@ public class CanSpawner : MonoBehaviour
             _canRoot.position, 
             Quaternion.Euler(90f, 0f, 0f), 
             _canRoot);
-        _elapsedTime = 0f;
     }
 
     private void OnSpawnCanStop()
     {
-        StopCoroutine(_runningCoroutine);
+        _token?.Cancel();
+        _token?.Dispose();
+        _token = null;
         
         DespawnCan();
-        _runningCoroutine = null;
     }
 
     private void DespawnCan()
