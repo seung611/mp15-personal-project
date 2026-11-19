@@ -500,6 +500,10 @@ PrefabInstance:
       value: PRB_GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 8835849665410251822, guid: efeda61d1cd5d924ba98fe5f57324e61, type: 3}
+      propertyPath: _playerInput
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 752d382753583594797810dab867de7c, type: 3}
+    - target: {fileID: 8835849665410251822, guid: efeda61d1cd5d924ba98fe5f57324e61, type: 3}
       propertyPath: _workDuration
       value: 30
       objectReference: {fileID: 0}

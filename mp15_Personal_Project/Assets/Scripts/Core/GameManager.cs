@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,6 +10,9 @@ public class GameManager : Singleton<GameManager>
     // 만약 패널티가 있으면 추가 시간 감소
     // 시간이 다 끝나면 작업 종료 및 캔 생성과 모든 걸 멈추기
     [SerializeField] private float _workDuration = 60f;
+    [SerializeField] private InputActionAsset _playerInput;
+
+    private InputActionMap _playerInputMap;
     
     private float _currentTime;
     private bool _isWorking;
@@ -21,7 +25,11 @@ public class GameManager : Singleton<GameManager>
     public event Action OnWorkStarted;
     public event Action OnWorkEnded;
 
-    private void Awake() => SetSingleton();
+    private void Awake()
+    {
+        SetSingleton();
+        _playerInputMap = _playerInput.FindActionMap("Player");
+    }
     private void Start()
     {
         _currentTime = _workDuration;
@@ -70,12 +78,14 @@ public class GameManager : Singleton<GameManager>
     {
         Time.timeScale = 0;
         _isPaused = true;
+        _playerInputMap.Disable();
     }
 
     public void Resume()
     {
         Time.timeScale = 1;
         _isPaused = false;
+        _playerInputMap.Enable();
     }
 
     public void LeaveEarly()
