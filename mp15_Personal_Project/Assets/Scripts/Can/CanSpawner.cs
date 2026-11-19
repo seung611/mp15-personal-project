@@ -86,8 +86,15 @@ public class CanSpawner : MonoBehaviour
     {
         while (!token.IsCancellationRequested)
         {
+            float spawn = _canCreateInterval;
+            
+            if (_trashBagController.IsChangeBag)
+            {
+                spawn *= 2f;
+            }
+            
             CanInstantiate();
-            await UniTask.Delay(TimeSpan.FromSeconds(_canCreateInterval), 
+            await UniTask.Delay(TimeSpan.FromSeconds(spawn), 
                 cancellationToken: token);
         }
     }

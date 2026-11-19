@@ -99,28 +99,30 @@ public class TrashBagController : MonoBehaviour
         if (_currentCanCount == _trashBagCapacity 
             && PlayerManager.Instance.HaveNodes.Contains(AUTO_BAG_CHANGE_ID))
         {
-            StartChangeBag();
+            float change = _changeDuration;
+            StartChangeBag(change);
         }
         UpdateInGameUI();
     }
 
     private void OnChangeBagInput(InputAction.CallbackContext context)
     {
+        float change = _changeDuration;
         if (!IsChangeAvailable()) return;
         if (PlayerManager.Instance.HaveNodes.Contains(SKILLED_HANDS_ID) 
             && _isFirstTimeSkillHand)
         {
             _isFirstTimeSkillHand = false;
             Node node = _skillTree.NodeDictionary[SKILLED_HANDS_ID];
-            _changeDuration -= node.NodeData.EffectValue;
+            change -= node.NodeData.EffectValue;
         }
         
-        StartChangeBag();
+        StartChangeBag(change);
     }
 
-    private void StartChangeBag()
+    private void StartChangeBag(float changeTime)
     {
-        _trashBagTimer.SetTime(_changeDuration);
+        _trashBagTimer.SetTime(changeTime);
     }
 
     private bool IsChangeAvailable()

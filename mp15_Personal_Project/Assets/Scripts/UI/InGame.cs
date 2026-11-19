@@ -23,6 +23,10 @@ public class InGame : MonoBehaviour
     private float _almostPercent = 0.8f;
     private float _halfPercent = 0.5f;
 
+    private int _currentCanCount;
+    private bool _isTrashCanView;
+    private bool _isTransitioning;
+
     private int _haveCoin => PlayerManager.Instance.HaveCoin;
 
     private void Awake() => SetButtonCoolTimerClose();
@@ -52,13 +56,16 @@ public class InGame : MonoBehaviour
 
     public void SetTrashBagUI(int current, int max)
     {
+        _currentCanCount = current;
         _trashBagText.text = $"{current} / {max}";
         _trashBagSlider.value = ((float)current / max);
         _trashBagState.text = CalculateTrashBagState(current, max);
+        RefreshTrashBagChangeGuide();
     }
 
     private string CalculateTrashBagState(int current, int max)
     {
+        _currentCanCount = current;
         float trashBagState = (float)current / max;
         if (trashBagState >= _fullPercent)
         {
@@ -80,8 +87,9 @@ public class InGame : MonoBehaviour
 
     public void SetGuide(bool isTrashCanView, bool isTransitioning)
     {
+        _isTrashCanView = isTrashCanView;
+        _isTransitioning = isTransitioning;
         SetPressButtonGuide(isTrashCanView, isTransitioning);
-        SetTrashBagChangeGuide(isTrashCanView, isTransitioning);
     }
 
     private void SetPressButtonGuide(bool isTrashCanView, bool isTransitioning)
@@ -96,9 +104,9 @@ public class InGame : MonoBehaviour
         }
     }
 
-    private void SetTrashBagChangeGuide(bool isTrashCanView, bool isTransitioning)
+    private void RefreshTrashBagChangeGuide()
     {
-        _guideUI[1].SetActive(isTrashCanView && !isTransitioning);
+        _guideUI[1].SetActive(_isTrashCanView && !_isTransitioning && _currentCanCount > 0);
     }
 
     public void SetChangeCoolTime(float currentTime, float coolTime)
