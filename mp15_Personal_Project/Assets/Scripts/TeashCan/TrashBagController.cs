@@ -84,8 +84,6 @@ public class TrashBagController : MonoBehaviour
         }
 
         AddCanToBag(can);
-        UpdateInGameUI();
-        
         DiscardCan(can);
     }
 

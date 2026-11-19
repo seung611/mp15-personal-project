@@ -1,4 +1,3 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Node", menuName = "Skill/Node")]

@@ -15,12 +15,17 @@ public class InGame : MonoBehaviour
     [SerializeField] private Image _changeCoolTime;
     [SerializeField] private Image _pressButtonCoolTime;
 
+    private string _fullText = "가득 참";
+    private string _almostText = "거의 참";
+    private string _halfText = "절반 참";
+    private string _enoughText = "충분함";
+    private float _fullPercent = 1f;
+    private float _almostPercent = 0.8f;
+    private float _halfPercent = 0.5f;
+
     private int _haveCoin => PlayerManager.Instance.HaveCoin;
 
-    private void Awake()
-    {
-        _pressButtonCoolTime.gameObject.SetActive(false);
-    }
+    private void Awake() => SetButtonCoolTimerClose();
     
     public void SetTimeUI(float time)
     {
@@ -31,12 +36,10 @@ public class InGame : MonoBehaviour
 
         if (time < 5f)
         {
-            //_timeText.text = seconds.ToString(@"ss\.f");
             _timeText.text = (time % 60f).ToString("F1");
         }
         else
         {
-            //_timeText.text = minutes.ToString(@"ss") + " : " + seconds.ToString(@"ss");
             _timeText.text = $"{min:00} : {sec:00}";
         }
     }
@@ -51,19 +54,28 @@ public class InGame : MonoBehaviour
     {
         _trashBagText.text = $"{current} / {max}";
         _trashBagSlider.value = ((float)current / max);
-        _trashBagState.text = $"{CalculateTrashBagState(current, max)}";
+        _trashBagState.text = CalculateTrashBagState(current, max);
     }
 
     private string CalculateTrashBagState(int current, int max)
     {
-        /*float num = (float)max / current;
-        switch (num)
+        float trashBagState = (float)current / max;
+        if (trashBagState >= _fullPercent)
         {
-            case 1 :
-                return "충분함";
-            case 0.8
-        }*/
-        return null;
+            return _fullText;
+        }
+
+        if (trashBagState >= _almostPercent)
+        {
+            return _almostText;
+        }
+
+        if (trashBagState >= _halfPercent)
+        {
+            return _halfText;
+        }
+        
+        return _enoughText;
     }
 
     public void SetGuide(bool isTrashCanView, bool isTransitioning)
@@ -101,7 +113,7 @@ public class InGame : MonoBehaviour
 
     public void SetButtonCoolTimerClose()
     {
-        _pressButtonCoolTime.gameObject.SetActive(true); 
+        _pressButtonCoolTime.gameObject.SetActive(false); 
     }
 
     public void SetPressedButtonCoolTime(float currentTime, float coolTime)

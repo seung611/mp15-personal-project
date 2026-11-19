@@ -21,7 +21,7 @@ public class CompressorController : MonoBehaviour
 
     private const string HIGH_SPEED_BUTTON_ID = "Comp_1";
     
-    private bool _isFirstTimrHighSpeedButton = true;
+    private bool _isFirstTimeHighSpeedButton = true;
     
     private bool _isPushButton => _compressButtonTimer.IsCounting;
     
@@ -73,9 +73,9 @@ public class CompressorController : MonoBehaviour
     {
         if (!GameManager.Instance.IsWorking || _isPushButton) return;
         if (PlayerManager.Instance.HaveNodes.Contains(HIGH_SPEED_BUTTON_ID) 
-            && _isFirstTimrHighSpeedButton)
+            && _isFirstTimeHighSpeedButton)
         {
-            _isFirstTimrHighSpeedButton = false;
+            _isFirstTimeHighSpeedButton = false;
             
             Node node = _skillTree.NodeDictionary[HIGH_SPEED_BUTTON_ID];
             _buttonCoolTime -= node.NodeData.EffectValue;
