@@ -16,6 +16,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] public TitleSetting TitleSettingUI;   // [UI] TitleSetting
     [SerializeField] public InGameSetting InGameSettingUI; // [UI] InGameSetting
     [SerializeField] public Warning WarningUI;             // [UI] Warning
+    [SerializeField] public Message MessageUI;             // [UI] Message
 
     private void Awake() => SetSingleton();
     private void Start() => Init();
@@ -77,5 +78,6 @@ public class UIManager : Singleton<UIManager>
         TitleSettingUI.gameObject.SetActive(false);
         InGameSettingUI.gameObject.SetActive(false);
         WarningUI.gameObject.SetActive(false);
+        MessageUI.gameObject.SetActive(false);
     }
 }

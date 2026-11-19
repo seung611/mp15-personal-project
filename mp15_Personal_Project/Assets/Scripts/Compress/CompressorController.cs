@@ -71,7 +71,12 @@ public class CompressorController : MonoBehaviour
 
     private void CompressorTry()
     {
-        if (!GameManager.Instance.IsWorking || _isPushButton) return;
+        if (!GameManager.Instance.IsWorking) return;
+        if (_isPushButton)
+        {
+            UIManager.Instance.MessageUI.ShowMessage("버튼 준비 중입니다.");
+            return;
+        }
         if (PlayerManager.Instance.HaveNodes.Contains(HIGH_SPEED_BUTTON_ID) 
             && _isFirstTimeHighSpeedButton)
         {
