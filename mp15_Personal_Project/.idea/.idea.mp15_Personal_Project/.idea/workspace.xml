@@ -13,10 +13,7 @@
     <list default="true" id="b4b5a5c1-5baa-441f-be08-300e551f33a2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_Map.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_Map.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Can/CanSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Can/CanSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

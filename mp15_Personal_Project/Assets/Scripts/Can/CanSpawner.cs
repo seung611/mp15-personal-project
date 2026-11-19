@@ -9,12 +9,16 @@ public class CanSpawner : MonoBehaviour
 {
     [SerializeField] private TrashBagController _trashBagController;
     [SerializeField] private GameObject[] _nomalCanPrefab;
-    [SerializeField] private Timer _canSpawnTimer;
     [SerializeField] private SkillTree _skillTree;
     [SerializeField] private Transform _canRoot;
     [SerializeField] private float _canCreateInterval = 5f;
     [SerializeField, Range(0, 100)] private int _percent = 25;
-    CancellationTokenSource _token = new();
+
+    private const string KEEN_EYE_ID = "Work_2";
+
+    private bool _isFirstTimeKeenEye = true;
+    
+    private CancellationTokenSource _token = new();
     
     public int Percent { get => _percent; set => _percent = value; }
 
@@ -37,6 +41,15 @@ public class CanSpawner : MonoBehaviour
     private GameObject GetRandomPrefab()
     {
         int randomValue = Random.Range(0, 100);
+
+        if (PlayerManager.Instance.HaveNodes.Contains(KEEN_EYE_ID)
+            && _isFirstTimeKeenEye)
+        {
+            _isFirstTimeKeenEye = false;
+            
+            Node node = _skillTree.NodeDictionary[KEEN_EYE_ID];
+            _percent += (int)node.NodeData.EffectValue;
+        }
 
         if (randomValue < _percent)
         {

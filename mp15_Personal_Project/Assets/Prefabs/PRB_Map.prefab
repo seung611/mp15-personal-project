@@ -556,7 +556,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7272561188484430735}
   - component: {fileID: 3475146705926618586}
-  - component: {fileID: 443415959314000129}
   m_Layer: 0
   m_Name: CanSpawner
   m_TagString: Untagged
@@ -596,22 +595,11 @@ MonoBehaviour:
   - {fileID: 7722268064461781545, guid: 6e141c7e044082d47814ef5d7a6ba6b9, type: 3}
   - {fileID: 5468738738656942365, guid: 80d35da5fcf138340b29fa06b4781148, type: 3}
   - {fileID: 3688049425670295798, guid: b25ccd864040e5f469c2e1a419fd7be2, type: 3}
-  _canSpawnTimer: {fileID: 443415959314000129}
+  _canSpawnTimer: {fileID: 0}
   _skillTree: {fileID: 0}
   _canRoot: {fileID: 7272561188484430735}
   _canCreateInterval: 3
---- !u!114 &443415959314000129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1934612322762758215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1f3b979e4bab764bb973ef15e250f36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Timer
+  _percent: 25
 --- !u!1 &2564175392804436182
 GameObject:
   m_ObjectHideFlags: 0
