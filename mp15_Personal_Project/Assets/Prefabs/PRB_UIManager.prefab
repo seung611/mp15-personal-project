@@ -2372,7 +2372,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2772072311495741694}
         m_TargetAssemblyTypeName: TitleSetting, Assembly-CSharp
         m_MethodName: OnClickExitButton
         m_Mode: 1
@@ -5533,7 +5533,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1773755379620951279}
         m_TargetAssemblyTypeName: InGameSetting, Assembly-CSharp
         m_MethodName: OnClickContinueButton
         m_Mode: 1
@@ -5666,7 +5666,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1773755379620951279}
         m_TargetAssemblyTypeName: InGameSetting, Assembly-CSharp
         m_MethodName: OnClickTitleButton
         m_Mode: 1
@@ -5883,7 +5883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d346b50cafd12e4f876a13061e90b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Warning
-  _gameExit: {fileID: 0}
+  _gameExit: {fileID: 8907026558674602356}
   _title: {fileID: 5667837173865214407}
   _discription: {fileID: 5504115449367413655}
   _yes: {fileID: 5613395652323407816}

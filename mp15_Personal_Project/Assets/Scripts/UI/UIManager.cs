@@ -24,19 +24,20 @@ public class UIManager : Singleton<UIManager>
 
     private void BindInputEvents()
     {
+        if (Instance != this) return;
         _pauseButton.action.Enable();
         _pauseButton.action.performed += OnClickEsc;
     }
 
     private void UnbindInputEvents()
     {
+        if (Instance != this) return;
         _pauseButton.action.Disable();
         _pauseButton.action.performed -= OnClickEsc;
     }
 
     private void OnClickEsc(InputAction.CallbackContext context)
     {
-        Debug.Log("설정 팝업");
         OnSettingUI();
     }
 
@@ -50,6 +51,15 @@ public class UIManager : Singleton<UIManager>
                  && GameManager.Instance.IsWorking)
         {
             InGameSettingUI.gameObject.SetActive(!InGameSettingUI.gameObject.activeSelf);
+            
+            if (InGameSettingUI.gameObject.activeSelf)
+            {
+                GameManager.Instance.Pause();
+            }
+            else
+            {
+                GameManager.Instance.Resume();
+            }
         }
     }
     
@@ -58,7 +68,7 @@ public class UIManager : Singleton<UIManager>
         
     }
 
-    private void Init()
+    public void Init()
     {
         TitleUI.gameObject.SetActive(true);
         InGameUI.gameObject.SetActive(false);

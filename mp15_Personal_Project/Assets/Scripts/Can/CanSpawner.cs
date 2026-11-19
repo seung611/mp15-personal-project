@@ -29,12 +29,14 @@ public class CanSpawner : MonoBehaviour
     {
         GameManager.Instance.OnWorkStarted += OnSpawnCan;
         GameManager.Instance.OnWorkEnded += OnSpawnCanStop;
+        UIManager.Instance.WarningUI.OnLeaveEarly += OnSpawnCanStop;
     }
 
     private void UnbindInputEvents()
     {
         GameManager.Instance.OnWorkStarted -= OnSpawnCan;
         GameManager.Instance.OnWorkEnded -= OnSpawnCanStop;
+        UIManager.Instance.WarningUI.OnLeaveEarly -= OnSpawnCanStop;
     }
 
     // 일반 캔 75%, 고가 캔 25% 랜덤 캔 프리팹

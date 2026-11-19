@@ -12,6 +12,7 @@ public class GameManager : Singleton<GameManager>
     
     private float _currentTime;
     private bool _isWorking;
+    private bool _isPaused;
     private float _elapsedPenaltyTime;
 
     public bool IsWorking => _isWorking;
@@ -47,6 +48,7 @@ public class GameManager : Singleton<GameManager>
 
         _currentTime = _workDuration;   // 시작할 때 시간 초기화
         _isWorking = true;
+        Resume();
         
         OnWorkStarted?.Invoke();
     }
@@ -62,6 +64,25 @@ public class GameManager : Singleton<GameManager>
         
         PlayerManager.Instance.Guide = 1;
         _elapsedPenaltyTime = 0;
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        _isPaused = true;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        _isPaused = false;
+    }
+
+    public void LeaveEarly()
+    {
+        _isWorking = false;
+        _elapsedPenaltyTime = 0;
+        Resume();
     }
 
     private void UpdateUI() 

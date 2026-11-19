@@ -12,10 +12,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b4b5a5c1-5baa-441f-be08-300e551f33a2" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Input/New Actions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/New Actions.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Title.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Title.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Can/CanSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Can/CanSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGameSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGameSetting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TitleSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TitleSetting.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Warning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Warning.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

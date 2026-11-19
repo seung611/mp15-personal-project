@@ -8,20 +8,16 @@ public class InGameSetting : MonoBehaviour
     [SerializeField] private Button _titleButton;
     [SerializeField] private Slider _musicSlider;
     
-    public void OnClickEsc()
-    {
-        UIManager.Instance.InGameSettingUI.gameObject.SetActive(false);
-    }
-    
     public void OnClickContinueButton()
     {
-        UIManager.Instance.InGameSettingUI.gameObject.SetActive(false);
+        UIManager.Instance.OnSettingUI();
     }
     
     public void OnClickTitleButton()
     {
-        UIManager.Instance.WarningUI.gameObject.SetActive(true);
         UIManager.Instance.InGameSettingUI.gameObject.SetActive(false);
+        UIManager.Instance.WarningUI.gameObject.SetActive(true);
+        UIManager.Instance.WarningUI.SetMessage();
     }
 
     public void OnMusicValueChange()
