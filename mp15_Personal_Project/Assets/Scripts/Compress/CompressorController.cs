@@ -12,12 +12,17 @@ public class CompressorController : MonoBehaviour
     [SerializeField] private InputActionReference _clickAction;
     [SerializeField] private Animator _pressedAnimator;
     [SerializeField] private Animator _pushButtonAnimator;
+    [SerializeField] private SkillTree _skillTree;
     [SerializeField] private Timer _compressButtonTimer;
     [SerializeField] private float _buttonCoolTime = 2f;
 
     private Camera _camera;
     private Animator _anim;
-    private float _pressSpeed;
+
+    private const string HIGH_SPEED_BUTTON_ID = "Comp_1";
+    
+    private bool _isFirstTimrHighSpeedButton = true;
+    
     private bool _isPushButton => _compressButtonTimer.IsCounting;
     
     public float ButtonCoolTime { get => _buttonCoolTime; set => _buttonCoolTime = value; }
@@ -67,6 +72,14 @@ public class CompressorController : MonoBehaviour
     private void CompressorTry()
     {
         if (!GameManager.Instance.IsWorking || _isPushButton) return;
+        if (PlayerManager.Instance.HaveNodes.Contains(HIGH_SPEED_BUTTON_ID) 
+            && _isFirstTimrHighSpeedButton)
+        {
+            _isFirstTimrHighSpeedButton = false;
+            
+            Node node = _skillTree.NodeDictionary[HIGH_SPEED_BUTTON_ID];
+            _buttonCoolTime -= node.NodeData.EffectValue;
+        }
         
         _compressButtonTimer.SetTime(_buttonCoolTime);
         UIManager.Instance.InGameUI.SetButtonCoolTimerOpen();

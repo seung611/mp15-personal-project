@@ -1,10 +1,16 @@
 using System;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class CanDespawner : MonoBehaviour
 {
     [SerializeField] private ConveyorManager _conveyorManager;
+    [SerializeField] private SkillTree _skillTree;
     [SerializeField] private bool _canDeleteSelf;
+
+    private const string PRESSURE_REDUCE_VALVE = "Comp_2";
+    
+    private bool _isFirstTimePressureReduceValue = true;
 
     private int _failCanCount;
     private int _successCanCount;
@@ -51,6 +57,15 @@ public class CanDespawner : MonoBehaviour
         }
         else
         {
+            if (PlayerManager.Instance.HaveNodes.Contains(PRESSURE_REDUCE_VALVE)
+                && _isFirstTimePressureReduceValue)
+            {
+                _isFirstTimePressureReduceValue = false;
+                
+                Node node = _skillTree.NodeDictionary[PRESSURE_REDUCE_VALVE];
+                _penaltyTime -= node.NodeData.EffectValue;
+            }
+            
             GameManager.Instance.AddPenalty(_penaltyTime);
             _failCanCount++;
         }

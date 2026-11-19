@@ -617,6 +617,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1310801936590997246, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+      propertyPath: _skillTree
+      value: 
+      objectReference: {fileID: 4673711829579356025}
+    - target: {fileID: 1773033724021580596, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+      propertyPath: _skillTree
+      value: 
+      objectReference: {fileID: 4673711829579356025}
     - target: {fileID: 3337711006049116237, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -657,6 +665,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3815827680912310572, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+      propertyPath: _skillTree
+      value: 
+      objectReference: {fileID: 4673711829579356025}
     - target: {fileID: 5137304465488580784, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
       propertyPath: _skillTree
       value: 
@@ -707,6 +719,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5886923f90121de49a19cf27d3e993da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanSpawner
+--- !u!114 &1228786008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3815827680912310572, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
+  m_PrefabInstance: {fileID: 1228786004}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efaf45e997b762d4b9d558adbbdb3fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CompressorController
 --- !u!1 &1720811878
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,6 +833,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1076196505546075260, guid: 0ce2327b39c0643478f2fe6a787d6dc7, type: 3}
+      propertyPath: _compressorController
+      value: 
+      objectReference: {fileID: 1228786008}
     - target: {fileID: 1296289291985210526, guid: 0ce2327b39c0643478f2fe6a787d6dc7, type: 3}
       propertyPath: _trashBagController
       value: 

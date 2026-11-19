@@ -11,14 +11,18 @@ public class TrashBagController : MonoBehaviour
     [SerializeField] private CanDespawner _canDespawner;
     [SerializeField] private SkillTree _skillTree;
     [SerializeField] private Timer _trashBagTimer;
-    [SerializeField] private float _changeDuration = 5f;
-    [SerializeField] private int _trashBagCapacity = 20;
+    [SerializeField] private float _changeDuration = 3f;
+    [SerializeField] private int _trashBagCapacity = 5;
 
     private const string BIG_TRASH_BAG_ID = "TrashBag_1";
     private const string SKILLED_HANDS_ID = "TrashBag_2";
     private const string BINDING_OFF_ID = "TrashBag_3";
     private const string AUTO_BAG_CHANGE_ID = "TrashBag_4";
     private const string FULL_BAG_BONUS_ID = "Work_3";
+
+    private bool _isFirstTimeBigTrashBag = true;
+    private bool _isFirstTimeSkillHand = true;
+    
     private bool _isBagFull => _currentCanCount >= _trashBagCapacity;
     private bool _isChangingBag => _trashBagTimer.IsCounting;
     private int _currentCanCount;
@@ -102,12 +106,13 @@ public class TrashBagController : MonoBehaviour
         UpdateInGameUI();
     }
 
-    public void OnChangeBagInput(InputAction.CallbackContext context)
+    private void OnChangeBagInput(InputAction.CallbackContext context)
     {
         if (!IsChangeAvailable()) return;
-        if (PlayerManager.Instance.HaveNodes.Contains(SKILLED_HANDS_ID))
+        if (PlayerManager.Instance.HaveNodes.Contains(SKILLED_HANDS_ID) 
+            && _isFirstTimeSkillHand)
         {
-            // bool 값 받아서 한 번만 실행되게.
+            _isFirstTimeSkillHand = false;
             Node node = _skillTree.NodeDictionary[SKILLED_HANDS_ID];
             _changeDuration -= node.NodeData.EffectValue;
         }
@@ -179,18 +184,15 @@ public class TrashBagController : MonoBehaviour
         _trashBagTimer.StopTime();
     }
 
-    private void AddBagCapacity()
+    private void ResetForNewWork()
     {
-        if (PlayerManager.Instance.HaveNodes.Contains(BIG_TRASH_BAG_ID))
+        if (PlayerManager.Instance.HaveNodes.Contains(BIG_TRASH_BAG_ID) 
+            && _isFirstTimeBigTrashBag)
         {
-            // 딱 한 번만 실행 되면 됨.
+            _isFirstTimeBigTrashBag = false;
             Node node = _skillTree.NodeDictionary[BIG_TRASH_BAG_ID];
             _trashBagCapacity += (int)node.NodeData.EffectValue;
         }
-    }
-
-    private void ResetForNewWork()
-    {
         _currentCanCount = 0;
         _currentBagCoin = 0;
         _tiedCanCount = 0;
