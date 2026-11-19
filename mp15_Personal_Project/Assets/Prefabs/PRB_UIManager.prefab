@@ -166,7 +166,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7238424003776558180}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TitleSetting, Assembly-CSharp
         m_MethodName: OnMusicValueChange
         m_Mode: 1
@@ -752,7 +752,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2576116504003681178}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnClickEsc
+        m_MethodName: OnSettingUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -963,7 +963,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2576116504003681178}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: OnClickEsc
+        m_MethodName: OnSettingUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2372,7 +2372,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7238424003776558180}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: TitleSetting, Assembly-CSharp
         m_MethodName: OnClickExitButton
         m_Mode: 1
@@ -3548,7 +3548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4888068039148181491}
-  - component: {fileID: 7238424003776558180}
+  - component: {fileID: 2772072311495741694}
   m_Layer: 5
   m_Name: '[UI] TitleSetting'
   m_TagString: Untagged
@@ -3580,7 +3580,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7238424003776558180
+--- !u!114 &2772072311495741694
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5533,7 +5533,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 718270433447081609}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InGameSetting, Assembly-CSharp
         m_MethodName: OnClickContinueButton
         m_Mode: 1
@@ -5666,7 +5666,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 718270433447081609}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InGameSetting, Assembly-CSharp
         m_MethodName: OnClickTitleButton
         m_Mode: 1
@@ -6809,12 +6809,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a462e12e5e1ddda408d0d2895963ec00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  _pauseButton: {fileID: -7964074018499091038, guid: 752d382753583594797810dab867de7c, type: 3}
   TitleUI: {fileID: 2734240833649264404}
   InGameUI: {fileID: 7091533657683435075}
   ResultUI: {fileID: 9009456393377341306}
   HelpUI: {fileID: 1292099611376061403}
-  TitleSettingUI: {fileID: 7238424003776558180}
-  InGameSettingUI: {fileID: 718270433447081609}
+  TitleSettingUI: {fileID: 2772072311495741694}
+  InGameSettingUI: {fileID: 1773755379620951279}
   WarningUI: {fileID: 6198299201390437885}
 --- !u!1 &6736611254079384128
 GameObject:
@@ -11035,7 +11036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1380776656751954152}
-  - component: {fileID: 718270433447081609}
+  - component: {fileID: 1773755379620951279}
   m_Layer: 5
   m_Name: '[UI] InGameSetting'
   m_TagString: Untagged
@@ -11068,7 +11069,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &718270433447081609
+--- !u!114 &1773755379620951279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11544,7 +11545,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 718270433447081609}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: InGameSetting, Assembly-CSharp
         m_MethodName: OnMusicValueChange
         m_Mode: 1

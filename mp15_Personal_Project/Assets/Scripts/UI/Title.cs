@@ -25,6 +25,6 @@ public class Title : MonoBehaviour
     
     public void OnClickSetting()
     {
-        UIManager.Instance.TitleSettingUI.gameObject.SetActive(true);
+        UIManager.Instance.OnSettingUI();
     }
 }
