@@ -15,13 +15,13 @@ public class Timer : MonoBehaviour
     private void Update()
     {
         if (!_isCounting) return;
-        if (_currentCoolTime <= 0)
-        {
-            _isCounting = false;
-            OnTimeOver?.Invoke();
-        }
-
+        
         _currentCoolTime -= Time.deltaTime;
+        if (_currentCoolTime > 0) return;
+        
+        _currentCoolTime = 0;
+        _isCounting = false;
+        OnTimeOver?.Invoke();
     }
 
     public void SetTime(float coolTime)
@@ -34,5 +34,6 @@ public class Timer : MonoBehaviour
     public void StopTime()
     {
         _isCounting = false;
+        _currentCoolTime = 0;
     }
 }
