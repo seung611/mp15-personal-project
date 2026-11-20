@@ -33,6 +33,11 @@ public class SoundManager : Singleton<SoundManager>
         Init();
     }
 
+    private void Start()
+    {
+        PlayBgm(EBgmType.Title);
+    }
+
     public void PlayBgm(EBgmType type)
     {
         if (_bgmClips.ContainsKey(type))

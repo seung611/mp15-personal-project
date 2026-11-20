@@ -62,6 +62,7 @@ public class GameManager : Singleton<GameManager>
         _currentTime = _currentWorkDuration;
         Resume();
         
+        SoundManager.Instance.PlayBgm(EBgmType.InGame);
         OnWorkStarted?.Invoke();
     }
 
@@ -71,6 +72,7 @@ public class GameManager : Singleton<GameManager>
 
         _isWorking = false;
         
+        SoundManager.Instance.PlayBgm(EBgmType.Result);
         OnWorkEnded?.Invoke();
         UpdateUI();
         

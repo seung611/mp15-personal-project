@@ -32,6 +32,7 @@ public class Warning : MonoBehaviour
             OnLeaveEarly?.Invoke();
             SceneManager.LoadScene(_titleScene.SceneName);
             UIManager.Instance.Init();
+            SoundManager.Instance.PlayBgm(EBgmType.Title);
         }
     }
 

@@ -48,7 +48,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   _bgmSource: {fileID: 6528911990783140326}
   _sfxSource: {fileID: 4219801983101137266}
-  _bgmClipList: []
+  _bgmClipList:
+  - Type: 0
+    Clip: {fileID: 8300000, guid: 033766cc31c97904bae4404b8a079544, type: 3}
+  - Type: 1
+    Clip: {fileID: 0}
+  - Type: 2
+    Clip: {fileID: 0}
   _sfxClipList: []
 --- !u!1 &6899749265752352318
 GameObject:
