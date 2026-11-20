@@ -41,14 +41,6 @@ public class PlayerManager : Singleton<PlayerManager>
         if (!CanPurchase(node)) return false;
         
         _haveNodes.Add(node.NodeData.SkillId);
-
-        Debug.Log("구매");
-        UpdateUI();
-        if (node.NodeEffect != null)
-        {
-            Debug.Log("플레이어 매니저");
-            node.NodeEffect.SetNodeEffect();
-        }
         UseCoin(node.NodeData.SkillPrice);
         
         return true;
