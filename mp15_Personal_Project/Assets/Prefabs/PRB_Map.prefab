@@ -595,7 +595,6 @@ MonoBehaviour:
   - {fileID: 7722268064461781545, guid: 6e141c7e044082d47814ef5d7a6ba6b9, type: 3}
   - {fileID: 5468738738656942365, guid: 80d35da5fcf138340b29fa06b4781148, type: 3}
   - {fileID: 3688049425670295798, guid: b25ccd864040e5f469c2e1a419fd7be2, type: 3}
-  _canSpawnTimer: {fileID: 0}
   _skillTree: {fileID: 0}
   _canRoot: {fileID: 7272561188484430735}
   _canCreateInterval: 3
@@ -3999,7 +3998,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4456425647365044494, guid: 3f063c7d749c1a14b8b19a7a8a339dec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.58
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4456425647365044494, guid: 3f063c7d749c1a14b8b19a7a8a339dec, type: 3}
       propertyPath: m_LocalPosition.y

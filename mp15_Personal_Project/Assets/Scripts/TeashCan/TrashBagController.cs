@@ -34,12 +34,6 @@ public class TrashBagController : MonoBehaviour
     private float _currentChangeDuration;
 
     public bool IsChangeBag { get => _isChangingBag; }
-    public int TrashBagCapacity { get => _trashBagCapacity; set => _trashBagCapacity = value; }
-    public float ChangeDuration { get => _changeDuration; set => _changeDuration = value; }
-    public int CurrentCanCount { get => _currentCanCount; set => _currentCanCount = value; }
-    public int FullTrashBagCount { get => _fullTrashBagCount; set => _fullTrashBagCount = value; }
-    public int TiedCoin { get => _tiedCoin; set => _tiedCoin = value; }
-    public int CurrentBagCoin { get => _currentBagCoin; set => _currentBagCoin = value; }
     
     private void OnEnable() => BindEvents();
     private void OnCollisionEnter(Collision collision)

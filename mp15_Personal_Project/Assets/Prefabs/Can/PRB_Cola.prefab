@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5364244339210172962}
   - component: {fileID: 628110254873052850}
   - component: {fileID: 7556091055032531687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,8 @@ GameObject:
   - component: {fileID: 5676851025155240088}
   - component: {fileID: 7431794359854302813}
   - component: {fileID: 2160141289270790360}
-  m_Layer: 0
+  - component: {fileID: 3198111812893113196}
+  m_Layer: 8
   m_Name: PRB_Cola
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +169,10 @@ MonoBehaviour:
   _normalCan: {fileID: 7285268091429950841}
   _trashCan: {fileID: 1467363637191128715}
   _triggerList: []
+  _canCrushTimer: {fileID: 3198111812893113196}
   _canPrice: 10
+  _time: 0.4
+  _isSuccess: 0
 --- !u!65 &2160141289270790360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -188,8 +192,20 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.47, y: 0.51, z: 0.31}
-  m_Center: {x: 0, y: 0, z: 0.133}
+  m_Size: {x: 0.47, y: 0.51, z: 0.6071118}
+  m_Center: {x: 0, y: 0, z: -0.015555903}
+--- !u!114 &3198111812893113196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5468738738656942365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1f3b979e4bab764bb973ef15e250f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
 --- !u!1 &7285268091429950841
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +217,7 @@ GameObject:
   - component: {fileID: 452249726268578756}
   - component: {fileID: 1599499703424897514}
   - component: {fileID: 3990520215309963492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}

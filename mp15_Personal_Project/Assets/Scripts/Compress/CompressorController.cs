@@ -25,7 +25,6 @@ public class CompressorController : MonoBehaviour
     
     private bool _isPushButton => _compressButtonTimer.IsCounting;
     
-    public float ButtonCoolTime { get => _buttonCoolTime; set => _buttonCoolTime = value; }
 
     private void Awake() => CacheComponents();
     private void OnEnable() => BindInputEvents();
