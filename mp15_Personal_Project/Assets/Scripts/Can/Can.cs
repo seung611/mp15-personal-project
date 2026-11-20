@@ -1,33 +1,48 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Can : MonoBehaviour
 {
     [SerializeField] private GameObject _normalCan;
     [SerializeField] private GameObject _trashCan;
-    [SerializeField] private List<Collider> _triggerList = new();
     [SerializeField] private int _canPrice;
-    private float _time = 0f;
+
+    private CompressorContact _piston;
+    private bool _isInCompressSpace;
 
     [SerializeField] private bool _isSuccess;
     
     public bool IsSuccess => _isSuccess;
     public int CanPrice => _canPrice;
 
+    public bool IsInCompressSpace => _isInCompressSpace;
+
     private void Awake() => Init();
     private void OnTriggerEnter(Collider collider)
     {
-        _triggerList.Add(collider);
-        
-        if (_triggerList.Count == 2 && IsCanCrush())
+        if (collider.attachedRigidbody != null
+            && collider.attachedRigidbody.TryGetComponent(out CompressorContact piston))
         {
-            CrushCan();
+            _piston = piston;
         }
+        else
+        {
+            _isInCompressSpace = true;
+        }
+        
+        if (IsCanCrush()) CrushCan();
     }
 
     private void OnTriggerExit(Collider collider)
     {
-        _triggerList.Remove(collider);
+        if (collider.attachedRigidbody != null
+            && collider.attachedRigidbody.TryGetComponent(out CompressorContact _))
+        {
+            _piston = null;
+        }
+        else
+        {
+            _isInCompressSpace = false;
+        }
     }
 
     private void CrushCan()
@@ -39,33 +54,10 @@ public class Can : MonoBehaviour
     
     private bool IsCanCrush()
     {
-        foreach (Collider trigger in _triggerList)
-        {
-            CompressorContact piston = trigger.GetComponentInParent<CompressorContact>();
-            if (piston == null) continue;
-
-            return piston.IsPressingDown();
-        }
-
-        return false;
-    }
-    
-    public bool IsInCompressSpace
-    {
-        get
-        {
-            foreach (Collider trigger in _triggerList)
-            {
-                if (trigger.GetComponentInParent<CompressorContact>() == null) return true;
-            }
-            return false;
-        }
-    }
-
-    private void ChangeToTrashModel()
-    {
-        _normalCan.SetActive(false);
-        _trashCan.SetActive(true);
+        return !_isSuccess
+               && _isInCompressSpace
+               && _piston != null
+               && _piston.IsPressingDown();
     }
 
     private void Init()

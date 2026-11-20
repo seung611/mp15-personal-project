@@ -9,7 +9,7 @@ public class CompressorContact : MonoBehaviour
 
     private Collider[] _hit = new Collider[4];
     
-    private const string PRESS_STATE = "Press";
+    private static readonly int PRESS_STATE_HASH = Animator.StringToHash("Press");
     private const float CLIP_FRAMES = 60f;
     private const float PRESS_TOP_Y = 4.5f;
     private const float PRESS_BOTTOM_Y = 3.3f;
@@ -29,7 +29,7 @@ public class CompressorContact : MonoBehaviour
     {
         AnimatorStateInfo info = _pressedAnimator.GetCurrentAnimatorStateInfo(0);
 
-        if (!info.IsName(PRESS_STATE)) return false;
+        if (info.shortNameHash != PRESS_STATE_HASH) return false;
         if (info.normalizedTime >= PRESS_IMPACT_TIME) return false;
 
         return true;
@@ -62,6 +62,6 @@ public class CompressorContact : MonoBehaviour
         float ratio = Mathf.InverseLerp(PRESS_BOTTOM_Y, PRESS_TOP_Y, height);
         float time = Mathf.Lerp(PRESS_RISE_START_TIME, 1f, ratio);
         
-        _pressedAnimator.Play(PRESS_STATE, 0, time);
+        _pressedAnimator.Play(PRESS_STATE_HASH, 0, time);
     }
 }
