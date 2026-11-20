@@ -57,9 +57,11 @@ public class InGame : MonoBehaviour
     public void SetTrashBagUI(int current, int max)
     {
         _currentCanCount = current;
+        
         _trashBagText.text = $"{current} / {max}";
         _trashBagSlider.value = ((float)current / max);
         _trashBagState.text = CalculateTrashBagState(current, max);
+        
         RefreshTrashBagChangeGuide();
     }
 
@@ -90,6 +92,7 @@ public class InGame : MonoBehaviour
         _isTrashCanView = isTrashCanView;
         _isTransitioning = isTransitioning;
         SetPressButtonGuide(isTrashCanView, isTransitioning);
+        RefreshTrashBagChangeGuide();
     }
 
     private void SetPressButtonGuide(bool isTrashCanView, bool isTransitioning)
