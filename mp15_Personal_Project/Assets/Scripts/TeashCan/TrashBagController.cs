@@ -32,12 +32,6 @@ public class TrashBagController : MonoBehaviour
     private int _fullTrashBagCount;
 
     public bool IsChangeBag { get => _isChangingBag; }
-    public int TrashBagCapacity { get => _trashBagCapacity; set => _trashBagCapacity = value; }
-    public float ChangeDuration { get => _changeDuration; set => _changeDuration = value; }
-    public int CurrentCanCount { get => _currentCanCount; set => _currentCanCount = value; }
-    public int FullTrashBagCount { get => _fullTrashBagCount; set => _fullTrashBagCount = value; }
-    public int TiedCoin { get => _tiedCoin; set => _tiedCoin = value; }
-    public int CurrentBagCoin { get => _currentBagCoin; set => _currentBagCoin = value; }
     
     private void OnEnable() => BindEvents();
     private void OnCollisionEnter(Collision collision)
@@ -107,17 +101,16 @@ public class TrashBagController : MonoBehaviour
 
     private void OnChangeBagInput(InputAction.CallbackContext context)
     {
-        float change = _changeDuration;
         if (!IsChangeAvailable()) return;
         if (PlayerManager.Instance.HaveNodes.Contains(SKILLED_HANDS_ID) 
             && _isFirstTimeSkillHand)
         {
             _isFirstTimeSkillHand = false;
             Node node = _skillTree.NodeDictionary[SKILLED_HANDS_ID];
-            change -= node.NodeData.EffectValue;
+            _changeDuration -= node.NodeData.EffectValue;
         }
         
-        StartChangeBag(change);
+        StartChangeBag(_changeDuration);
     }
 
     private void StartChangeBag(float changeTime)
