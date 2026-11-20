@@ -41,6 +41,11 @@ public class Message : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void OnDestroy()
+    {
+        CancelHideTimer();
+    }
+
     private void CancelHideTimer()
     {
         if (_hideToken != null)
