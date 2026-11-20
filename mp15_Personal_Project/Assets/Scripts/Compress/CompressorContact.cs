@@ -10,7 +10,11 @@ public class CompressorContact : MonoBehaviour
     private Collider[] _hit = new Collider[4];
     
     private const string PRESS_STATE = "Press";
-    private const float PRESS_BOTTOM_TIME = 0.5f;
+    private const float CLIP_FRAMES = 60f;
+    private const float PRESS_TOP_Y = 4.5f;
+    private const float PRESS_BOTTOM_Y = 3.3f;
+    private const float PRESS_IMPACT_TIME = 10f / CLIP_FRAMES;
+    private const float PRESS_RISE_START_TIME = 20f / CLIP_FRAMES;
     
     private void FixedUpdate()
     {
@@ -26,7 +30,7 @@ public class CompressorContact : MonoBehaviour
         AnimatorStateInfo info = _pressedAnimator.GetCurrentAnimatorStateInfo(0);
 
         if (!info.IsName(PRESS_STATE)) return false;
-        if (info.normalizedTime >= PRESS_BOTTOM_TIME) return false;
+        if (info.normalizedTime >= PRESS_IMPACT_TIME) return false;
 
         return true;
     }
@@ -44,6 +48,7 @@ public class CompressorContact : MonoBehaviour
         {
             if (!_hit[i].TryGetComponent(out Can can)) continue;
             if (can.IsSuccess) continue;
+            if (can.IsInCompressSpace) continue;
 
             return true;
         }
@@ -53,7 +58,10 @@ public class CompressorContact : MonoBehaviour
     
     private void ReturnCompressor()
     {
-        float progress = _pressedAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-        _pressedAnimator.Play(PRESS_STATE, 0, 1f - progress);
+        float height = transform.localPosition.y;
+        float ratio = Mathf.InverseLerp(PRESS_BOTTOM_Y, PRESS_TOP_Y, height);
+        float time = Mathf.Lerp(PRESS_RISE_START_TIME, 1f, ratio);
+        
+        _pressedAnimator.Play(PRESS_STATE, 0, time);
     }
 }

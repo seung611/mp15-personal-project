@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +6,8 @@ public class Can : MonoBehaviour
     [SerializeField] private GameObject _normalCan;
     [SerializeField] private GameObject _trashCan;
     [SerializeField] private List<Collider> _triggerList = new();
-    [SerializeField] private Timer _canCrushTimer;
     [SerializeField] private int _canPrice;
-    private float _time = 0.2f;
+    private float _time = 0f;
 
     [SerializeField] private bool _isSuccess;
     
@@ -17,8 +15,6 @@ public class Can : MonoBehaviour
     public int CanPrice => _canPrice;
 
     private void Awake() => Init();
-    private void OnEnable()  => _canCrushTimer.OnTimeOver += ChangeToTrashModel;
-    private void OnDisable() => _canCrushTimer.OnTimeOver -= ChangeToTrashModel;
     private void OnTriggerEnter(Collider collider)
     {
         _triggerList.Add(collider);
@@ -31,16 +27,14 @@ public class Can : MonoBehaviour
 
     private void OnTriggerExit(Collider collider)
     {
-        for (int i = 0; i < _triggerList.Count; ++i)
-        {
-            _triggerList.Remove(collider);
-        }
+        _triggerList.Remove(collider);
     }
 
     private void CrushCan()
     {
         _isSuccess = true;
-        _canCrushTimer.SetTime(_time);
+        _normalCan.SetActive(false);
+        _trashCan.SetActive(true);
     }
     
     private bool IsCanCrush()
@@ -48,12 +42,24 @@ public class Can : MonoBehaviour
         foreach (Collider trigger in _triggerList)
         {
             CompressorContact piston = trigger.GetComponentInParent<CompressorContact>();
-            if (piston == null) continue;          // 압축 공간 트리거는 넘어감
+            if (piston == null) continue;
 
-            return piston.IsPressingDown();        // 피스톤이면 내려가는 중인지 반환
+            return piston.IsPressingDown();
         }
 
-        return false;                              // 피스톤 트리거가 없음
+        return false;
+    }
+    
+    public bool IsInCompressSpace
+    {
+        get
+        {
+            foreach (Collider trigger in _triggerList)
+            {
+                if (trigger.GetComponentInParent<CompressorContact>() == null) return true;
+            }
+            return false;
+        }
     }
 
     private void ChangeToTrashModel()
