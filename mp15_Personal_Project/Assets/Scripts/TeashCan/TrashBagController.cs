@@ -12,6 +12,7 @@ public class TrashBagController : MonoBehaviour
     [SerializeField] private SkillTree _skillTree;
     [SerializeField] private Timer _trashBagTimer;
     [SerializeField] private float _changeDuration = 3f;
+    [SerializeField] private float _autoChangeDuration = 3f;
     [SerializeField] private int _trashBagCapacity = 5;
 
     private const string BIG_TRASH_BAG_ID = "TrashBag_1";
@@ -30,8 +31,15 @@ public class TrashBagController : MonoBehaviour
     private int _currentBagCoin;
     private int _tiedCoin;
     private int _fullTrashBagCount;
+    private float _currentChangeDuration;
 
     public bool IsChangeBag { get => _isChangingBag; }
+    public int TrashBagCapacity { get => _trashBagCapacity; set => _trashBagCapacity = value; }
+    public float ChangeDuration { get => _changeDuration; set => _changeDuration = value; }
+    public int CurrentCanCount { get => _currentCanCount; set => _currentCanCount = value; }
+    public int FullTrashBagCount { get => _fullTrashBagCount; set => _fullTrashBagCount = value; }
+    public int TiedCoin { get => _tiedCoin; set => _tiedCoin = value; }
+    public int CurrentBagCoin { get => _currentBagCoin; set => _currentBagCoin = value; }
     
     private void OnEnable() => BindEvents();
     private void OnCollisionEnter(Collision collision)
@@ -40,7 +48,7 @@ public class TrashBagController : MonoBehaviour
     }
     private void Update()
     {
-        UIManager.Instance.InGameUI.SetChangeCoolTime(_trashBagTimer.CurrentCoolTime, _changeDuration);
+        UIManager.Instance.InGameUI.SetChangeCoolTime(_trashBagTimer.CurrentCoolTime, _currentChangeDuration);
     }
     private void OnDisable() => UnbindEvents();
     
@@ -93,7 +101,7 @@ public class TrashBagController : MonoBehaviour
         if (_currentCanCount == _trashBagCapacity 
             && PlayerManager.Instance.HaveNodes.Contains(AUTO_BAG_CHANGE_ID))
         {
-            float change = _changeDuration;
+            float change = _autoChangeDuration;
             StartChangeBag(change);
         }
         UpdateInGameUI();
@@ -115,6 +123,7 @@ public class TrashBagController : MonoBehaviour
 
     private void StartChangeBag(float changeTime)
     {
+        _currentChangeDuration = changeTime;
         _trashBagTimer.SetTime(changeTime);
     }
 

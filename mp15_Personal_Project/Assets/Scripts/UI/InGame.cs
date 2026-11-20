@@ -114,6 +114,11 @@ public class InGame : MonoBehaviour
 
     public void SetChangeCoolTime(float currentTime, float coolTime)
     {
+        if (coolTime <= 0)
+        {
+            _changeCoolTime.fillAmount = 0;
+            return;
+        }
         _changeCoolTime.fillAmount = currentTime / coolTime;
     }
 
