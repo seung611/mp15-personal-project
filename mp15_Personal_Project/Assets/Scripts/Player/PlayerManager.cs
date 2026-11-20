@@ -12,7 +12,6 @@ public class PlayerManager : Singleton<PlayerManager>
     public int Guide { get => _guide; set => _guide = value; }
 
     public HashSet<string> HaveNodes => _haveNodes;
-    // public Dictionary<string, Node> NodeDictionary => _nodeDictionary;
 
     public event Action OnUpdateSkillTreeUI;
 
@@ -38,9 +37,14 @@ public class PlayerManager : Singleton<PlayerManager>
     
     public bool TryPurchase(Node node)
     {
-        if (!CanPurchase(node)) return false;
+        if (!CanPurchase(node))
+        {
+            SoundManager.Instance.PlaySfx(ESfxType.SkillDenied);
+            return false;
+        }
         
         _haveNodes.Add(node.NodeData.SkillId);
+        SoundManager.Instance.PlaySfx(ESfxType.SkillPurchase);
         UseCoin(node.NodeData.SkillPrice);
         
         return true;

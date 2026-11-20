@@ -67,6 +67,7 @@ public class CanDespawner : MonoBehaviour
             }
             
             GameManager.Instance.AddPenalty(_penaltyTime);
+            SoundManager.Instance.PlaySfx(ESfxType.TimePenalty);
             _failCanCount++;
         }
     }

@@ -23,7 +23,6 @@ public class GameManager : Singleton<GameManager>
     private float _elapsedPenaltyTime;
 
     public bool IsWorking => _isWorking;
-    public float WorkDuration {get => _workDuration; set => _workDuration = value; }
 
     public event Action OnWorkStarted;
     public event Action OnWorkEnded;
@@ -45,6 +44,10 @@ public class GameManager : Singleton<GameManager>
         _currentTime -= Time.deltaTime;   // 매 프레임 흐른 시간만큼 감소
         UIManager.Instance.InGameUI.SetTimeUI(_currentTime);
         
+        if (_currentTime < 5f)
+        {
+            SoundManager.Instance.PlaySfx(ESfxType.TimeWarning);
+        }
         if (_currentTime <= 0f)
         {
             _currentTime = 0f;
@@ -72,6 +75,7 @@ public class GameManager : Singleton<GameManager>
 
         _isWorking = false;
         
+        SoundManager.Instance.PlaySfx(ESfxType.WorkEnd);
         SoundManager.Instance.PlayBgm(EBgmType.Result);
         OnWorkEnded?.Invoke();
         UpdateUI();

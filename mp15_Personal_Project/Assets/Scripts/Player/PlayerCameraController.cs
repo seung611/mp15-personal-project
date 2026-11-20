@@ -47,6 +47,7 @@ public class PlayerCameraController : MonoBehaviour
         Transform target = _isTrashCanView ? _trashCanView : _conveyorView;
         
         StartCoroutine(MoveCamera(target));
+        SoundManager.Instance.PlaySfx(ESfxType.CameraSwitch);
         UIManager.Instance.InGameUI.SetGuide(_isTrashCanView, _isTransitioning);
     }
 

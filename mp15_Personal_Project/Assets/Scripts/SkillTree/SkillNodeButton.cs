@@ -14,8 +14,6 @@ public class SkillNodeButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
     [SerializeField] private Color _availableColor;
     [SerializeField] private Color _notEnoughCoinColor;
 
-    public NodeData NodeData => _node.NodeData;
-
     public void OnClickSkillButton()
     {
         PlayerManager.Instance.TryPurchase(_node);
@@ -23,6 +21,7 @@ public class SkillNodeButton : MonoBehaviour, IPointerEnterHandler, IPointerExit
     
     public void OnPointerEnter(PointerEventData eventData)
     {
+        SoundManager.Instance.PlaySfx(ESfxType.SkillHover);
         _toolTip.Show(_node.NodeData, transform as RectTransform);
     }
 

@@ -13,7 +13,6 @@ public class Can : MonoBehaviour
     
     public bool IsSuccess => _isSuccess;
     public int CanPrice => _canPrice;
-
     public bool IsInCompressSpace => _isInCompressSpace;
 
     private void Awake() => Init();
@@ -47,6 +46,7 @@ public class Can : MonoBehaviour
 
     private void CrushCan()
     {
+        SoundManager.Instance.PlaySfx(ESfxType.Compress);
         _isSuccess = true;
         _normalCan.SetActive(false);
         _trashCan.SetActive(true);

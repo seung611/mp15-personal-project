@@ -63,5 +63,6 @@ public class CompressorContact : MonoBehaviour
         float time = Mathf.Lerp(PRESS_RISE_START_TIME, 1f, ratio);
         
         _pressedAnimator.Play(PRESS_STATE_HASH, 0, time);
+        SoundManager.Instance.PlaySfx(ESfxType.CompressFail);
     }
 }

@@ -76,6 +76,7 @@ public class TrashBagController : MonoBehaviour
         if (_isChangingBag || _isBagFull)
         {
             DiscardCan(can);
+            SoundManager.Instance.PlaySfx(ESfxType.CanFail);
             return;
         }
 
@@ -90,6 +91,7 @@ public class TrashBagController : MonoBehaviour
 
     private void AddCanToBag(Can can)
     {
+        SoundManager.Instance.PlaySfx(ESfxType.CanSuccess);
         _currentBagCoin += can.CanPrice;
         _currentCanCount++;
         if (_currentCanCount == _trashBagCapacity 

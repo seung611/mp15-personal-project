@@ -89,6 +89,7 @@ public class CompressorController : MonoBehaviour
         UIManager.Instance.InGameUI.SetButtonCoolTimerOpen();
         _pushButtonAnimator.SetTrigger("OnDown");
         _pressedAnimator.SetTrigger("OnDown");
+        SoundManager.Instance.PlaySfx(ESfxType.CompressButton);
     }
 
     private void PushButtonCoolTime()
