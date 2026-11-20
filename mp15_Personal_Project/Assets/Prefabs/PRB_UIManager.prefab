@@ -5949,8 +5949,8 @@ MonoBehaviour:
   _yes: {fileID: 5613395652323407816}
   _no: {fileID: 6433309315457387757}
   _titleScene:
-    _sceneAsset: {fileID: 0}
-    _sceneName: 
+    _sceneAsset: {fileID: 102900000, guid: ce387d6dfc496f54c914b4cd75bfc001, type: 3}
+    _sceneName: TitleScene
 --- !u!114 &8907026558674602356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6803,7 +6803,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6198299201390437885}
         m_TargetAssemblyTypeName: Warning, Assembly-CSharp
-        m_MethodName: OnClickTitleYes
+        m_MethodName: OnClickYes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

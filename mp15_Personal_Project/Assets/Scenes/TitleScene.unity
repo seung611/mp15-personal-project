@@ -127,18 +127,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5613395652323407816, guid: cac721a74a120964b971fb1b0e7d497b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickYes
-      objectReference: {fileID: 0}
-    - target: {fileID: 6198299201390437885, guid: cac721a74a120964b971fb1b0e7d497b, type: 3}
-      propertyPath: _titleScene._sceneName
-      value: TitleScene
-      objectReference: {fileID: 0}
-    - target: {fileID: 6198299201390437885, guid: cac721a74a120964b971fb1b0e7d497b, type: 3}
-      propertyPath: _titleScene._sceneAsset
-      value: 
-      objectReference: {fileID: 102900000, guid: ce387d6dfc496f54c914b4cd75bfc001, type: 3}
     - target: {fileID: 6615408113100947306, guid: cac721a74a120964b971fb1b0e7d497b, type: 3}
       propertyPath: m_Name
       value: PRB_UIManager
@@ -498,14 +486,6 @@ PrefabInstance:
     - target: {fileID: 7203424393595679530, guid: efeda61d1cd5d924ba98fe5f57324e61, type: 3}
       propertyPath: m_Name
       value: PRB_GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 8835849665410251822, guid: efeda61d1cd5d924ba98fe5f57324e61, type: 3}
-      propertyPath: _playerInput
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: 752d382753583594797810dab867de7c, type: 3}
-    - target: {fileID: 8835849665410251822, guid: efeda61d1cd5d924ba98fe5f57324e61, type: 3}
-      propertyPath: _workDuration
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

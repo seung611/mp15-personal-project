@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -11,12 +10,16 @@ public class GameManager : Singleton<GameManager>
     // 시간이 다 끝나면 작업 종료 및 캔 생성과 모든 걸 멈추기
     [SerializeField] private float _workDuration = 60f;
     [SerializeField] private InputActionAsset _playerInput;
+    [SerializeField] private NodeData _overtimeWorkNode;
 
     private InputActionMap _playerInputMap;
+
+    private const string OVERTIME_WORK_ID = "Work_1";
     
-    private float _currentTime;
     private bool _isWorking;
     private bool _isPaused;
+    private float _currentTime;
+    private float _currentWorkDuration;
     private float _elapsedPenaltyTime;
 
     public bool IsWorking => _isWorking;
@@ -54,8 +57,9 @@ public class GameManager : Singleton<GameManager>
     {
         if (_isWorking) return;
 
-        _currentTime = _workDuration;   // 시작할 때 시간 초기화
         _isWorking = true;
+        _currentWorkDuration = GetWorkDuration();
+        _currentTime = _currentWorkDuration;
         Resume();
         
         OnWorkStarted?.Invoke();
@@ -72,6 +76,18 @@ public class GameManager : Singleton<GameManager>
         
         PlayerManager.Instance.Guide = 1;
         _elapsedPenaltyTime = 0;
+    }
+
+    private float GetWorkDuration()
+    {
+        if (PlayerManager.Instance.HaveNodes.Contains(OVERTIME_WORK_ID))
+        {
+            return _workDuration + _overtimeWorkNode.EffectValue;
+        }
+        else
+        {
+            return _workDuration;
+        }
     }
 
     public void Pause()
@@ -97,7 +113,7 @@ public class GameManager : Singleton<GameManager>
 
     private void UpdateUI() 
     {
-        UIManager.Instance.ResultUI.SetTotalTimeText(_workDuration - _elapsedPenaltyTime);
+        UIManager.Instance.ResultUI.SetTotalTimeText(_currentWorkDuration - _elapsedPenaltyTime);
         UIManager.Instance.InGameUI.gameObject.SetActive(false);
         UIManager.Instance.ResultUI.gameObject.SetActive(true);
     }
