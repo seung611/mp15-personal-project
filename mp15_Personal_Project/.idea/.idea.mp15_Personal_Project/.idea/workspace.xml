@@ -10,7 +10,23 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4b5a5c1-5baa-441f-be08-300e551f33a2" name="변경" comment="" />
+    <list default="true" id="b4b5a5c1-5baa-441f-be08-300e551f33a2" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.mp15_Personal_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Bold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Light SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Light SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Medium SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image/UI/ui/hazard_bar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Image/UI/ui/hazard_bar.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_SkillTree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_SkillTree.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGameSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGameSetting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TitleSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TitleSetting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Warning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Warning.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

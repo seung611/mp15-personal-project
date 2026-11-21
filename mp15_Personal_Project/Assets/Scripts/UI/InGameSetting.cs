@@ -33,7 +33,9 @@ public class InGameSetting : MonoBehaviour
     {
         UIManager.Instance.InGameSettingUI.gameObject.SetActive(false);
         UIManager.Instance.WarningUI.gameObject.SetActive(true);
-        UIManager.Instance.WarningUI.SetMessage();
+        // 작업 중인지, 결과 화면에서 열었는지에 따라 문구가 다름
+        EWarningType type = GameManager.Instance.IsWorking ? EWarningType.LeaveWork : EWarningType.LeaveResult;
+        UIManager.Instance.WarningUI.SetMessage(type);
     }
 
     public void OnMusicValueChange(float value)

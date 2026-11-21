@@ -27,7 +27,7 @@ public class TitleSetting : MonoBehaviour
     {
         UIManager.Instance.TitleSettingUI.gameObject.SetActive(false);
         UIManager.Instance.WarningUI.gameObject.SetActive(true);
-        UIManager.Instance.WarningUI.SetMessage();
+        UIManager.Instance.WarningUI.SetMessage(EWarningType.ExitGame);
     }
 
     public void OnMusicValueChange(float value)

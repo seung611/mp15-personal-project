@@ -44,12 +44,20 @@ public class UIManager : Singleton<UIManager>
 
     public void OnSettingUI()
     {
+        // 확인 창이 떠 있으면 ESC = 취소
+        if (WarningUI.gameObject.activeSelf)
+        {
+            WarningUI.OnClickNo();
+            return;
+        }
+
         if (TitleUI.gameObject.activeSelf)
         {
             TitleSettingUI.gameObject.SetActive(!TitleSettingUI.gameObject.activeSelf); 
         }
-        else if (InGameUI.gameObject.activeSelf 
-                 && GameManager.Instance.IsWorking)
+        // 작업 중이거나 결과 화면일 때 인게임 설정을 연다
+        else if ((InGameUI.gameObject.activeSelf && GameManager.Instance.IsWorking)
+                 || ResultUI.gameObject.activeSelf)
         {
             InGameSettingUI.gameObject.SetActive(!InGameSettingUI.gameObject.activeSelf);
             
