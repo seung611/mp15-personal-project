@@ -134,6 +134,7 @@ public class TrashBagController : MonoBehaviour
     
     private void ChangeBag()
     {
+        SoundManager.Instance.PlaySfx(ESfxType.BagChanged);
         FullTrashBag();
         CompleteBagChange();
     }

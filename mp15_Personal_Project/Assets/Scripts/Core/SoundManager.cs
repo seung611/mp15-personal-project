@@ -55,7 +55,6 @@ public class SoundManager : Singleton<SoundManager>
     {
         if (_sfxClips.ContainsKey(type))
         {
-            _sfxSource.clip = _sfxClips[type];
             _sfxSource.PlayOneShot(_sfxClips[type]);
         }
         else
