@@ -27,6 +27,11 @@ public class SoundManager : Singleton<SoundManager>
     private Dictionary<EBgmType, AudioClip> _bgmClips = new();
     private Dictionary<ESfxType, AudioClip> _sfxClips = new();
 
+    private const string MASTER_VOLUME_KEY = "MasterVolume";
+    private float _masterVolume = 1f;
+
+    public float MasterVolume => _masterVolume;
+
     private void Awake()
     {
         SetSingleton();
@@ -83,14 +88,18 @@ public class SoundManager : Singleton<SoundManager>
         _sfxSource.volume = Mathf.Clamp(volume, 0f, 1f);
     }
     
-    public void AllSoundVolume(float volume)
+    public void SetMasterVolume(float volume)
     {
-        _bgmSource.volume = Mathf.Clamp(volume, 0f, 1f);
-        _sfxSource.volume = Mathf.Clamp(volume, 0f, 1f);
+        _masterVolume = Mathf.Clamp01(volume);
+        AudioListener.volume = _masterVolume;
+        PlayerPrefs.SetFloat(MASTER_VOLUME_KEY, _masterVolume);
     }
     
     private void Init()
     {
+        _masterVolume = PlayerPrefs.GetFloat(MASTER_VOLUME_KEY, 1f);
+        AudioListener.volume = _masterVolume;
+
         foreach (BgmAudioClip bgm in _bgmClipList)
         {
             if (!_bgmClips.ContainsKey(bgm.Type))

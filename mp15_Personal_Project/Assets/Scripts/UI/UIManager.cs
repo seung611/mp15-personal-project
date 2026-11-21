@@ -64,11 +64,6 @@ public class UIManager : Singleton<UIManager>
         }
     }
     
-    public void OnMusicValueChange()
-    {
-        
-    }
-
     public void Init()
     {
         TitleUI.gameObject.SetActive(true);
