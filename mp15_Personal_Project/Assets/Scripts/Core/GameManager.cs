@@ -24,6 +24,7 @@ public class GameManager : Singleton<GameManager>
     private int _lastWarningSecond = -1;
 
     public bool IsWorking => _isWorking;
+    public float BaseWorkDuration => _workDuration;     // 스킬 적용 전 작업 시간 (툴팁 비교용)
 
     public event Action OnWorkStarted;
     public event Action OnWorkEnded;

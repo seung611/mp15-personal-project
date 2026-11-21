@@ -15,17 +15,30 @@
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Bold SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Light SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Light SDF.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Medium SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fonts/esamanru_OTF(Mac)/esamanru OTF Medium SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Image/UI/ui/hazard_bar.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Image/UI/ui/hazard_bar.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_SkillTree.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_SkillTree.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PRB_UIManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/InGameSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/InGameSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TitleSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TitleSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Warning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Warning.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Comp_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_4.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_TrashBag_4.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ScriptableObject/Node/Node_Work_3.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/InGameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InGameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Can/CanDespawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Can/CanDespawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Can/CanSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Can/CanSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Compress/CompressorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Compress/CompressorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/NodeData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/NodeData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SkillToolTip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SkillTree/SkillToolTip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TrashCan/TrashBagController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TrashCan/TrashBagController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

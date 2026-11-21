@@ -18,6 +18,11 @@ public class CanDespawner : MonoBehaviour
     
     public float PenaltyTime { get => _penaltyTime; set => _penaltyTime = value; }
 
+    private float _basePenaltyTime;
+    public float BasePenaltyTime => _basePenaltyTime;          // 스킬 적용 전 실패 패널티 (툴팁 비교용)
+
+    private void Awake() => _basePenaltyTime = _penaltyTime;
+
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();
 

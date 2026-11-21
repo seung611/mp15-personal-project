@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Node_Comp_2
   m_EditorClassIdentifier: Assembly-CSharp::Node
   _skillId: Comp_2
-  _skillName: "\uAC10\uC555 \uBCA8\uBE0C"
+  _skillName: "\uAC10\uC555 \uBC38\uBE0C"
   _description: "\uC555\uCD95\uC5D0 \uC2E4\uD328\uD588\uC744 \uACBD\uC6B0 \uC0DD\uAE30\uB294
     \uD328\uB110\uD2F0\uB97C \uC644\uD654\uD574\uC90D\uB2C8\uB2E4."
   _skillPrice: 50

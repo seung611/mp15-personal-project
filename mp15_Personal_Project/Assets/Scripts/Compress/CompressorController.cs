@@ -26,7 +26,14 @@ public class CompressorController : MonoBehaviour
     private bool _isPushButton => _compressButtonTimer.IsCounting;
     
 
-    private void Awake() => CacheComponents();
+    private float _baseButtonCoolTime;
+    public float BaseButtonCoolTime => _baseButtonCoolTime;   // 스킬 적용 전 레버 대기 시간 (툴팁 비교용)
+
+    private void Awake()
+    {
+        CacheComponents();
+        _baseButtonCoolTime = _buttonCoolTime;
+    }
     private void OnEnable() => BindInputEvents();
     private void Update()
     {

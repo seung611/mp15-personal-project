@@ -767,7 +767,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5e51cce999585469ab4c7954900061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameStart
-  _skillTree: {fileID: 4673711829579356025}
 --- !u!4 &1720811880
 Transform:
   m_ObjectHideFlags: 0
@@ -954,6 +953,22 @@ PrefabInstance:
       propertyPath: _trashBagController
       value: 
       objectReference: {fileID: 1228786005}
+    - target: {fileID: 6819636346857028280, guid: 0ce2327b39c0643478f2fe6a787d6dc7, type: 3}
+      propertyPath: _trashBag
+      value: 
+      objectReference: {fileID: 1228786005}
+    - target: {fileID: 6819636346857028280, guid: 0ce2327b39c0643478f2fe6a787d6dc7, type: 3}
+      propertyPath: _canSpawner
+      value: 
+      objectReference: {fileID: 1228786007}
+    - target: {fileID: 6819636346857028280, guid: 0ce2327b39c0643478f2fe6a787d6dc7, type: 3}
+      propertyPath: _compressor
+      value: 
+      objectReference: {fileID: 1228786008}
+    - target: {fileID: 6819636346857028280, guid: 0ce2327b39c0643478f2fe6a787d6dc7, type: 3}
+      propertyPath: _failDespawner
+      value: 
+      objectReference: {fileID: 1228786006}
     - target: {fileID: 8353378257525204509, guid: 0ce2327b39c0643478f2fe6a787d6dc7, type: 3}
       propertyPath: _canSpawner
       value: 

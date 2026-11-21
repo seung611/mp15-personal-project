@@ -34,6 +34,19 @@ public class TrashBagController : MonoBehaviour
     private float _currentChangeDuration;
 
     public bool IsChangeBag { get => _isChangingBag; }
+
+    // 스킬 적용 전 값 (툴팁 비교용). 스킬을 사면 원래 필드가 바뀌므로 시작할 때 저장해 둔다
+    private int _baseCapacity;
+    private float _baseChangeDuration;
+    public int BaseCapacity => _baseCapacity;
+    public float BaseChangeDuration => _baseChangeDuration;
+    public float AutoChangeDuration => _autoChangeDuration;
+
+    private void Awake()
+    {
+        _baseCapacity = _trashBagCapacity;
+        _baseChangeDuration = _changeDuration;
+    }
     
     private void OnEnable() => BindEvents();
     private void OnCollisionEnter(Collision collision)

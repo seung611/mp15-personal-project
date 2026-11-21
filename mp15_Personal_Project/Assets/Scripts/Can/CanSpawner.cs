@@ -21,6 +21,11 @@ public class CanSpawner : MonoBehaviour
     
     public int Percent { get => _percent; set => _percent = value; }
 
+    private int _basePercent;
+    public int BasePercent => _basePercent;                    // 스킬 적용 전 고가 캔 확률 (툴팁 비교용)
+
+    private void Awake() => _basePercent = _percent;
+
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();
 
