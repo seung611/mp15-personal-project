@@ -14,6 +14,8 @@ public class InGame : MonoBehaviour
     [SerializeField] private GameObject[] _guideUI;
     [SerializeField] private Image _changeCoolTime;
     [SerializeField] private Image _pressButtonCoolTime;
+    [SerializeField] private GameObject _pressButtonCoolTimeRoot;  // 비워 두면 _pressButtonCoolTime만 켜고 끔
+
 
     private string _fullText = "가득 참";
     private string _almostText = "거의 참";
@@ -124,12 +126,17 @@ public class InGame : MonoBehaviour
 
     public void SetButtonCoolTimerOpen()
     {
-        _pressButtonCoolTime.gameObject.SetActive(true);
+        GetButtonCoolTimeObject().SetActive(true);
     }
 
     public void SetButtonCoolTimerClose()
     {
-        _pressButtonCoolTime.gameObject.SetActive(false); 
+        GetButtonCoolTimeObject().SetActive(false);
+    }
+
+    private GameObject GetButtonCoolTimeObject()
+    {
+        return _pressButtonCoolTimeRoot != null ? _pressButtonCoolTimeRoot : _pressButtonCoolTime.gameObject;
     }
 
     public void SetPressedButtonCoolTime(float currentTime, float coolTime)
