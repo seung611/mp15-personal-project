@@ -11,10 +11,11 @@ public class InGame : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _trashBagText;
     [SerializeField] private TextMeshProUGUI _trashBagState;
     [SerializeField] private Slider _trashBagSlider;
-    [SerializeField] private GameObject[] _guideUI;
-    [SerializeField] private Image _changeCoolTime;
-    [SerializeField] private Image _pressButtonCoolTime;
-    [SerializeField] private GameObject _pressButtonCoolTimeRoot;  // 비워 두면 _pressButtonCoolTime만 켜고 끔
+    [SerializeField] private GuideBox _guide;
+    [SerializeField] private Sprite _pressIcon;
+    [SerializeField] private Sprite _changeIcon;
+    [SerializeField, TextArea] private string _pressMessage = "마우스 클릭으로 버튼을 눌러 캔을 압축하세요.";
+    [SerializeField, TextArea] private string _changeMessage = "키를 눌러 봉투를 교체하세요.";
 
 
     private string _fullText = "가득 참";
@@ -28,10 +29,12 @@ public class InGame : MonoBehaviour
     private int _currentCanCount;
     private bool _isTrashCanView;
     private bool _isTransitioning;
+    private float _pressFill;
+    private float _changeFill;
 
     private int _haveCoin => PlayerManager.Instance.HaveCoin;
 
-    private void Awake() => SetButtonCoolTimerClose();
+    private void Awake() => RefreshGuide();
     
     public void SetTimeUI(float time)
     {
@@ -93,54 +96,59 @@ public class InGame : MonoBehaviour
     {
         _isTrashCanView = isTrashCanView;
         _isTransitioning = isTransitioning;
-        SetPressButtonGuide(isTrashCanView, isTransitioning);
-        RefreshTrashBagChangeGuide();
+        RefreshGuide();
     }
 
-    private void SetPressButtonGuide(bool isTrashCanView, bool isTransitioning)
+    private void RefreshGuide()
     {
-        if (PlayerManager.Instance.Guide == 0)
+        if (_guide == null) return;
+        
+        _guide.gameObject.SetActive(!_isTransitioning);
+        
+        if (_isTransitioning) return;
+        if (_isTrashCanView)
         {
-            _guideUI[0].SetActive(!isTrashCanView && !isTransitioning);
+            _guide.SetContent(_changeIcon, _changeMessage);
+            _guide.SetMessageVisible(_currentCanCount > 0);
+            _guide.SetFill(_changeFill);
         }
         else
         {
-            _guideUI[0].gameObject.SetActive(false);
+            bool isNotPressedYet = PlayerManager.Instance != null && PlayerManager.Instance.Guide == 0;
+            _guide.SetContent(_pressIcon, _pressMessage);
+            _guide.SetMessageVisible(isNotPressedYet);
+            _guide.SetFill(_pressFill);
         }
     }
 
     private void RefreshTrashBagChangeGuide()
     {
-        _guideUI[1].SetActive(_isTrashCanView && !_isTransitioning && _currentCanCount > 0);
+        if (_isTrashCanView) RefreshGuide();
     }
 
     public void SetChangeCoolTime(float currentTime, float coolTime)
     {
-        if (coolTime <= 0)
-        {
-            _changeCoolTime.fillAmount = 0;
-            return;
-        }
-        _changeCoolTime.fillAmount = currentTime / coolTime;
+        _changeFill = coolTime > 0f ? currentTime / coolTime : 0f;
+        if (_isTrashCanView && _guide != null) _guide.SetFill(_changeFill);
     }
 
     public void SetButtonCoolTimerOpen()
     {
-        GetButtonCoolTimeObject().SetActive(true);
+        if (PlayerManager.Instance == null || PlayerManager.Instance.Guide != 0) return;
+
+        PlayerManager.Instance.Guide = 1;
+        RefreshGuide();
     }
 
     public void SetButtonCoolTimerClose()
     {
-        GetButtonCoolTimeObject().SetActive(false);
-    }
-
-    private GameObject GetButtonCoolTimeObject()
-    {
-        return _pressButtonCoolTimeRoot != null ? _pressButtonCoolTimeRoot : _pressButtonCoolTime.gameObject;
+        _pressFill = 0f;
+        if (!_isTrashCanView && _guide != null) _guide.SetFill(_pressFill);
     }
 
     public void SetPressedButtonCoolTime(float currentTime, float coolTime)
     {
-        _pressButtonCoolTime.fillAmount = currentTime / coolTime;
+        _pressFill = coolTime > 0f ? currentTime / coolTime : 0f;
+        if (!_isTrashCanView && _guide != null) _guide.SetFill(_pressFill);
     }
 }
