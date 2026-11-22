@@ -29,8 +29,9 @@ public class InGame : MonoBehaviour
     private int _currentCanCount;
     private bool _isTrashCanView;
     private bool _isTransitioning;
-    private float _pressFill;
-    private float _changeFill;
+    // 게이지는 "사용 가능한 정도"를 보여 준다: 사용 가능하면 가득(1), 대기 · 교체 중에는 0에서 다시 차오름
+    private float _pressFill = 1f;
+    private float _changeFill = 1f;
 
     private int _haveCoin => PlayerManager.Instance.HaveCoin;
 
@@ -128,7 +129,7 @@ public class InGame : MonoBehaviour
 
     public void SetChangeCoolTime(float currentTime, float coolTime)
     {
-        _changeFill = coolTime > 0f ? currentTime / coolTime : 0f;
+        _changeFill = ToReadyFill(currentTime, coolTime);
         if (_isTrashCanView && _guide != null) _guide.SetFill(_changeFill);
     }
 
@@ -142,13 +143,20 @@ public class InGame : MonoBehaviour
 
     public void SetButtonCoolTimerClose()
     {
-        _pressFill = 0f;
+        _pressFill = 1f;
         if (!_isTrashCanView && _guide != null) _guide.SetFill(_pressFill);
     }
 
     public void SetPressedButtonCoolTime(float currentTime, float coolTime)
     {
-        _pressFill = coolTime > 0f ? currentTime / coolTime : 0f;
+        _pressFill = ToReadyFill(currentTime, coolTime);
         if (!_isTrashCanView && _guide != null) _guide.SetFill(_pressFill);
+    }
+
+    // 남은 시간 → 채움 정도 (남은 시간이 없으면 가득 참)
+    private static float ToReadyFill(float remainingTime, float totalTime)
+    {
+        if (totalTime <= 0f || remainingTime <= 0f) return 1f;
+        return 1f - Mathf.Clamp01(remainingTime / totalTime);
     }
 }

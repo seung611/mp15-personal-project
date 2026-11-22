@@ -669,10 +669,6 @@ PrefabInstance:
       propertyPath: _skillTree
       value: 
       objectReference: {fileID: 4673711829579356025}
-    - target: {fileID: 3475146705926618586, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
-      propertyPath: _canSpawnTimer
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3815827680912310572, guid: 011c342bb2144a348a912a4db8eb04ca, type: 3}
       propertyPath: _skillTree
       value: 

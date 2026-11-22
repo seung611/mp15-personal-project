@@ -17,7 +17,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] public InGameSetting InGameSettingUI; // [UI] InGameSetting
     [SerializeField] public Warning WarningUI;             // [UI] Warning
     [SerializeField] public Message MessageUI;             // [UI] Message
-
+    
     private void Awake()
     {
         SetSingleton();
@@ -48,7 +48,6 @@ public class UIManager : Singleton<UIManager>
 
     public void OnSettingUI()
     {
-        // 확인 창이 떠 있으면 ESC = 취소
         if (WarningUI.gameObject.activeSelf)
         {
             WarningUI.OnClickNo();
@@ -59,7 +58,6 @@ public class UIManager : Singleton<UIManager>
         {
             TitleSettingUI.gameObject.SetActive(!TitleSettingUI.gameObject.activeSelf); 
         }
-        // 작업 중이거나 결과 화면일 때 인게임 설정을 연다
         else if ((InGameUI.gameObject.activeSelf && GameManager.Instance.IsWorking)
                  || ResultUI.gameObject.activeSelf)
         {
