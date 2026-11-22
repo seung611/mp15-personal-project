@@ -18,7 +18,11 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] public Warning WarningUI;             // [UI] Warning
     [SerializeField] public Message MessageUI;             // [UI] Message
 
-    private void Awake() => SetSingleton();
+    private void Awake()
+    {
+        SetSingleton();
+        if (Instance == this) UIClickSound.Bind(transform);
+    }
     private void Start() => Init();
     private void OnEnable() => BindInputEvents();
     private void OnDisable() => UnbindInputEvents();

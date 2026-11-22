@@ -16,7 +16,11 @@ public class SkillTree : MonoBehaviour
 
     public Dictionary<string, Node> NodeDictionary => _nodeDictionary;
 
-    private void Awake() => SetNodeDictionary();
+    private void Awake()
+    {
+        SetNodeDictionary();
+        UIClickSound.Bind(transform);
+    }
     private void OnEnable() => BindEvents();
     private void OnDisable() => UnbindEvents();
     
