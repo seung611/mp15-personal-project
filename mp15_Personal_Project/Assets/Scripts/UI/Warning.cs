@@ -54,14 +54,16 @@ public class Warning : MonoBehaviour
             _gameExit.ExitGame();
             return;
         }
-
+        
         gameObject.SetActive(false);
         GameManager.Instance.LeaveEarly();
 
         OnLeaveEarly?.Invoke();
-        SceneManager.LoadScene(_titleScene.SceneName);
-        UIManager.Instance.Init();
-        SoundManager.Instance.PlayBgm(EBgmType.Title);
+        UIManager.Instance.SceneChanger.FadeOut(_titleScene, () =>
+        {
+            UIManager.Instance.Init();
+            SoundManager.Instance.PlayBgm(EBgmType.Title);
+        });
     }
 
     public void OnClickNo()

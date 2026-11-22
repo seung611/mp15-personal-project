@@ -13,9 +13,11 @@ public class Title : MonoBehaviour
     
     public void OnClickStart()
     {
-        SceneManager.LoadScene(_nextScene.SceneName);
-        UIManager.Instance.TitleUI.gameObject.SetActive(false);
-        UIManager.Instance.InGameUI.gameObject.SetActive(true);
+        UIManager.Instance.SceneChanger.FadeOut(_nextScene, () =>
+        {
+            UIManager.Instance.TitleUI.gameObject.SetActive(false);
+            UIManager.Instance.InGameUI.gameObject.SetActive(true);
+        });
     }
 
     public void OnClickHelp()
