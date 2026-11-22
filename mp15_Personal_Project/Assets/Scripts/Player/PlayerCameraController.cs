@@ -12,7 +12,7 @@ public class PlayerCameraController : MonoBehaviour
     [SerializeField] private Transform _conveyorView;
     [SerializeField] private Transform _trashCanView;
 
-    private float _trasitionDuration = 0.6f;
+    private float _transitionDuration = 0.6f;
 
     private bool _isTrashCanView;
     private bool _isTransitioning;
@@ -60,13 +60,13 @@ public class PlayerCameraController : MonoBehaviour
         Vector3 startPosition = cameraTransform.position;
         Quaternion startRotation = cameraTransform.rotation;
 
-        float elaspedTime = 0f;
+        float elapsedTime = 0f;
 
-        while (elaspedTime < _trasitionDuration)
+        while (elapsedTime < _transitionDuration)
         {
-            elaspedTime += Time.deltaTime;
+            elapsedTime += Time.deltaTime;
             
-            float translate = Mathf.Clamp01(elaspedTime / _trasitionDuration);
+            float translate = Mathf.Clamp01(elapsedTime / _transitionDuration);
             
             translate = Mathf.SmoothStep(0f, 1f, translate);
             
