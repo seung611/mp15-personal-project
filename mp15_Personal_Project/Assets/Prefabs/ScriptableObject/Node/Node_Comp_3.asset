@@ -20,4 +20,4 @@ MonoBehaviour:
   _skillPrice: 50
   _effectType: 7
   _effectValue: 0
-  _prevNode: {fileID: 11400000, guid: 1deb208baa1b2c84892b10873a9b5076, type: 2}
+  _prevNode: {fileID: 0}

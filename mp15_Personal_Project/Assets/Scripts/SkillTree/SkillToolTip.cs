@@ -6,7 +6,9 @@ public class SkillToolTip : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _skillName;
     [SerializeField] private TextMeshProUGUI _description;
+    [SerializeField] private TextMeshProUGUI _statName;
     [SerializeField] private TextMeshProUGUI _currentEffect;
+    [SerializeField] private TextMeshProUGUI _arrow;
     [SerializeField] private TextMeshProUGUI _nextEffect;
     [SerializeField] private TextMeshProUGUI _price;
     [SerializeField] private float _offsetY = 3f;
@@ -33,11 +35,18 @@ public class SkillToolTip : MonoBehaviour
     // 사기 전: "교체 시간 5초" → "4초"   /   산 뒤: "적용됨" · "교체 시간 4초"
     private void SetCompareText(NodeData node)
     {
-        string statName = null, beforeText = null, afterText = null;
+        string statName = null;
+        string beforeText = null;
+        string afterText = null;
+        
         bool hasCompare = _statProvider != null
                           && _statProvider.TryGetCompare(node, out statName, out beforeText, out afterText);
+        
+        _statName.gameObject.SetActive(hasCompare);
         _currentEffect.gameObject.SetActive(hasCompare);
+        _arrow.gameObject.SetActive(hasCompare);
         _nextEffect.gameObject.SetActive(hasCompare);
+        
         if (!hasCompare) return;
 
         string before = ColorUtility.ToHtmlStringRGB(_beforeColor);
@@ -46,13 +55,15 @@ public class SkillToolTip : MonoBehaviour
 
         if (isPurchased)
         {
+            _statName.text = statName;
             _currentEffect.text = $"<color=#{before}>적용됨</color>";
-            _nextEffect.text = $"{statName} <color=#{after}>{afterText}</color>";
+            _nextEffect.text = $"<color=#{after}>{afterText}</color>";
         }
         else
         {
-            _currentEffect.text = $"{statName} <color=#{before}>{beforeText}</color>";
-            _nextEffect.text = $"→ <color=#{after}>{afterText}</color>";
+            _statName.text = statName;
+            _currentEffect.text = $"<color=#{before}>{beforeText}</color>";
+            _nextEffect.text = $"<color=#{after}>{afterText}</color>";
         }
     }
 
