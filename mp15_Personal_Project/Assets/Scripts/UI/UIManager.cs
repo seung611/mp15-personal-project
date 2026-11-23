@@ -17,6 +17,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] public InGameSetting InGameSettingUI; // [UI] InGameSetting
     [SerializeField] public Warning WarningUI;             // [UI] Warning
     [SerializeField] public Message MessageUI;             // [UI] Message
+    [SerializeField] public Credit CreditUI;                 // [UI] Credit
     [SerializeField] public SceneChanger SceneChanger;
     
     private void Awake()

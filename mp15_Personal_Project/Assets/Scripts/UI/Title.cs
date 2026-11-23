@@ -9,6 +9,7 @@ public class Title : MonoBehaviour
     [SerializeField] private Button _gameStartButton;
     [SerializeField] private Button _helpButton;
     [SerializeField] private Button _settingButton;
+    [SerializeField] private Button _creditButton;
     [SerializeField] private SceneReference _nextScene;
     
     public void OnClickStart()
@@ -25,8 +26,8 @@ public class Title : MonoBehaviour
         UIManager.Instance.HelpUI.gameObject.SetActive(true);
     }
     
-    public void OnClickSetting()
+    public void OnClickCredit()
     {
-        UIManager.Instance.OnSettingUI();
+        UIManager.Instance.CreditUI.gameObject.SetActive(true);
     }
 }
