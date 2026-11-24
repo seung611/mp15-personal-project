@@ -17,7 +17,7 @@ MonoBehaviour:
   _description: "\uC555\uCD95 \uACF5\uAC04 2\uCE78, \uBC84\uD2BC \uD55C \uBC88\uC5D0
     \uACF5\uAC04 \uC548\uC758 \uCE94 \uC804\uBD80 \uC555\uCD95\uC2DC\uD0B5\uB2C8\uB2E4.
     (\uBCF4\uB958)"
-  _skillPrice: 50
+  _skillPrice: 300
   _effectType: 7
   _effectValue: 0
   _prevNode: {fileID: 0}

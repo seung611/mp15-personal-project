@@ -16,7 +16,7 @@ MonoBehaviour:
   _skillName: "\uAF49 \uCC2C \uBD09\uD22C \uBCF4\uB108\uC2A4"
   _description: "\uC4F0\uB808\uAE30 \uBD09\uD22C\uC758 \uC6A9\uB7C9\uC744 \uAF49
     \uCC44\uC6CC \uBB36\uC73C\uBA74 \uBCF4\uB108\uC2A4 \uCF54\uC778\uC744 \uD68D\uB4DD\uD569\uB2C8\uB2E4."
-  _skillPrice: 50
+  _skillPrice: 200
   _effectType: 10
-  _effectValue: 10
+  _effectValue: 25
   _prevNode: {fileID: 11400000, guid: 2c4657db3d55b0e4084f965ebb9ee402, type: 2}

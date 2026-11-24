@@ -15,7 +15,7 @@ MonoBehaviour:
   _skillId: TrashBag_1
   _skillName: "\uD070 \uBD09\uD22C"
   _description: "\uBD09\uD22C\uC758 \uC6A9\uB7C9\uC744 \uC99D\uAC00 \uC2DC\uD0B5\uB2C8\uB2E4."
-  _skillPrice: 50
+  _skillPrice: 100
   _effectType: 1
   _effectValue: 1
   _prevNode: {fileID: 11400000, guid: 8d3f0a72257b0e44991286a6f52a7eb6, type: 2}

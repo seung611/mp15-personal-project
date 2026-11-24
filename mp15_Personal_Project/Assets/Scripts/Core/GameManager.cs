@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager>
     // 게임이 시작되면 시간 감소
     // 만약 패널티가 있으면 추가 시간 감소
     // 시간이 다 끝나면 작업 종료 및 캔 생성과 모든 걸 멈추기
-    [SerializeField] private float _workDuration = 60f;
+    [SerializeField] private float _workDuration = 90f;
     [SerializeField] private InputActionAsset _playerInput;
     [SerializeField] private NodeData _overtimeWorkNode;
 

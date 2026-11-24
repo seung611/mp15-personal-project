@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerManager : Singleton<PlayerManager>
 {
     private int _guide;
-    private int _haveCoin = 100;
+    private int _haveCoin;
     private HashSet<string> _haveNodes = new();
 
     public int HaveCoin => _haveCoin;

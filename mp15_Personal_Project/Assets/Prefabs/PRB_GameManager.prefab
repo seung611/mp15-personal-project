@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd9f6c9b63ce11b4ebb0ba941267aedc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GarbageTruckController
-  _workDuration: 30
+  _workDuration: 90
   _playerInput: {fileID: -944628639613478452, guid: 752d382753583594797810dab867de7c, type: 3}
   _overtimeWorkNode: {fileID: 11400000, guid: b1448216f782bf5499d6a1d214ea52db, type: 2}
 --- !u!114 &8700685808382871544

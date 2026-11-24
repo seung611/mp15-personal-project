@@ -12,7 +12,7 @@ public class TrashBagController : MonoBehaviour
     [SerializeField] private SkillTree _skillTree;
     [SerializeField] private Timer _trashBagTimer;
     [SerializeField] private float _changeDuration = 3f;
-    [SerializeField] private float _autoChangeDuration = 3f;
+    // [SerializeField] private float _autoChangeDuration = 3f;
     [SerializeField] private int _trashBagCapacity = 5;
 
     private const string BIG_TRASH_BAG_ID = "TrashBag_1";
@@ -40,7 +40,7 @@ public class TrashBagController : MonoBehaviour
     private float _baseChangeDuration;
     public int BaseCapacity => _baseCapacity;
     public float BaseChangeDuration => _baseChangeDuration;
-    public float AutoChangeDuration => _autoChangeDuration;
+    public float AutoChangeDuration => _changeDuration + 1f;
 
     private void Awake()
     {
@@ -110,7 +110,7 @@ public class TrashBagController : MonoBehaviour
         if (_currentCanCount == _trashBagCapacity 
             && PlayerManager.Instance.HaveNodes.Contains(AUTO_BAG_CHANGE_ID))
         {
-            float change = _autoChangeDuration;
+            float change = _changeDuration + 1f;
             StartChangeBag(change);
         }
         UpdateInGameUI();
@@ -119,13 +119,6 @@ public class TrashBagController : MonoBehaviour
     private void OnChangeBagInput(InputAction.CallbackContext context)
     {
         if (!IsChangeAvailable()) return;
-        if (PlayerManager.Instance.HaveNodes.Contains(SKILLED_HANDS_ID) 
-            && _isFirstTimeSkillHand)
-        {
-            _isFirstTimeSkillHand = false;
-            Node node = _skillTree.NodeDictionary[SKILLED_HANDS_ID];
-            _changeDuration -= node.NodeData.EffectValue;
-        }
         
         StartChangeBag(_changeDuration);
     }
@@ -204,6 +197,14 @@ public class TrashBagController : MonoBehaviour
             _isFirstTimeBigTrashBag = false;
             Node node = _skillTree.NodeDictionary[BIG_TRASH_BAG_ID];
             _trashBagCapacity += (int)node.NodeData.EffectValue;
+        }
+        
+        if (PlayerManager.Instance.HaveNodes.Contains(SKILLED_HANDS_ID) 
+            && _isFirstTimeSkillHand)
+        {
+            _isFirstTimeSkillHand = false;
+            Node node = _skillTree.NodeDictionary[SKILLED_HANDS_ID];
+            _changeDuration -= node.NodeData.EffectValue;
         }
         _currentCanCount = 0;
         _currentBagCoin = 0;
