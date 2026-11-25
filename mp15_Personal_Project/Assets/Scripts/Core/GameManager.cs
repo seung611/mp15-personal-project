@@ -31,6 +31,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Awake()
     {
+        Screen.SetResolution(1920, 1080, true);
         SetSingleton();
         _playerInputMap = _playerInput.FindActionMap("Player");
     }
