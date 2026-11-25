@@ -10,7 +10,7 @@ public class CanSpawner : MonoBehaviour
     [SerializeField] private GameObject[] _nomalCanPrefab;
     [SerializeField] private SkillTree _skillTree;
     [SerializeField] private Transform _canRoot;
-    [SerializeField] private float _canCreateInterval = 5f;
+    [SerializeField] private float _canCreateInterval = 3f;
     [SerializeField, Range(0, 100)] private int _percent = 25;
 
     private const string KEEN_EYE_ID = "Work_2";
@@ -18,8 +18,6 @@ public class CanSpawner : MonoBehaviour
     private bool _isFirstTimeKeenEye = true;
     
     private CancellationTokenSource _token = new();
-    
-    public int Percent { get => _percent; set => _percent = value; }
 
     private int _basePercent;
     public int BasePercent => _basePercent;                    // 스킬 적용 전 고가 캔 확률 (툴팁 비교용)
