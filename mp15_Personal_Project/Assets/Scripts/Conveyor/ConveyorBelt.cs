@@ -4,7 +4,7 @@ public class ConveyorBelt : MonoBehaviour
 {
     [SerializeField] private Vector3 _beltDirection;
     [SerializeField] private ConveyorManager _conveyorManager;
-    [SerializeField] private float _conveyorSpeed = 0.5f;
+    [SerializeField] private float _conveyorSpeed = 0.725f;
     
     private Material _material;
     private MeshRenderer _meshRenderer;
