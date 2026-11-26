@@ -11042,13 +11042,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1368416653898204903, guid: d35be991b1d67bf4c87ec70ee6fbc508, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5600298773018300475}
   m_SourcePrefab: {fileID: 100100000, guid: d35be991b1d67bf4c87ec70ee6fbc508, type: 3}
 --- !u!4 &1511754516129473480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4137069793365973617, guid: d35be991b1d67bf4c87ec70ee6fbc508, type: 3}
   m_PrefabInstance: {fileID: 3283977039567043001}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4570749025354678110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1368416653898204903, guid: d35be991b1d67bf4c87ec70ee6fbc508, type: 3}
+  m_PrefabInstance: {fileID: 3283977039567043001}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5600298773018300475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570749025354678110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097bcf9087315b64f84b7a33e1ac67ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CompressorSpace
+  _plateCollider: {fileID: 3971322111780932558}
 --- !u!1001 &4818409047732864661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11124,6 +11145,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3337711006049116237}
     m_Modifications:
+    - target: {fileID: 3402144953074504130, guid: 3f063c7d749c1a14b8b19a7a8a339dec, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0755593
+      objectReference: {fileID: 0}
+    - target: {fileID: 3402144953074504130, guid: 3f063c7d749c1a14b8b19a7a8a339dec, type: 3}
+      propertyPath: m_Center.y
+      value: 0.5377796
+      objectReference: {fileID: 0}
     - target: {fileID: 4456425647365044494, guid: 3f063c7d749c1a14b8b19a7a8a339dec, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.6
@@ -11177,6 +11206,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f063c7d749c1a14b8b19a7a8a339dec, type: 3}
+--- !u!65 &3971322111780932558 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 6157335966673023389, guid: 3f063c7d749c1a14b8b19a7a8a339dec, type: 3}
+  m_PrefabInstance: {fileID: 7093090364790372947}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6897227202533868381 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4456425647365044494, guid: 3f063c7d749c1a14b8b19a7a8a339dec, type: 3}

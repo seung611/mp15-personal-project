@@ -168,10 +168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Can
   _normalCan: {fileID: 7285268091429950841}
   _trashCan: {fileID: 1467363637191128715}
-  _triggerList: []
-  _canCrushTimer: {fileID: 3198111812893113196}
   _canPrice: 10
-  _time: 0.4
+  boxCol: {fileID: 2160141289270790360}
   _isSuccess: 0
 --- !u!65 &2160141289270790360
 BoxCollider:
@@ -192,8 +190,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.47, y: 0.51, z: 0.6071118}
-  m_Center: {x: 0, y: 0, z: -0.015555903}
+  m_Size: {x: 0.47, y: 0.51, z: 0.62649673}
+  m_Center: {x: 0, y: 0, z: -0.025248379}
 --- !u!114 &3198111812893113196
 MonoBehaviour:
   m_ObjectHideFlags: 0
