@@ -6,6 +6,7 @@ public class CompressorContact : MonoBehaviour
     [SerializeField] private Animator _pressedAnimator;
     [SerializeField] private BoxCollider _compressCollider;
     [SerializeField] private LayerMask _canLayer;
+    [SerializeField] private float _topHitTolerance = 0.1f;
 
     private Collider[] _hit = new Collider[4];
     
@@ -16,13 +17,16 @@ public class CompressorContact : MonoBehaviour
     private const float PRESS_IMPACT_TIME = 10f / CLIP_FRAMES;
     private const float PRESS_RISE_START_TIME = 20f / CLIP_FRAMES;
     
-    private void FixedUpdate()
+    private void OnCollisionEnter(Collision collision)
     {
-        if (!IsPressingDown()) return;
-        if (!IsTouchingCan()) return;
-        
+        if (!IsBeforeRise()) return;
+        if (collision.rigidbody == null) return;
+        if (!collision.rigidbody.TryGetComponent(out Can can)) return;
+        if (can.IsSuccess) return;
+        if (can.IsInCompressSpace) return;
+        if (!IsHitFromAbove(collision)) return;
+
         ReturnCompressor();
-        
     }
     
     public bool IsPressingDown()
@@ -35,22 +39,25 @@ public class CompressorContact : MonoBehaviour
         return true;
     }
     
-    private bool IsTouchingCan()
+    private bool IsBeforeRise()
     {
-        int count = Physics.OverlapBoxNonAlloc(
-            _compressCollider.bounds.center,
-            _compressCollider.bounds.extents,
-            _hit,
-            Quaternion.identity,
-            _canLayer);
+        AnimatorStateInfo info = _pressedAnimator.GetCurrentAnimatorStateInfo(0);
 
-        for (int i = 0; i < count; i++)
+        if (info.shortNameHash != PRESS_STATE_HASH) return false;
+        if (info.normalizedTime >= PRESS_RISE_START_TIME) return false;
+
+        return true;
+    }
+
+    private bool IsHitFromAbove(Collision collision)
+    {
+        float canTop = collision.collider.bounds.max.y;
+
+        for (int i = 0; i < collision.contactCount; i++)
         {
-            if (!_hit[i].TryGetComponent(out Can can)) continue;
-            if (can.IsSuccess) continue;
-            if (can.IsInCompressSpace) continue;
-
-            return true;
+            ContactPoint contact = collision.GetContact(i);
+            if (contact.thisCollider != _compressCollider) continue;
+            if (contact.point.y >= canTop - _topHitTolerance) return true;
         }
 
         return false;
